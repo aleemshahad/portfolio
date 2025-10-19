@@ -1,0 +1,41 @@
+{
+  "name": "aleem-shahzad-portfolio",
+  "version": "1.0.0",
+  "description": "Advanced portfolio website for Muhammad Aleem Shahzad - Digital Marketing Expert, SEO Specialist & Python Automation Developer",
+  "main": "index.html",
+  "scripts": {
+    "build": "tailwindcss -i ./assets/css/style.css -o ./assets/css/style.min.css --minify",
+    "watch": "tailwindcss -i ./assets/css/style.css -o ./assets/css/style.min.css --watch",
+    "serve": "python -m http.server 8000",
+    "deploy": "gh-pages -d ."
+  },
+  "keywords": [
+    "portfolio",
+    "digital-marketing",
+    "seo",
+    "python-automation",
+    "trading",
+    "web-development",
+    "github-pages"
+  ],
+  "author": {
+    "name": "Muhammad Aleem Shahzad",
+    "email": "aleemshahzad@email.com",
+    "url": "https://aleemshahzad.github.io/portfolio"
+  },
+  "license": "MIT",
+  "homepage": "https://aleemshahzad.github.io/portfolio",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aleemshahzad/portfolio.git"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.0",
+    "gh-pages": "^6.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

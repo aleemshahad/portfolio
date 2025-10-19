@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Aleem Shahzad - Digital Marketing & Python Expert</title>
+    <meta name="description" content="Professional Digital Marketer, SEO Specialist & Python Automation Expert">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-gray-900/95 backdrop-blur-sm border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="text-2xl font-bold text-blue-400">
+                    <i class="fas fa-code"></i> Aleem
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="hover:text-blue-400 transition-colors">Home</a>
+                    <a href="#about" class="hover:text-blue-400 transition-colors">About</a>
+                    <a href="#skills" class="hover:text-blue-400 transition-colors">Skills</a>
+                    <a href="#services" class="hover:text-blue-400 transition-colors">Services</a>
+                    <a href="#blog" class="hover:text-blue-400 transition-colors">Blog</a>
+                    <a href="#contact" class="hover:text-blue-400 transition-colors">Contact</a>
+                </div>
+                <button class="md:hidden text-white" id="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">
+        <div class="max-w-4xl mx-auto text-center px-4" data-aos="fade-up">
+            <div class="mb-8">
+                <img src="assets/images/profile.jpg" alt="Muhammad Aleem Shahzad" 
+                     class="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-blue-400 shadow-lg">
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold mb-6">
+                Muhammad <span class="text-blue-400">Aleem</span> Shahzad
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-300 mb-8">
+                Digital Marketing Expert | SEO Specialist | Python Automation Developer
+            </p>
+            <div class="flex justify-center space-x-4 mb-8">
+                <span class="bg-blue-600 px-4 py-2 rounded-full text-sm">Digital Marketing</span>
+                <span class="bg-green-600 px-4 py-2 rounded-full text-sm">Python Automation</span>
+                <span class="bg-purple-600 px-4 py-2 rounded-full text-sm">SEO Expert</span>
+            </div>
+            <div class="flex justify-center space-x-6">
+                <a href="#contact" class="bg-blue-600 hover:bg-blue-700 px-8 py-3 rounded-lg transition-colors">
+                    Get In Touch
+                </a>
+                <a href="#about" class="border border-blue-600 hover:bg-blue-600 px-8 py-3 rounded-lg transition-colors">
+                    Learn More
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-800">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12" data-aos="fade-up">About Me</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <h3 class="text-2xl font-semibold mb-6 text-blue-400">Professional Journey</h3>
+                    <p class="text-gray-300 mb-6 leading-relaxed">
+                        I'm Muhammad Aleem Shahzad, a passionate digital marketing professional and Python automation expert 
+                        with over 5 years of experience in creating innovative solutions for businesses and traders.
+                    </p>
+                    <p class="text-gray-300 mb-6 leading-relaxed">
+                        My expertise spans across SEO optimization, automated trading systems, data scraping, and 
+                        comprehensive digital marketing strategies that drive real results.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 mb-6">
+                        <div class="text-center p-4 bg-gray-700 rounded-lg">
+                            <h4 class="text-2xl font-bold text-blue-400">5+</h4>
+                            <p class="text-sm text-gray-300">Years Experience</p>
+                        </div>
+                        <div class="text-center p-4 bg-gray-700 rounded-lg">
+                            <h4 class="text-2xl font-bold text-green-400">100+</h4>
+                            <p class="text-sm text-gray-300">Projects Completed</p>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-left">
+                    <h3 class="text-2xl font-semibold mb-6 text-blue-400">Core Expertise</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-search text-blue-400"></i>
+                            <span>SEO Optimization — Complete on-page & off-page strategies</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-robot text-green-400"></i>
+                            <span>Python Automation — Custom bots and data workflows</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-chart-line text-purple-400"></i>
+                            <span>Digital Marketing — Growth campaigns for brands</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-laptop-code text-yellow-400"></i>
+                            <span>Website Design — WordPress, landing pages, and web tools</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-chart-area text-red-400"></i>
+                            <span>Trading Systems — Forex automation and strategy development</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-900">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12" data-aos="fade-up">Technical Skills</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Programming Skills -->
+                <div class="bg-gray-800 p-6 rounded-lg" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-xl font-semibold mb-4 text-blue-400">
+                        <i class="fas fa-code"></i> Programming
+                    </h3>
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span>Python</span>
+                            <span class="text-blue-400">95%</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2">
+                            <div class="bg-blue-400 h-2 rounded-full" style="width: 95%"></div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span>JavaScript</span>
+                            <span class="text-green-400">85%</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2">
+                            <div class="bg-green-400 h-2 rounded-full" style="width: 85%"></div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span>HTML/CSS</span>
+                            <span class="text-purple-400">90%</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2">
+                            <div class="bg-purple-400 h-2 rounded-full" style="width: 90%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Marketing Skills -->
+                <div class="bg-gray-800 p-6 rounded-lg" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-xl font-semibold mb-4 text-green-400">
+                        <i class="fas fa-bullhorn"></i> Marketing
+                    </h3>
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span>SEO</span>
+                            <span class="text-blue-400">98%</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2">
+                            <div class="bg-blue-400 h-2 rounded-full" style="width: 98%"></div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span>Google Ads</span>
+                            <span class="text-green-400">88%</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2">
+                            <div class="bg-green-400 h-2 rounded-full" style="width: 88%"></div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span>Analytics</span>
+                            <span class="text-purple-400">92%</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2">
+                            <div class="bg-purple-400 h-2 rounded-full" style="width: 92%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trading Skills -->
+                <div class="bg-gray-800 p-6 rounded-lg" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="text-xl font-semibold mb-4 text-yellow-400">
+                        <i class="fas fa-chart-line"></i> Trading
+                    </h3>
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span>Forex</span>
+                            <span class="text-blue-400">90%</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2">
+                            <div class="bg-blue-400 h-2 rounded-full" style="width: 90%"></div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span>Gold (XAU/USD)</span>
+                            <span class="text-green-400">85%</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2">
+                            <div class="bg-green-400 h-2 rounded-full" style="width: 85%"></div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span>ICT Strategy</span>
+                            <span class="text-purple-400">88%</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2">
+                            <div class="bg-purple-400 h-2 rounded-full" style="width: 88%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-800">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12" data-aos="fade-up">Services</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-900 p-6 rounded-lg hover:transform hover:scale-105 transition-all duration-300" data-aos="fade-up">
+                    <div class="text-4xl text-blue-400 mb-4">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">SEO Optimization</h3>
+                    <p class="text-gray-300 mb-4">Complete on-page and off-page SEO strategies to boost your website rankings and organic traffic.</p>
+                    <ul class="text-sm text-gray-400 space-y-1">
+                        <li>• Keyword Research & Analysis</li>
+                        <li>• Technical SEO Audits</li>
+                        <li>• Content Optimization</li>
+                        <li>• Link Building Strategies</li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-900 p-6 rounded-lg hover:transform hover:scale-105 transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-4xl text-green-400 mb-4">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Python Automation</h3>
+                    <p class="text-gray-300 mb-4">Custom automation solutions, trading bots, and data scraping systems to streamline your workflows.</p>
+                    <ul class="text-sm text-gray-400 space-y-1">
+                        <li>• Trading Bot Development</li>
+                        <li>• Data Scraping & Mining</li>
+                        <li>• Process Automation</li>
+                        <li>• API Integration</li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-900 p-6 rounded-lg hover:transform hover:scale-105 transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-4xl text-purple-400 mb-4">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Digital Marketing</h3>
+                    <p class="text-gray-300 mb-4">Comprehensive digital marketing campaigns to grow your brand and increase conversions.</p>
+                    <ul class="text-sm text-gray-400 space-y-1">
+                        <li>• Google Ads Management</li>
+                        <li>• Social Media Marketing</li>
+                        <li>• Content Strategy</li>
+                        <li>• Analytics & Reporting</li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-900 p-6 rounded-lg hover:transform hover:scale-105 transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-4xl text-yellow-400 mb-4">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Web Development</h3>
+                    <p class="text-gray-300 mb-4">Modern, responsive websites and web applications built with latest technologies.</p>
+                    <ul class="text-sm text-gray-400 space-y-1">
+                        <li>• WordPress Development</li>
+                        <li>• Landing Page Design</li>
+                        <li>• E-commerce Solutions</li>
+                        <li>• Custom Web Tools</li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-900 p-6 rounded-lg hover:transform hover:scale-105 transition-all duration-300" data-aos="fade-up" data-aos-delay="400">
+                    <div class="text-4xl text-red-400 mb-4">
+                        <i class="fas fa-chart-area"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Trading Systems</h3>
+                    <p class="text-gray-300 mb-4">Advanced trading strategies and automated systems for Forex and commodity markets.</p>
+                    <ul class="text-sm text-gray-400 space-y-1">
+                        <li>• Forex Strategy Development</li>
+                        <li>• Gold Trading Systems</li>
+                        <li>• Risk Management</li>
+                        <li>• Performance Analytics</li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-900 p-6 rounded-lg hover:transform hover:scale-105 transition-all duration-300" data-aos="fade-up" data-aos-delay="500">
+                    <div class="text-4xl text-indigo-400 mb-4">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Consultation & Training</h3>
+                    <p class="text-gray-300 mb-4">One-on-one consultation and training sessions to help you master digital marketing and automation.</p>
+                    <ul class="text-sm text-gray-400 space-y-1">
+                        <li>• SEO Training</li>
+                        <li>• Python Programming</li>
+                        <li>• Trading Education</li>
+                        <li>• Business Strategy</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="py-20 bg-gray-900">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12" data-aos="fade-up">Latest Articles</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <article class="bg-gray-800 rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300" data-aos="fade-up">
+                    <div class="h-48 bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center">
+                        <i class="fas fa-robot text-6xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3">How AI Automation is Changing Digital Marketing</h3>
+                        <p class="text-gray-300 mb-4">Discover how artificial intelligence and automation are revolutionizing the digital marketing landscape...</p>
+                        <div class="flex justify-between items-center text-sm text-gray-400">
+                            <span>Oct 15, 2024</span>
+                            <span>5 min read</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="bg-gray-800 rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-48 bg-gradient-to-r from-green-500 to-blue-600 flex items-center justify-center">
+                        <i class="fas fa-chart-line text-6xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3">Turning $10 into $100 — My Trading Journey</h3>
+                        <p class="text-gray-300 mb-4">Learn about my personal journey in forex trading and the strategies that helped me achieve consistent profits...</p>
+                        <div class="flex justify-between items-center text-sm text-gray-400">
+                            <span>Oct 12, 2024</span>
+                            <span>8 min read</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="bg-gray-800 rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-48 bg-gradient-to-r from-purple-500 to-pink-600 flex items-center justify-center">
+                        <i class="fas fa-cogs text-6xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3">Building Smart Python Bots for Forex Trading</h3>
+                        <p class="text-gray-300 mb-4">A comprehensive guide to creating automated trading systems using Python and machine learning...</p>
+                        <div class="flex justify-between items-center text-sm text-gray-400">
+                            <span>Oct 8, 2024</span>
+                            <span>12 min read</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="text-center mt-12">
+                <a href="blog.html" class="bg-blue-600 hover:bg-blue-700 px-8 py-3 rounded-lg transition-colors">
+                    View All Articles
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-800">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12" data-aos="fade-up">Get In Touch</h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div data-aos="fade-right">
+                    <h3 class="text-2xl font-semibold mb-6 text-blue-400">Let's Work Together</h3>
+                    <p class="text-gray-300 mb-6">
+                        Ready to take your business to the next level? I'm here to help you with digital marketing, 
+                        automation solutions, and trading strategies.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-envelope text-blue-400"></i>
+                            <span>aleemshahzad@email.com</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-phone text-green-400"></i>
+                            <span>+92 XXX XXXXXXX</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-map-marker-alt text-red-400"></i>
+                            <span>Pakistan</span>
+                        </div>
+                    </div>
+                    <div class="flex space-x-4 mt-6">
+                        <a href="#" class="text-blue-400 hover:text-blue-300 text-2xl">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-gray-300 text-2xl">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="text-blue-400 hover:text-blue-300 text-2xl">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                <div data-aos="fade-left">
+                    <form class="space-y-6" id="contact-form">
+                        <div>
+                            <input type="text" placeholder="Your Name" required
+                                   class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:border-blue-400 focus:outline-none">
+                        </div>
+                        <div>
+                            <input type="email" placeholder="Your Email" required
+                                   class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:border-blue-400 focus:outline-none">
+                        </div>
+                        <div>
+                            <input type="text" placeholder="Subject"
+                                   class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:border-blue-400 focus:outline-none">
+                        </div>
+                        <div>
+                            <textarea placeholder="Your Message" rows="5" required
+                                      class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:border-blue-400 focus:outline-none resize-none"></textarea>
+                        </div>
+                        <button type="submit" 
+                                class="w-full bg-blue-600 hover:bg-blue-700 py-3 rounded-lg transition-colors">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-8 border-t border-gray-800">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <p class="text-gray-400">
+                © 2024 Muhammad Aleem Shahzad. All rights reserved.
+            </p>
+            <p class="text-gray-500 text-sm mt-2">
+                Built with ❤️ using modern web technologies
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

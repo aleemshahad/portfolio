@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Muhammad Aleem Shahzad</title>
+    <meta name="description" content="Latest articles on digital marketing, SEO, Python automation, and trading strategies">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-gray-900/95 backdrop-blur-sm border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="text-2xl font-bold text-blue-400">
+                    <a href="index.html"><i class="fas fa-code"></i> Aleem</a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="hover:text-blue-400 transition-colors">Home</a>
+                    <a href="index.html#about" class="hover:text-blue-400 transition-colors">About</a>
+                    <a href="index.html#skills" class="hover:text-blue-400 transition-colors">Skills</a>
+                    <a href="index.html#services" class="hover:text-blue-400 transition-colors">Services</a>
+                    <a href="blog.html" class="text-blue-400">Blog</a>
+                    <a href="index.html#contact" class="hover:text-blue-400 transition-colors">Contact</a>
+                </div>
+                <button class="md:hidden text-white" id="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-12 bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">
+        <div class="max-w-6xl mx-auto px-4 text-center" data-aos="fade-up">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6">
+                My <span class="text-blue-400">Blog</span>
+            </h1>
+            <p class="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Insights on digital marketing, SEO strategies, Python automation, trading systems, and the latest trends in technology.
+            </p>
+            <div class="flex justify-center space-x-4">
+                <span class="bg-blue-600 px-4 py-2 rounded-full text-sm">Digital Marketing</span>
+                <span class="bg-green-600 px-4 py-2 rounded-full text-sm">Python Automation</span>
+                <span class="bg-purple-600 px-4 py-2 rounded-full text-sm">Trading Strategies</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Article -->
+    <section class="py-12 bg-gray-800">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8" data-aos="fade-up">Featured Article</h2>
+            <div class="bg-gray-900 rounded-lg overflow-hidden shadow-xl" data-aos="fade-up">
+                <div class="md:flex">
+                    <div class="md:w-1/2 h-64 md:h-auto bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center">
+                        <i class="fas fa-robot text-8xl text-white"></i>
+                    </div>
+                    <div class="md:w-1/2 p-8">
+                        <div class="flex items-center space-x-2 text-sm text-blue-400 mb-3">
+                            <i class="fas fa-calendar"></i>
+                            <span>October 15, 2024</span>
+                            <span>•</span>
+                            <span>12 min read</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">How AI Automation is Revolutionizing Digital Marketing</h3>
+                        <p class="text-gray-300 mb-6">
+                            Discover how artificial intelligence and automation are transforming the digital marketing landscape. 
+                            From chatbots to predictive analytics, learn how to leverage AI to boost your marketing ROI.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="bg-blue-600 px-3 py-1 rounded-full text-xs">AI</span>
+                            <span class="bg-green-600 px-3 py-1 rounded-full text-xs">Automation</span>
+                            <span class="bg-purple-600 px-3 py-1 rounded-full text-xs">Marketing</span>
+                        </div>
+                        <a href="#" class="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg transition-colors inline-block">
+                            Read Full Article
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Articles Grid -->
+    <section class="py-20 bg-gray-900">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12" data-aos="fade-up">Latest Articles</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Article 1 -->
+                <article class="bg-gray-800 rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300" data-aos="fade-up">
+                    <div class="h-48 bg-gradient-to-r from-green-500 to-blue-600 flex items-center justify-center">
+                        <i class="fas fa-chart-line text-6xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center space-x-2 text-sm text-gray-400 mb-3">
+                            <i class="fas fa-calendar"></i>
+                            <span>Oct 12, 2024</span>
+                            <span>•</span>
+                            <span>8 min read</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Turning $10 into $100 — My Trading Journey</h3>
+                        <p class="text-gray-300 mb-4">
+                            Learn about my personal journey in forex trading and the strategies that helped me achieve consistent profits...
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-yellow-600 px-2 py-1 rounded text-xs">Trading</span>
+                            <span class="bg-green-600 px-2 py-1 rounded text-xs">Forex</span>
+                            <span class="bg-blue-600 px-2 py-1 rounded text-xs">Strategy</span>
+                        </div>
+                        <a href="#" class="text-blue-400 hover:text-blue-300 font-medium">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- Article 2 -->
+                <article class="bg-gray-800 rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-48 bg-gradient-to-r from-purple-500 to-pink-600 flex items-center justify-center">
+                        <i class="fas fa-cogs text-6xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center space-x-2 text-sm text-gray-400 mb-3">
+                            <i class="fas fa-calendar"></i>
+                            <span>Oct 8, 2024</span>
+                            <span>•</span>
+                            <span>15 min read</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Building Smart Python Bots for Forex Trading</h3>
+                        <p class="text-gray-300 mb-4">
+                            A comprehensive guide to creating automated trading systems using Python and machine learning algorithms...
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-600 px-2 py-1 rounded text-xs">Python</span>
+                            <span class="bg-green-600 px-2 py-1 rounded text-xs">Automation</span>
+                            <span class="bg-purple-600 px-2 py-1 rounded text-xs">Trading Bots</span>
+                        </div>
+                        <a href="#" class="text-blue-400 hover:text-blue-300 font-medium">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- Article 3 -->
+                <article class="bg-gray-800 rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-48 bg-gradient-to-r from-red-500 to-orange-600 flex items-center justify-center">
+                        <i class="fas fa-search text-6xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center space-x-2 text-sm text-gray-400 mb-3">
+                            <i class="fas fa-calendar"></i>
+                            <span>Oct 5, 2024</span>
+                            <span>•</span>
+                            <span>10 min read</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Advanced SEO Techniques for 2024</h3>
+                        <p class="text-gray-300 mb-4">
+                            Stay ahead of the competition with these cutting-edge SEO strategies and Google algorithm updates...
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-red-600 px-2 py-1 rounded text-xs">SEO</span>
+                            <span class="bg-blue-600 px-2 py-1 rounded text-xs">Google</span>
+                            <span class="bg-green-600 px-2 py-1 rounded text-xs">Rankings</span>
+                        </div>
+                        <a href="#" class="text-blue-400 hover:text-blue-300 font-medium">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- Article 4 -->
+                <article class="bg-gray-800 rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
+                    <div class="h-48 bg-gradient-to-r from-indigo-500 to-blue-600 flex items-center justify-center">
+                        <i class="fas fa-database text-6xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center space-x-2 text-sm text-gray-400 mb-3">
+                            <i class="fas fa-calendar"></i>
+                            <span>Oct 1, 2024</span>
+                            <span>•</span>
+                            <span>12 min read</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Web Scraping with Python: Complete Guide</h3>
+                        <p class="text-gray-300 mb-4">
+                            Master the art of web scraping with Python. Learn BeautifulSoup, Scrapy, and advanced techniques...
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-600 px-2 py-1 rounded text-xs">Python</span>
+                            <span class="bg-green-600 px-2 py-1 rounded text-xs">Web Scraping</span>
+                            <span class="bg-purple-600 px-2 py-1 rounded text-xs">Data Mining</span>
+                        </div>
+                        <a href="#" class="text-blue-400 hover:text-blue-300 font-medium">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- Article 5 -->
+                <article class="bg-gray-800 rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300" data-aos="fade-up" data-aos-delay="400">
+                    <div class="h-48 bg-gradient-to-r from-teal-500 to-green-600 flex items-center justify-center">
+                        <i class="fas fa-bullhorn text-6xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center space-x-2 text-sm text-gray-400 mb-3">
+                            <i class="fas fa-calendar"></i>
+                            <span>Sep 28, 2024</span>
+                            <span>•</span>
+                            <span>7 min read</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Google Ads Optimization Strategies</h3>
+                        <p class="text-gray-300 mb-4">
+                            Maximize your Google Ads ROI with these proven optimization techniques and bidding strategies...
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-green-600 px-2 py-1 rounded text-xs">Google Ads</span>
+                            <span class="bg-blue-600 px-2 py-1 rounded text-xs">PPC</span>
+                            <span class="bg-yellow-600 px-2 py-1 rounded text-xs">ROI</span>
+                        </div>
+                        <a href="#" class="text-blue-400 hover:text-blue-300 font-medium">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- Article 6 -->
+                <article class="bg-gray-800 rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300" data-aos="fade-up" data-aos-delay="500">
+                    <div class="h-48 bg-gradient-to-r from-pink-500 to-red-600 flex items-center justify-center">
+                        <i class="fas fa-mobile-alt text-6xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center space-x-2 text-sm text-gray-400 mb-3">
+                            <i class="fas fa-calendar"></i>
+                            <span>Sep 25, 2024</span>
+                            <span>•</span>
+                            <span>9 min read</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Mobile-First SEO: The Future of Search</h3>
+                        <p class="text-gray-300 mb-4">
+                            Understand Google's mobile-first indexing and how to optimize your website for mobile users...
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-pink-600 px-2 py-1 rounded text-xs">Mobile SEO</span>
+                            <span class="bg-blue-600 px-2 py-1 rounded text-xs">UX</span>
+                            <span class="bg-green-600 px-2 py-1 rounded text-xs">Performance</span>
+                        </div>
+                        <a href="#" class="text-blue-400 hover:text-blue-300 font-medium">Read More →</a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="text-center mt-12">
+                <button class="bg-blue-600 hover:bg-blue-700 px-8 py-3 rounded-lg transition-colors">
+                    Load More Articles
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Subscription -->
+    <section class="py-20 bg-gray-800">
+        <div class="max-w-4xl mx-auto px-4 text-center" data-aos="fade-up">
+            <h2 class="text-3xl font-bold mb-6">Stay Updated</h2>
+            <p class="text-gray-300 mb-8">
+                Subscribe to my newsletter and get the latest insights on digital marketing, automation, and trading strategies.
+            </p>
+            <form class="flex flex-col md:flex-row gap-4 max-w-md mx-auto">
+                <input type="email" placeholder="Enter your email" required
+                       class="flex-1 px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:border-blue-400 focus:outline-none">
+                <button type="submit" 
+                        class="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg transition-colors whitespace-nowrap">
+                    Subscribe
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-8 border-t border-gray-800">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold text-blue-400 mb-4">Aleem Shahzad</h3>
+                    <p class="text-gray-400">
+                        Digital Marketing Expert, SEO Specialist & Python Automation Developer
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html" class="hover:text-blue-400">Home</a></li>
+                        <li><a href="index.html#about" class="hover:text-blue-400">About</a></li>
+                        <li><a href="index.html#services" class="hover:text-blue-400">Services</a></li>
+                        <li><a href="index.html#contact" class="hover:text-blue-400">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Categories</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-blue-400">Digital Marketing</a></li>
+                        <li><a href="#" class="hover:text-blue-400">SEO Tips</a></li>
+                        <li><a href="#" class="hover:text-blue-400">Python Automation</a></li>
+                        <li><a href="#" class="hover:text-blue-400">Trading Strategies</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-blue-400 hover:text-blue-300 text-xl">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-gray-300 text-xl">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="text-blue-400 hover:text-blue-300 text-xl">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>© 2024 Muhammad Aleem Shahzad. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

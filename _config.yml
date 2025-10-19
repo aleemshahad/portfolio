@@ -1,0 +1,72 @@
+# GitHub Pages Configuration
+title: Muhammad Aleem Shahzad - Portfolio
+description: Professional Digital Marketer, SEO Specialist & Python Automation Expert
+url: "https://aleemshahzad.github.io"
+baseurl: "/portfolio"
+
+# Author information
+author:
+  name: Muhammad Aleem Shahzad
+  email: aleemshahzad@email.com
+  bio: Digital Marketing Expert | SEO Specialist | Python Automation Developer
+
+# Social links
+social:
+  github: aleemshahzad
+  linkedin: aleemshahzad
+  twitter: aleemshahzad
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+theme: minima
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Exclude files
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .sass-cache
+  - .jekyll-cache
+
+# Include files
+include:
+  - _pages
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /:categories/:year/:month/:day/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Muhammad Aleem Shahzad"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+
+# SEO settings
+google_analytics: UA-XXXXXXXXX-X
+google_site_verification: "your-verification-code"
+
+# Contact form
+contact:
+  email: aleemshahzad@email.com
+  phone: "+92 XXX XXXXXXX"
+  location: "Pakistan"
