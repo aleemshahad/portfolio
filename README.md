@@ -2,7 +2,7 @@
 
 An advanced, modern, and fully responsive **personal portfolio website** built for developers, freelancers, and digital marketers who want to showcase their **skills, projects, services, and blogs** beautifully on **GitHub Pages**.
 
-🌐 **Live Demo**: [View Portfolio](https://aleemshahzad.github.io/portfolio)
+🌐 **Live Demo**: [View Portfolio](https://aleemshahad.github.io/portfolio/)
 
 ---
 
