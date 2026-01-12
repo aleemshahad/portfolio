@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muhammad Aleem Shahzad - Guest Posting & SEO Expert</title>
-    <meta name="description" content="Professional Guest Posting Specialist, SEO Expert & Python Automation Developer">
+    <title>Aleem Shahzad - SEO & Automation Expert</title>
+    <meta name="description" content="Guest Posting Specialist | SEO Expert | Python Automation Developer">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -12,440 +12,388 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- AOS Animation Library -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+    
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        .icon-link {
+            transition: transform 0.2s ease, opacity 0.2s ease;
+        }
+        .icon-link:hover {
+            transform: translateY(-2px);
+            opacity: 0.8;
+        }
+        
+        /* Snow animation background */
+        .snow-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .snowflake {
+            position: absolute;
+            top: -10px;
+            color: rgba(255, 255, 255, 0.8);
+            user-select: none;
+            cursor: default;
+            animation: snowfall linear infinite;
+            font-size: 14px;
+        }
+
+        @keyframes snowfall {
+            0% {
+                top: -10px;
+                transform: translateX(0) rotate(0deg);
+            }
+            100% {
+                top: 100vh;
+                transform: translateX(100px) rotate(360deg);
+            }
+        }
+
+        /* Typing cursor animation */
+        .typing-cursor::after {
+            content: '|';
+            animation: blink 1s infinite;
+            color: #3b82f6;
+            font-weight: bold;
+        }
+
+        @keyframes blink {
+            0%, 50% {
+                opacity: 1;
+            }
+            51%, 100% {
+                opacity: 0;
+            }
+        }
+    </style>
 </head>
-<body class="bg-gray-900 text-white">
-    <!-- Navigation -->
-    <nav class="fixed w-full z-50 bg-gray-900/95 backdrop-blur-sm border-b border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center py-4">
-                <div class="text-2xl font-bold text-blue-400">
-                    <i class="fas fa-code"></i> Aleem
+<body class="bg-gray-900 text-gray-100 min-h-screen">
+    <!-- Main Container -->
+    <div class="container mx-auto px-6 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            
+            <!-- Left Column -->
+            <div class="lg:col-span-1 space-y-6">
+                <!-- Profile Section -->
+                <div class="bg-gray-800 rounded-xl p-6 text-center">
+                    <h2 class="text-xl font-bold mb-4 text-blue-400">Profile</h2>
+                    <img src="assets/images/profile.jpg" alt="Aleem Shahzad" 
+                         class="w-24 h-24 rounded-full mx-auto mb-3 border-2 border-gray-600">
+                    <h3 class="text-2xl font-bold mb-2">Aleem Shahzad</h3>
+                    <p class="text-gray-400 text-base mb-4">@aleemshahzad</p>
                 </div>
-                <div class="hidden md:flex space-x-8">
-                    <a href="#home" class="hover:text-blue-400 transition-colors">Home</a>
-                    <a href="#about" class="hover:text-blue-400 transition-colors">About</a>
-                    <a href="#skills" class="hover:text-blue-400 transition-colors">Skills</a>
-                    <a href="#services" class="hover:text-blue-400 transition-colors">Services</a>
-                    <a href="#blog" class="hover:text-blue-400 transition-colors">Blog</a>
-                    <a href="#contact" class="hover:text-blue-400 transition-colors">Contact</a>
-                </div>
-                <button class="md:hidden text-white" id="mobile-menu-btn">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </div>
-        </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">
-        <div class="max-w-4xl mx-auto text-center px-4" data-aos="fade-up">
-            <div class="mb-8">
-                <img src="assets/images/profile.jpg" alt="Muhammad Aleem Shahzad" 
-                     class="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-blue-400 shadow-lg">
-            </div>
-            <h1 class="text-5xl md:text-7xl font-bold mb-6">
-                Muhammad <span class="text-blue-400">Aleem</span> Shahzad
-            </h1>
-            <p class="text-xl md:text-2xl text-gray-300 mb-8">
-                Guest Posting Expert | SEO Specialist | Python Automation Developer
-            </p>
-            <div class="flex justify-center space-x-4 mb-8">
-                <span class="bg-blue-600 px-4 py-2 rounded-full text-sm">Guest Posting</span>
-                <span class="bg-green-600 px-4 py-2 rounded-full text-sm">Python Automation</span>
-                <span class="bg-purple-600 px-4 py-2 rounded-full text-sm">SEO Expert</span>
-            </div>
-            <div class="flex justify-center space-x-6">
-                <a href="#contact" class="bg-blue-600 hover:bg-blue-700 px-8 py-3 rounded-lg transition-colors">
-                    Get In Touch
-                </a>
-                <a href="#about" class="border border-blue-600 hover:bg-blue-600 px-8 py-3 rounded-lg transition-colors">
-                    Learn More
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="py-20 bg-gray-800">
-        <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center mb-12" data-aos="fade-up">About Me</h2>
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div data-aos="fade-right">
-                    <h3 class="text-2xl font-semibold mb-6 text-blue-400">Professional Journey</h3>
-                    <p class="text-gray-300 mb-6 leading-relaxed">
-                        I'm Muhammad Aleem Shahzad, a passionate guest posting specialist and Python automation expert 
-                        with over 5 years of experience in creating innovative SEO solutions for businesses and traders.
-                    </p>
-                    <p class="text-gray-300 mb-6 leading-relaxed">
-                        My expertise spans across guest posting strategies, SEO optimization, automated trading systems, data scraping, and 
-                        comprehensive link building campaigns that drive real results.
-                    </p>
-                    <div class="grid grid-cols-2 gap-4 mb-6">
-                        <div class="text-center p-4 bg-gray-700 rounded-lg">
-                            <h4 class="text-2xl font-bold text-blue-400">5+</h4>
-                            <p class="text-sm text-gray-300">Years Experience</p>
-                        </div>
-                        <div class="text-center p-4 bg-gray-700 rounded-lg">
-                            <h4 class="text-2xl font-bold text-green-400">100+</h4>
-                            <p class="text-sm text-gray-300">Projects Completed</p>
-                        </div>
+                <!-- Currently, I am... Section -->
+                <div class="bg-gray-800 rounded-xl p-6">
+                    <h2 class="text-xl font-bold mb-4 text-blue-400">Currently, I am...</h2>
+                    <p class="text-gray-400 text-base font-semibold">SEO & Automation Expert</p>
+                    <div class="min-h-[60px] flex items-center">
+                        <p class="text-gray-500 text-base typing-cursor" id="typing-text"></p>
                     </div>
                 </div>
-                <div data-aos="fade-left">
-                    <h3 class="text-2xl font-semibold mb-6 text-blue-400">Core Expertise</h3>
-                    <div class="space-y-4">
-                        <div class="flex items-center space-x-3">
-                            <i class="fas fa-pen text-blue-400"></i>
-                            <span>Guest Posting — High-authority placements and link building</span>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <i class="fas fa-search text-green-400"></i>
-                            <span>SEO Optimization — Complete on-page & off-page strategies</span>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <i class="fas fa-robot text-purple-400"></i>
-                            <span>Python Automation — Custom bots and data workflows</span>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <i class="fas fa-laptop-code text-yellow-400"></i>
-                            <span>Website Design — WordPress, landing pages, and web tools</span>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <i class="fas fa-chart-area text-red-400"></i>
-                            <span>Trading Systems — Forex automation and strategy development</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="py-20 bg-gray-900">
-        <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center mb-12" data-aos="fade-up">Technical Skills</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Programming Skills -->
-                <div class="bg-gray-800 p-6 rounded-lg" data-aos="fade-up" data-aos-delay="100">
-                    <h3 class="text-xl font-semibold mb-4 text-blue-400">
-                        <i class="fas fa-code"></i> Programming
-                    </h3>
+                <!-- Journey Section -->
+                <div class="bg-gray-800 rounded-xl p-6">
+                    <h2 class="text-xl font-bold mb-4 text-blue-400">Journey</h2>
                     <div class="space-y-3">
-                        <div class="flex justify-between items-center">
-                            <span>Python</span>
-                            <span class="text-blue-400">95%</span>
+                        <div class="bg-gray-700 rounded-lg p-3">
+                            <p class="font-semibold text-base">2025 - Present: SEO Expert</p>
+                            <p class="text-gray-400 text-sm">Advanced SEO optimization and automation</p>
                         </div>
-                        <div class="w-full bg-gray-700 rounded-full h-2">
-                            <div class="bg-blue-400 h-2 rounded-full" style="width: 95%"></div>
+                        <div class="bg-gray-700 rounded-lg p-3">
+                            <p class="font-semibold text-base">2023 - 2024: Python Developer</p>
+                            <p class="text-gray-400 text-sm">Automation scripts and web scraping</p>
                         </div>
-                        <div class="flex justify-between items-center">
-                            <span>JavaScript</span>
-                            <span class="text-green-400">85%</span>
-                        </div>
-                        <div class="w-full bg-gray-700 rounded-full h-2">
-                            <div class="bg-green-400 h-2 rounded-full" style="width: 85%"></div>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <span>HTML/CSS</span>
-                            <span class="text-purple-400">90%</span>
-                        </div>
-                        <div class="w-full bg-gray-700 rounded-full h-2">
-                            <div class="bg-purple-400 h-2 rounded-full" style="width: 90%"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- SEO & Guest Posting Skills -->
-                <div class="bg-gray-800 p-6 rounded-lg" data-aos="fade-up" data-aos-delay="200">
-                    <h3 class="text-xl font-semibold mb-4 text-green-400">
-                        <i class="fas fa-pen"></i> SEO & Guest Posting
-                    </h3>
-                    <div class="space-y-3">
-                        <div class="flex justify-between items-center">
-                            <span>Guest Posting</span>
-                            <span class="text-blue-400">98%</span>
-                        </div>
-                        <div class="w-full bg-gray-700 rounded-full h-2">
-                            <div class="bg-blue-400 h-2 rounded-full" style="width: 98%"></div>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <span>SEO Optimization</span>
-                            <span class="text-green-400">95%</span>
-                        </div>
-                        <div class="w-full bg-gray-700 rounded-full h-2">
-                            <div class="bg-green-400 h-2 rounded-full" style="width: 95%"></div>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <span>Link Building</span>
-                            <span class="text-purple-400">92%</span>
-                        </div>
-                        <div class="w-full bg-gray-700 rounded-full h-2">
-                            <div class="bg-purple-400 h-2 rounded-full" style="width: 92%"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Trading Skills -->
-                <div class="bg-gray-800 p-6 rounded-lg" data-aos="fade-up" data-aos-delay="300">
-                    <h3 class="text-xl font-semibold mb-4 text-yellow-400">
-                        <i class="fas fa-chart-line"></i> Trading
-                    </h3>
-                    <div class="space-y-3">
-                        <div class="flex justify-between items-center">
-                            <span>Forex</span>
-                            <span class="text-blue-400">90%</span>
-                        </div>
-                        <div class="w-full bg-gray-700 rounded-full h-2">
-                            <div class="bg-blue-400 h-2 rounded-full" style="width: 90%"></div>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <span>Gold (XAU/USD)</span>
-                            <span class="text-green-400">85%</span>
-                        </div>
-                        <div class="w-full bg-gray-700 rounded-full h-2">
-                            <div class="bg-green-400 h-2 rounded-full" style="width: 85%"></div>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <span>ICT Strategy</span>
-                            <span class="text-purple-400">88%</span>
-                        </div>
-                        <div class="w-full bg-gray-700 rounded-full h-2">
-                            <div class="bg-purple-400 h-2 rounded-full" style="width: 88%"></div>
+                        <div class="bg-gray-700 rounded-lg p-3">
+                            <p class="font-semibold text-base">2020 - 2022: Content Manager</p>
+                            <p class="text-gray-400 text-sm">Guest posting and content strategy</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="py-20 bg-gray-800">
-        <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center mb-12" data-aos="fade-up">Services</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-gray-900 p-6 rounded-lg hover:transform hover:scale-105 transition-all duration-300" data-aos="fade-up">
-                    <div class="text-4xl text-blue-400 mb-4">
-                        <i class="fas fa-pen"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Guest Posting Services</h3>
-                    <p class="text-gray-300 mb-4">High-authority guest posting placements to boost your SEO and domain authority.</p>
-                    <ul class="text-sm text-gray-400 space-y-1 mb-6">
-                        <li>• Premium Blog Placements</li>
-                        <li>• High-DA Link Building</li>
-                        <li>• Content Creation & Outreach</li>
-                        <li>• Niche-Relevant Sites</li>
-                    </ul>
-                    <button class="w-full bg-green-600 hover:bg-green-700 py-3 rounded-lg transition-colors font-semibold">
-                        Buy Now
-                    </button>
-                </div>
-
-                <div class="bg-gray-900 p-6 rounded-lg hover:transform hover:scale-105 transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
-                    <div class="text-4xl text-green-400 mb-4">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Python Automation</h3>
-                    <p class="text-gray-300 mb-4">Custom automation solutions, trading bots, and data scraping systems to streamline your workflows.</p>
-                    <ul class="text-sm text-gray-400 space-y-1 mb-6">
-                        <li>• Trading Bot Development</li>
-                        <li>• Data Scraping & Mining</li>
-                        <li>• Process Automation</li>
-                        <li>• API Integration</li>
-                    </ul>
-                    <button class="w-full bg-green-600 hover:bg-green-700 py-3 rounded-lg transition-colors font-semibold">
-                        Buy Now
-                    </button>
-                </div>
-
-                <div class="bg-gray-900 p-6 rounded-lg hover:transform hover:scale-105 transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
-                    <div class="text-4xl text-yellow-400 mb-4">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Web Development</h3>
-                    <p class="text-gray-300 mb-4">Modern, responsive websites and web applications built with latest technologies.</p>
-                    <ul class="text-sm text-gray-400 space-y-1 mb-6">
-                        <li>• WordPress Development</li>
-                        <li>• Landing Page Design</li>
-                        <li>• E-commerce Solutions</li>
-                        <li>• Custom Web Tools</li>
-                    </ul>
-                    <button class="w-full bg-green-600 hover:bg-green-700 py-3 rounded-lg transition-colors font-semibold">
-                        Buy Now
-                    </button>
-                </div>
-
-                <div class="bg-gray-900 p-6 rounded-lg hover:transform hover:scale-105 transition-all duration-300" data-aos="fade-up" data-aos-delay="400">
-                    <div class="text-4xl text-red-400 mb-4">
-                        <i class="fas fa-chart-area"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Trading Systems</h3>
-                    <p class="text-gray-300 mb-4">Advanced trading strategies and automated systems for Forex and commodity markets.</p>
-                    <ul class="text-sm text-gray-400 space-y-1 mb-6">
-                        <li>• Forex Strategy Development</li>
-                        <li>• Gold Trading Systems</li>
-                        <li>• Risk Management</li>
-                        <li>• Performance Analytics</li>
-                    </ul>
-                    <button class="w-full bg-green-600 hover:bg-green-700 py-3 rounded-lg transition-colors font-semibold">
-                        Buy Now
-                    </button>
-                </div>
-
-                <div class="bg-gray-900 p-6 rounded-lg hover:transform hover:scale-105 transition-all duration-300" data-aos="fade-up" data-aos-delay="500">
-                    <div class="text-4xl text-indigo-400 mb-4">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Consultation & Training</h3>
-                    <p class="text-gray-300 mb-4">One-on-one consultation and training sessions to help you master digital marketing and automation.</p>
-                    <ul class="text-sm text-gray-400 space-y-1 mb-6">
-                        <li>• SEO Training</li>
-                        <li>• Python Programming</li>
-                        <li>• Trading Education</li>
-                        <li>• Business Strategy</li>
-                    </ul>
-                    <button class="w-full bg-green-600 hover:bg-green-700 py-3 rounded-lg transition-colors font-semibold">
-                        Buy Now
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Guest Posting Websites Section -->
-    <section id="guest-posting-sites" class="py-20 bg-gray-900">
-        <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center mb-12" data-aos="fade-up">Guest Posting Websites</h2>
-            <div class="overflow-x-auto" data-aos="fade-up">
-                <table class="w-full bg-gray-800 rounded-lg overflow-hidden">
-                    <thead class="bg-gray-700">
-                        <tr>
-                            <th class="px-6 py-4 text-left text-blue-400">Website</th>
-                            <th class="px-6 py-4 text-left text-green-400">Domain Authority</th>
-                            <th class="px-6 py-4 text-left text-purple-400">Niche</th>
-                            <th class="px-6 py-4 text-left text-yellow-400">Price Range</th>
-                        </tr>
-                    </thead>
-                    <tbody class="divide-y divide-gray-700">
-                        <tr class="hover:bg-gray-700 transition-colors">
-                            <td class="px-6 py-4">techblog.com</td>
-                            <td class="px-6 py-4">85</td>
-                            <td class="px-6 py-4">Technology</td>
-                            <td class="px-6 py-4">$200-500</td>
-                        </tr>
-                        <tr class="hover:bg-gray-700 transition-colors">
-                            <td class="px-6 py-4">businessdaily.com</td>
-                            <td class="px-6 py-4">78</td>
-                            <td class="px-6 py-4">Business</td>
-                            <td class="px-6 py-4">$150-400</td>
-                        </tr>
-                        <tr class="hover:bg-gray-700 transition-colors">
-                            <td class="px-6 py-4">healthwellness.com</td>
-                            <td class="px-6 py-4">72</td>
-                            <td class="px-6 py-4">Health</td>
-                            <td class="px-6 py-4">$100-300</td>
-                        </tr>
-                        <tr class="hover:bg-gray-700 transition-colors">
-                            <td class="px-6 py-4">marketingpro.com</td>
-                            <td class="px-6 py-4">80</td>
-                            <td class="px-6 py-4">Marketing</td>
-                            <td class="px-6 py-4">$180-450</td>
-                        </tr>
-                        <tr class="hover:bg-gray-700 transition-colors">
-                            <td class="px-6 py-4">financetoday.com</td>
-                            <td class="px-6 py-4">75</td>
-                            <td class="px-6 py-4">Finance</td>
-                            <td class="px-6 py-4">$250-600</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-gray-800">
-        <div class="max-w-4xl mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center mb-12" data-aos="fade-up">Get In Touch</h2>
-            <div class="grid md:grid-cols-2 gap-12">
-                <div data-aos="fade-right">
-                    <h3 class="text-2xl font-semibold mb-6 text-blue-400">Let's Work Together</h3>
-                    <p class="text-gray-300 mb-6">
-                        Ready to take your business to the next level? I'm here to help you with guest posting services, 
-                        SEO solutions, automation, and trading strategies.
-                    </p>
-                    <div class="space-y-4">
-                        <div class="flex items-center space-x-3">
-                            <i class="fas fa-envelope text-blue-400"></i>
-                            <span>aleemssg@gmail.com</span>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <i class="fas fa-phone text-green-400"></i>
-                            <span>+92 300 0810352</span>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <i class="fas fa-map-marker-alt text-red-400"></i>
-                            <span>Pakistan</span>
-                        </div>
-                    </div>
-                    <div class="flex space-x-4 mt-6">
-                        <a href="#" class="text-blue-400 hover:text-blue-300 text-2xl">
-                            <i class="fab fa-linkedin"></i>
+            
+            <!-- Middle Column -->
+            <div class="lg:col-span-1 space-y-6">
+                <!-- Social Links Section -->
+                <div class="bg-gray-800 rounded-xl p-6">
+                    <h2 class="text-xl font-bold mb-4 text-blue-400">Social Links</h2>
+                    <div class="grid grid-cols-3 gap-3">
+                        <a href="https://t.me/aleemshahzad" target="_blank" class="bg-gray-700 rounded-lg p-3 text-center icon-link hover:bg-gray-600">
+                            <i class="fab fa-telegram text-blue-500 text-xl"></i>
+                            <p class="text-xs mt-1">Telegram</p>
                         </a>
-                        <a href="#" class="text-gray-400 hover:text-gray-300 text-2xl">
-                            <i class="fab fa-github"></i>
+                        <a href="tel:+923000810352" class="bg-gray-700 rounded-lg p-3 text-center icon-link hover:bg-gray-600">
+                            <i class="fas fa-phone text-green-500 text-xl"></i>
+                            <p class="text-xs mt-1">Phone</p>
                         </a>
-                        <a href="#" class="text-blue-400 hover:text-blue-300 text-2xl">
-                            <i class="fab fa-twitter"></i>
+                        <a href="mailto:aleemssg@gmail.com" class="bg-gray-700 rounded-lg p-3 text-center icon-link hover:bg-gray-600">
+                            <i class="fas fa-envelope text-red-500 text-xl"></i>
+                            <p class="text-xs mt-1">Email</p>
                         </a>
+                        <a href="https://github.com/aleemshahzad" target="_blank" class="bg-gray-700 rounded-lg p-3 text-center icon-link hover:bg-gray-600">
+                            <i class="fab fa-github text-gray-300 text-xl"></i>
+                            <p class="text-xs mt-1">GitHub</p>
+                        </a>
+                        <a href="https://facebook.com/aleemshahzad" target="_blank" class="bg-gray-700 rounded-lg p-3 text-center icon-link hover:bg-gray-600">
+                            <i class="fab fa-facebook text-blue-600 text-xl"></i>
+                            <p class="text-xs mt-1">Facebook</p>
+                        </a>
+                        <a href="https://youtube.com/@aleemshahzad" target="_blank" class="bg-gray-700 rounded-lg p-3 text-center icon-link hover:bg-gray-600">
+                            <i class="fab fa-youtube text-red-500 text-xl"></i>
+                            <p class="text-xs mt-1">YouTube</p>
+                        </a>
+                        <a href="https://discord.com/users/aleemshahzad" target="_blank" class="bg-gray-700 rounded-lg p-3 text-center icon-link hover:bg-gray-600">
+                            <i class="fab fa-discord text-indigo-500 text-xl"></i>
+                            <p class="text-xs mt-1">Discord</p>
+                        </a>
+                        <a href="https://aleemshahzad.com" target="_blank" class="bg-gray-700 rounded-lg p-3 text-center icon-link hover:bg-gray-600">
+                            <i class="fas fa-globe text-green-600 text-xl"></i>
+                            <p class="text-xs mt-1">Website</p>
+                        </a>
+                        <div class="bg-gray-700 rounded-lg p-3 text-center">
+                            <i class="fab fa-linkedin text-blue-400 text-xl"></i>
+                            <p class="text-xs mt-1">LinkedIn</p>
+                        </div>
                     </div>
                 </div>
-                <div data-aos="fade-left">
-                    <form class="space-y-6" id="contact-form">
-                        <div>
-                            <input type="text" placeholder="Your Name" required
-                                   class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:border-blue-400 focus:outline-none">
+
+                <!-- Buy me a coffee Section -->
+                <div class="bg-gray-800 rounded-xl p-6">
+                    <h2 class="text-xl font-bold mb-4 text-blue-400">Buy me a coffee</h2>
+                    <div class="grid grid-cols-2 gap-4 mb-4">
+                        <div class="text-center">
+                            <div class="w-20 h-20 bg-gray-700 rounded-lg flex items-center justify-center mb-2 mx-auto">
+                                <i class="fas fa-university text-gray-400 text-2xl"></i>
+                            </div>
+                            <p class="text-sm text-gray-400">Bank Transfer</p>
                         </div>
-                        <div>
-                            <input type="email" placeholder="Your Email" required
-                                   class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:border-blue-400 focus:outline-none">
+                        <div class="text-center">
+                            <div class="w-20 h-20 bg-gray-700 rounded-lg flex items-center justify-center mb-2 mx-auto">
+                                <i class="fab fa-bitcoin text-gray-400 text-2xl"></i>
+                            </div>
+                            <p class="text-sm text-gray-400">USDT</p>
                         </div>
-                        <div>
-                            <input type="text" placeholder="Subject"
-                                   class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:border-blue-400 focus:outline-none">
-                        </div>
-                        <div>
-                            <textarea placeholder="Your Message" rows="5" required
-                                      class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:border-blue-400 focus:outline-none resize-none"></textarea>
-                        </div>
-                        <button type="submit" 
-                                class="w-full bg-blue-600 hover:bg-blue-700 py-3 rounded-lg transition-colors">
-                            Send Message
+                    </div>
+                    <div class="space-y-2">
+                        <button class="w-full bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-lg text-sm font-semibold transition">
+                            PayPal Wallet
                         </button>
-                    </form>
+                        <button class="w-full bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg text-sm font-semibold transition">
+                            USDT Wallet
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Skills Section -->
+                <div class="bg-gray-800 rounded-xl p-6">
+                    <h2 class="text-xl font-bold mb-4 text-blue-400">Skills</h2>
+                    <div class="space-y-2">
+                        <div class="bg-gray-700 rounded-lg p-3">
+                            <p class="font-semibold text-base">Project Manager</p>
+                        </div>
+                        <div class="bg-gray-700 rounded-lg p-3">
+                            <p class="font-semibold text-base">Generative AI</p>
+                        </div>
+                        <div class="bg-gray-700 rounded-lg p-3">
+                            <p class="font-semibold text-base">Automation</p>
+                        </div>
+                        <div class="bg-gray-700 rounded-lg p-3">
+                            <p class="font-semibold text-base">SEO Optimization</p>
+                        </div>
+                        <div class="bg-gray-700 rounded-lg p-3">
+                            <p class="font-semibold text-base">Python Development</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Column -->
+            <div class="lg:col-span-1 space-y-6">
+                <!-- Applications/Extensions Section -->
+                <div class="bg-gray-800 rounded-xl p-6">
+                    <h2 class="text-xl font-bold mb-4 text-blue-400">Applications/Extensions</h2>
+                    <div class="space-y-3">
+                        <div class="bg-gray-700 rounded-lg p-3 flex justify-between items-center">
+                            <div>
+                                <p class="font-semibold text-base">G-labs Automation</p>
+                                <p class="text-gray-400 text-xs">Automation toolkit</p>
+                            </div>
+                            <button class="bg-blue-500 hover:bg-blue-600 text-white py-1 px-3 rounded text-xs font-semibold transition">
+                                Try Now
+                            </button>
+                        </div>
+                        <div class="bg-gray-700 rounded-lg p-3 flex justify-between items-center">
+                            <div>
+                                <p class="font-semibold text-base">Auto Whisk</p>
+                                <p class="text-gray-400 text-xs">Browser Extension</p>
+                            </div>
+                            <button class="bg-blue-500 hover:bg-blue-600 text-white py-1 px-3 rounded text-xs font-semibold transition">
+                                Try Now
+                            </button>
+                        </div>
+                        <div class="bg-gray-700 rounded-lg p-3 flex justify-between items-center">
+                            <div>
+                                <p class="font-semibold text-base">Auto Flow</p>
+                                <p class="text-gray-400 text-xs">Browser Extension</p>
+                            </div>
+                            <button class="bg-blue-500 hover:bg-blue-600 text-white py-1 px-3 rounded text-xs font-semibold transition">
+                                Try Now
+                            </button>
+                        </div>
+                        <div class="bg-gray-700 rounded-lg p-3 flex justify-between items-center">
+                            <div>
+                                <p class="font-semibold text-base">Auto Meta</p>
+                                <p class="text-gray-400 text-xs">Browser Extension</p>
+                            </div>
+                            <button class="bg-blue-500 hover:bg-blue-600 text-white py-1 px-3 rounded text-xs font-semibold transition">
+                                Try Now
+                            </button>
+                        </div>
+                        <div class="bg-gray-700 rounded-lg p-3 flex justify-between items-center">
+                            <div>
+                                <p class="font-semibold text-base">YouTube Downloader</p>
+                                <p class="text-gray-400 text-xs">Media tool</p>
+                            </div>
+                            <button class="bg-blue-500 hover:bg-blue-600 text-white py-1 px-3 rounded text-xs font-semibold transition">
+                                Try Now
+                            </button>
+                        </div>
+                        <div class="bg-gray-700 rounded-lg p-3 flex justify-between items-center">
+                            <div>
+                                <p class="font-semibold text-base">Word & Character Counter</p>
+                                <p class="text-gray-400 text-xs">Text utility</p>
+                            </div>
+                            <button class="bg-blue-500 hover:bg-blue-600 text-white py-1 px-3 rounded text-xs font-semibold transition">
+                                Try Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Services Section -->
+                <div class="bg-gray-800 rounded-xl p-6">
+                    <h2 class="text-xl font-bold mb-4 text-blue-400">Services</h2>
+                    <div class="space-y-3">
+                        <div class="bg-gray-700 rounded-lg p-4 service-card">
+                            <h4 class="font-semibold mb-1 text-base">SEO Audit & Optimization</h4>
+                            <p class="text-sm text-gray-400">Complete website analysis and optimization</p>
+                        </div>
+                        <div class="bg-gray-700 rounded-lg p-4 service-card">
+                            <h4 class="font-semibold mb-1 text-base">Automation Solutions</h4>
+                            <p class="text-sm text-gray-400">Custom Python automation scripts</p>
+                        </div>
+                        <div class="bg-gray-700 rounded-lg p-4 service-card">
+                            <h4 class="font-semibold mb-1 text-base">Guest Posting Campaigns</h4>
+                            <p class="text-sm text-gray-400">High-quality backlink building</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 py-8 border-t border-gray-800">
-        <div class="max-w-6xl mx-auto px-4 text-center">
-            <p class="text-gray-400">
-                © 2024 Muhammad Aleem Shahzad. All rights reserved.
-            </p>
-            <p class="text-gray-500 text-sm mt-2">
-                Built with ❤️ using modern web technologies
-            </p>
-        </div>
-    </footer>
-
-    <!-- Scripts -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="assets/js/main.js"></script>
+<script>
+        // Create snowflakes
+        function createSnowflakes() {
+            // Check if snow container already exists
+            if (document.querySelector('.snow-container')) {
+                return;
+            }
+            
+            const snowContainer = document.createElement('div');
+            snowContainer.className = 'snow-container';
+            document.body.appendChild(snowContainer);
+            
+            const snowflakeSymbols = ['❄', '❅', '❆', '✻', '✼', '❉'];
+            const numberOfSnowflakes = 50;
+            
+            for (let i = 0; i < numberOfSnowflakes; i++) {
+                const snowflake = document.createElement('div');
+                snowflake.className = 'snowflake';
+                snowflake.innerHTML = snowflakeSymbols[Math.floor(Math.random() * snowflakeSymbols.length)];
+                snowflake.style.left = Math.random() * 100 + '%';
+                snowflake.style.animationDuration = Math.random() * 3 + 2 + 's';
+                snowflake.style.opacity = Math.random() * 0.6 + 0.4;
+                snowflake.style.fontSize = Math.random() * 10 + 10 + 'px';
+                snowflake.style.animationDelay = Math.random() * 2 + 's';
+                snowContainer.appendChild(snowflake);
+            }
+        }
+        
+        // Typing animation with multiple texts
+        function typeWriter() {
+            const texts = [
+                "Researching and developing SEO optimization and automation solutions.",
+                "Creating innovative Python automation scripts for businesses.",
+                "Expert in guest posting and content strategy development.",
+                "Building cutting-edge AI and machine learning solutions."
+            ];
+            const element = document.getElementById("typing-text");
+            let textIndex = 0;
+            let charIndex = 0;
+            let isDeleting = false;
+            
+            function type() {
+                const currentText = texts[textIndex];
+                
+                if (isDeleting) {
+                    // Deleting text
+                    element.innerHTML = currentText.substring(0, charIndex - 1);
+                    charIndex--;
+                    
+                    if (charIndex === 0) {
+                        isDeleting = false;
+                        textIndex = (textIndex + 1) % texts.length;
+                        setTimeout(type, 500); // Pause before typing next text
+                        return;
+                    }
+                } else {
+                    // Typing text
+                    element.innerHTML = currentText.substring(0, charIndex + 1);
+                    charIndex++;
+                    
+                    if (charIndex === currentText.length) {
+                        isDeleting = true;
+                        setTimeout(type, 2000); // Pause before deleting
+                        return;
+                    }
+                }
+                
+                const typingSpeed = isDeleting ? 30 : 50;
+                setTimeout(type, typingSpeed);
+            }
+            
+            // Start the animation
+            type();
+        }
+        
+        // Initialize animations when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            createSnowflakes();
+            typeWriter();
+        });
+        
+        // Also initialize if DOM is already loaded
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', function() {
+                createSnowflakes();
+                typeWriter();
+            });
+        } else {
+            createSnowflakes();
+            typeWriter();
+        }
+    </script>
 </body>
 </html>
