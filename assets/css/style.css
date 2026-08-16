@@ -1,0 +1,59 @@
+:root{
+  --bg: #0f1724;
+  --surface: #0b1220;
+  --muted: #94a3b8;
+  --accent: #06b6d4;
+  --surface-contrast: #e6eef8;
+  --glass: rgba(255,255,255,0.04);
+}
+
+/* Light theme variables (will be toggled by JS) */
+:root.light {
+  --bg: #f8fafc;
+  --surface: #ffffff;
+  --muted: #475569;
+  --accent: #0ea5a4;
+  --surface-contrast: #0b1220;
+  --glass: rgba(2,6,23,0.03);
+}
+
+body { background: var(--bg); color: var(--surface-contrast); font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; }
+
+/* Utility tokens used in markup */
+.bg-surface { background-color: var(--surface); }
+.text-muted { color: var(--muted); }
+.text-subtle { color: color-mix(in srgb, var(--muted) 60%, transparent); }
+
+/* Card / glass */
+.bg-glass { background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); backdrop-filter: blur(6px); border: 1px solid rgba(255,255,255,0.04); }
+.card { background: var(--surface); border-radius: 12px; padding: 16px; box-shadow: 0 6px 18px rgba(2,6,23,0.5); border: 1px solid rgba(255,255,255,0.03); }
+.card-title { font-weight: 700; color: var(--accent); margin-bottom: 8px; }
+
+/* Buttons */
+.btn-primary { background: linear-gradient(90deg,var(--accent),#3b82f6); color: white; padding: 10px 14px; border-radius: 8px; font-weight:600; display:inline-block; text-decoration:none; }
+.btn-ghost { border:1px solid rgba(255,255,255,0.06); padding:10px 14px; border-radius:8px; color:var(--surface-contrast); text-decoration:none; }
+.btn-sm { background:var(--accent); color:white; padding:6px 8px; border-radius:6px; font-size:12px; text-decoration:none; }
+.btn-sm-outline { border:1px solid rgba(255,255,255,0.06); padding:6px 8px; border-radius:6px; font-size:12px; color:var(--surface-contrast); text-decoration:none; }
+
+/* small UI bits */
+.chip { background: rgba(255,255,255,0.03); padding:6px 8px; border-radius:999px; font-size:12px; color:var(--surface-contrast); }
+
+/* project card */
+.project-card { background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02)); padding:12px; border-radius:12px; }
+.project-media { border-radius:8px; }
+
+/* icons/links */
+.icon-link { display:flex; align-items:center; justify-content:center; background: rgba(255,255,255,0.02); padding:10px; border-radius:8px; color:var(--muted); transition:transform .15s ease; }
+.icon-link:hover { transform:translateY(-4px); color:var(--accent); }
+
+/* focus states for accessibility */
+a:focus, button:focus { outline: none; box-shadow: 0 0 0 3px rgba(99,102,241,0.12); border-radius:6px; }
+
+/* small responsive tweaks */
+@media (max-width:640px){
+  .card { padding:12px; }
+  .text-4xl { font-size:2rem; }
+}
+
+/* visually-hidden */
+.sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
