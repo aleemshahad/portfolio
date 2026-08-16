@@ -1,465 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aleem Shahzad - SEO & Automation Expert</title>
-    <meta name="description" content="Guest Posting Specialist | SEO Expert | Python Automation Developer">
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        }
-        .icon-link {
-            transition: transform 0.2s ease, opacity 0.2s ease;
-        }
-        .icon-link:hover {
-            transform: translateY(-2px);
-            opacity: 0.8;
-        }
-        
-        /* Snow animation background */
-        .snow-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            overflow: hidden;
-            z-index: -1;
-        }
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Aleem Shahzad — SEO & Automation Expert</title>
+  <meta name="description" content="Guest Posting Specialist | SEO Expert | Python Automation Developer">
 
-        .snowflake {
-            position: absolute;
-            top: -10px;
-            color: rgba(255, 255, 255, 0.8);
-            user-select: none;
-            cursor: default;
-            animation: snowfall linear infinite;
-            font-size: 14px;
-        }
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
-        @keyframes snowfall {
-            0% {
-                top: -10px;
-                transform: translateX(0) rotate(0deg);
-            }
-            100% {
-                top: 100vh;
-                transform: translateX(100px) rotate(360deg);
-            }
-        }
+  <!-- Tailwind (CDN for quick updates) -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-        /* Typing cursor animation */
-        .typing-cursor::after {
-            content: '|';
-            animation: blink 1s infinite;
-            color: #3b82f6;
-            font-weight: bold;
-        }
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="" crossorigin="anonymous">
 
-        @keyframes blink {
-            0%, 50% {
-                opacity: 1;
-            }
-            51%, 100% {
-                opacity: 0;
-            }
-        }
-    </style>
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <meta name="color-scheme" content="dark light">
 </head>
-<body class="bg-gray-900 text-gray-100 min-h-screen">
-    <!-- Main Container -->
-    <div class="container mx-auto px-6 py-8">
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            
-            <!-- Left Column -->
-            <div class="lg:col-span-1 space-y-6">
-                <!-- Profile Section -->
-                <div class="bg-gray-800 rounded-xl p-6 text-center">
-                    <h2 class="text-xl font-bold mb-4 text-blue-400">Profile</h2>
-                    <img src="assets/images/profile.jpg" alt="Aleem Shahzad" 
-                         class="w-24 h-24 rounded-full mx-auto mb-3 border-2 border-gray-600">
-                    <h3 class="text-2xl font-bold mb-2">Aleem Shahzad</h3>
-                    <p class="text-gray-400 text-base mb-4">@aleemshahzad</p>
-                </div>
+<body class="font-sans bg-surface text-surface-contrast antialiased">
+  <header class="max-w-5xl mx-auto px-6 py-6 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-3" aria-label="Home - Aleem Shahzad">
+      <img src="assets/images/profile.jpg" alt="Aleem Shahzad" class="w-10 h-10 rounded-full object-cover border-2 border-muted">
+      <span class="font-semibold text-lg">Aleem Shahzad</span>
+    </a>
 
-                <!-- Currently, I am... Section -->
-                <div class="bg-gray-800 rounded-xl p-6">
-                    <h2 class="text-xl font-bold mb-4 text-blue-400">Currently, I am...</h2>
-                    <p class="text-gray-400 text-base font-semibold">SEO & Automation Expert</p>
-                    <div class="min-h-[60px] flex items-center">
-                        <p class="text-gray-500 text-base typing-cursor" id="typing-text"></p>
-                    </div>
-                </div>
+    <div class="flex items-center gap-3">
+      <nav class="hidden sm:flex gap-4 text-sm" aria-label="Main navigation">
+        <a class="nav-link" href="#work">Work</a>
+        <a class="nav-link" href="#services">Services</a>
+        <a class="nav-link" href="#contact">Contact</a>
+      </nav>
 
-                <!-- Journey Section -->
-                <div class="bg-gray-800 rounded-xl p-6">
-                    <h2 class="text-xl font-bold mb-4 text-blue-400">Journey</h2>
-                    <div class="space-y-3">
-                        <div class="bg-gray-700 rounded-lg p-3">
-                            <p class="font-semibold text-base">2025 - Present: SEO Expert</p>
-                            <p class="text-gray-400 text-sm">Advanced SEO optimization and automation</p>
-                        </div>
-                        <div class="bg-gray-700 rounded-lg p-3">
-                            <p class="font-semibold text-base">2023 - 2024: Python Developer</p>
-                            <p class="text-gray-400 text-sm">Automation scripts and web scraping</p>
-                        </div>
-                        <div class="bg-gray-700 rounded-lg p-3">
-                            <p class="font-semibold text-base">2020 - 2022: Content Manager</p>
-                            <p class="text-gray-400 text-sm">Guest posting and content strategy</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Middle Column -->
-            <div class="lg:col-span-1 space-y-6">
-                <!-- Social Links Section -->
-                <div class="bg-gray-800 rounded-xl p-6">
-                    <h2 class="text-xl font-bold mb-4 text-blue-400">Social Links</h2>
-                    
-                    <!-- Blogger Links -->
-                    <div class="mb-4">
-                        <h3 class="text-sm font-semibold mb-2 text-gray-400">Blogger</h3>
-                        <div class="grid grid-cols-3 gap-3">
-                            <a href="https://asgraphic2.blogspot.com" target="_blank" class="bg-gray-700 rounded-lg p-3 text-center icon-link hover:bg-gray-600">
-                                <i class="fab fa-blogger text-orange-500 text-xl"></i>
-                                <p class="text-xs mt-1">AS Graphic</p>
-                            </a>
-                            <a href="https://silencepeek.blogspot.com/" target="_blank" class="bg-gray-700 rounded-lg p-3 text-center icon-link hover:bg-gray-600">
-                                <i class="fab fa-blogger text-orange-500 text-xl"></i>
-                                <p class="text-xs mt-1">Silence Peek</p>
-                            </a>
-                            <a href="https://earningelite2.blogspot.com/" target="_blank" class="bg-gray-700 rounded-lg p-3 text-center icon-link hover:bg-gray-600">
-                                <i class="fab fa-blogger text-orange-500 text-xl"></i>
-                                <p class="text-xs mt-1">Earning Elite</p>
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <!-- Social Media Links -->
-                    <div class="mb-4">
-                        <h3 class="text-sm font-semibold mb-2 text-gray-400">Social Media</h3>
-                        <div class="grid grid-cols-3 gap-3">
-                            <a href="https://twitter.com/ALEEMSHAHZAD2" target="_blank" class="bg-gray-700 rounded-lg p-3 text-center icon-link hover:bg-gray-600">
-                                <i class="fab fa-x-twitter text-black text-xl"></i>
-                                <p class="text-xs mt-1">X/Twitter</p>
-                            </a>
-                            <a href="https://web.facebook.com/aleemssg" target="_blank" class="bg-gray-700 rounded-lg p-3 text-center icon-link hover:bg-gray-600">
-                                <i class="fab fa-facebook text-blue-600 text-xl"></i>
-                                <p class="text-xs mt-1">FB Page</p>
-                            </a>
-                            <a href="https://web.facebook.com/aleemss" target="_blank" class="bg-gray-700 rounded-lg p-3 text-center icon-link hover:bg-gray-600">
-                                <i class="fab fa-facebook text-blue-600 text-xl"></i>
-                                <p class="text-xs mt-1">FB Profile</p>
-                            </a>
-                            <a href="https://www.linkedin.com/in/aleem-shahzad/" target="_blank" class="bg-gray-700 rounded-lg p-3 text-center icon-link hover:bg-gray-600">
-                                <i class="fab fa-linkedin text-blue-400 text-xl"></i>
-                                <p class="text-xs mt-1">LinkedIn</p>
-                            </a>
-                            <a href="https://www.instagram.com/aleem_shahzad2/" target="_blank" class="bg-gray-700 rounded-lg p-3 text-center icon-link hover:bg-gray-600">
-                                <i class="fab fa-instagram text-pink-500 text-xl"></i>
-                                <p class="text-xs mt-1">Instagram</p>
-                            </a>
-                            <a href="https://www.youtube.com/@aleemshahzad7070" target="_blank" class="bg-gray-700 rounded-lg p-3 text-center icon-link hover:bg-gray-600">
-                                <i class="fab fa-youtube text-red-500 text-xl"></i>
-                                <p class="text-xs mt-1">YouTube</p>
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <!-- Professional Links -->
-                    <div class="mb-4">
-                        <h3 class="text-sm font-semibold mb-2 text-gray-400">Professional</h3>
-                        <div class="grid grid-cols-3 gap-3">
-                            <a href="https://www.kaggle.com/muhammadaleemshahzad" target="_blank" class="bg-gray-700 rounded-lg p-3 text-center icon-link hover:bg-gray-600">
-                                <i class="fab fa-kaggle text-blue-500 text-xl"></i>
-                                <p class="text-xs mt-1">Kaggle</p>
-                            </a>
-                            <a href="https://github.com/aleemshahad" target="_blank" class="bg-gray-700 rounded-lg p-3 text-center icon-link hover:bg-gray-600">
-                                <i class="fab fa-github text-gray-300 text-xl"></i>
-                                <p class="text-xs mt-1">GitHub</p>
-                            </a>
-                            <a href="https://aleemshahad.github.io/portfolio/" target="_blank" class="bg-gray-700 rounded-lg p-3 text-center icon-link hover:bg-gray-600">
-                                <i class="fas fa-globe text-green-600 text-xl"></i>
-                                <p class="text-xs mt-1">Portfolio</p>
-                            </a>
-                            <a href="https://contra.com/muhammad_aleem_shahzad_uu1d5zfd/about?r=muhammad_aleem_shahzad_uu1d5zfd" target="_blank" class="bg-gray-700 rounded-lg p-3 text-center icon-link hover:bg-gray-600">
-                                <i class="fab fa-contra text-purple-500 text-xl"></i>
-                                <p class="text-xs mt-1">Contra</p>
-                            </a>
-                            <a href="https://www.fiverr.com/s/0bZyWNy" target="_blank" class="bg-gray-700 rounded-lg p-3 text-center icon-link hover:bg-gray-600">
-                                <i class="fab fa-fiverr text-green-400 text-xl"></i>
-                                <p class="text-xs mt-1">Fiverr</p>
-                            </a>
-                            <a href="https://www.upwork.com/freelancers/~01c84cdf94cd3f0b09" target="_blank" class="bg-gray-700 rounded-lg p-3 text-center icon-link hover:bg-gray-600">
-                                <i class="fab fa-upwork text-green-500 text-xl"></i>
-                                <p class="text-xs mt-1">Upwork</p>
-                            </a>
-                            <a href="https://www.freelancer.com/u/aleemssg" target="_blank" class="bg-gray-700 rounded-lg p-3 text-center icon-link hover:bg-gray-600">
-                                <i class="fab fa-freelancer text-blue-400 text-xl"></i>
-                                <p class="text-xs mt-1">Freelancer</p>
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <!-- Contact Links -->
-                    <div>
-                        <h3 class="text-sm font-semibold mb-2 text-gray-400">Contact</h3>
-                        <div class="grid grid-cols-3 gap-3">
-                            <a href="tel:+923000810352" class="bg-gray-700 rounded-lg p-3 text-center icon-link hover:bg-gray-600">
-                                <i class="fas fa-phone text-green-500 text-xl"></i>
-                                <p class="text-xs mt-1">Phone</p>
-                            </a>
-                            <a href="mailto:aleemssg@gmail.com" class="bg-gray-700 rounded-lg p-3 text-center icon-link hover:bg-gray-600">
-                                <i class="fas fa-envelope text-red-500 text-xl"></i>
-                                <p class="text-xs mt-1">Email</p>
-                            </a>
-                            <a href="https://t.me/aleemshahzad" target="_blank" class="bg-gray-700 rounded-lg p-3 text-center icon-link hover:bg-gray-600">
-                                <i class="fab fa-telegram text-blue-500 text-xl"></i>
-                                <p class="text-xs mt-1">Telegram</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Buy me a coffee Section -->
-                <div class="bg-gray-800 rounded-xl p-6">
-                    <h2 class="text-xl font-bold mb-4 text-blue-400">Buy me a coffee</h2>
-                    <div class="grid grid-cols-2 gap-4 mb-4">
-                        <div class="text-center">
-                            <div class="w-20 h-20 bg-gray-700 rounded-lg flex items-center justify-center mb-2 mx-auto">
-                                <i class="fas fa-university text-gray-400 text-2xl"></i>
-                            </div>
-                            <p class="text-sm text-gray-400">Bank Transfer</p>
-                        </div>
-                        <div class="text-center">
-                            <div class="w-20 h-20 bg-gray-700 rounded-lg flex items-center justify-center mb-2 mx-auto">
-                                <i class="fab fa-bitcoin text-gray-400 text-2xl"></i>
-                            </div>
-                            <p class="text-sm text-gray-400">USDT</p>
-                        </div>
-                    </div>
-                    <div class="space-y-2">
-                        <button class="w-full bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-lg text-sm font-semibold transition">
-                            PayPal Wallet
-                        </button>
-                        <button class="w-full bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg text-sm font-semibold transition">
-                            USDT Wallet
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Skills Section -->
-                <div class="bg-gray-800 rounded-xl p-6">
-                    <h2 class="text-xl font-bold mb-4 text-blue-400">Skills</h2>
-                    <div class="space-y-2">
-                        <div class="bg-gray-700 rounded-lg p-3">
-                            <p class="font-semibold text-base">Project Manager</p>
-                        </div>
-                        <div class="bg-gray-700 rounded-lg p-3">
-                            <p class="font-semibold text-base">Generative AI</p>
-                        </div>
-                        <div class="bg-gray-700 rounded-lg p-3">
-                            <p class="font-semibold text-base">Automation</p>
-                        </div>
-                        <div class="bg-gray-700 rounded-lg p-3">
-                            <p class="font-semibold text-base">SEO Optimization</p>
-                        </div>
-                        <div class="bg-gray-700 rounded-lg p-3">
-                            <p class="font-semibold text-base">Python Development</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Right Column -->
-            <div class="lg:col-span-1 space-y-6">
-                <!-- Applications/Extensions Section -->
-                <div class="bg-gray-800 rounded-xl p-6">
-                    <h2 class="text-xl font-bold mb-4 text-blue-400">Applications/Extensions</h2>
-                    <div class="space-y-3">
-                        <div class="bg-gray-700 rounded-lg p-3 flex justify-between items-center">
-                            <div>
-                                <p class="font-semibold text-base">G-labs Automation</p>
-                                <p class="text-gray-400 text-xs">Automation toolkit</p>
-                            </div>
-                            <button class="bg-blue-500 hover:bg-blue-600 text-white py-1 px-3 rounded text-xs font-semibold transition">
-                                Try Now
-                            </button>
-                        </div>
-                        <div class="bg-gray-700 rounded-lg p-3 flex justify-between items-center">
-                            <div>
-                                <p class="font-semibold text-base">Auto Whisk</p>
-                                <p class="text-gray-400 text-xs">Browser Extension</p>
-                            </div>
-                            <button class="bg-blue-500 hover:bg-blue-600 text-white py-1 px-3 rounded text-xs font-semibold transition">
-                                Try Now
-                            </button>
-                        </div>
-                        <div class="bg-gray-700 rounded-lg p-3 flex justify-between items-center">
-                            <div>
-                                <p class="font-semibold text-base">Auto Flow</p>
-                                <p class="text-gray-400 text-xs">Browser Extension</p>
-                            </div>
-                            <button class="bg-blue-500 hover:bg-blue-600 text-white py-1 px-3 rounded text-xs font-semibold transition">
-                                Try Now
-                            </button>
-                        </div>
-                        <div class="bg-gray-700 rounded-lg p-3 flex justify-between items-center">
-                            <div>
-                                <p class="font-semibold text-base">Auto Meta</p>
-                                <p class="text-gray-400 text-xs">Browser Extension</p>
-                            </div>
-                            <button class="bg-blue-500 hover:bg-blue-600 text-white py-1 px-3 rounded text-xs font-semibold transition">
-                                Try Now
-                            </button>
-                        </div>
-                        <div class="bg-gray-700 rounded-lg p-3 flex justify-between items-center">
-                            <div>
-                                <p class="font-semibold text-base">YouTube Downloader</p>
-                                <p class="text-gray-400 text-xs">Media tool</p>
-                            </div>
-                            <button class="bg-blue-500 hover:bg-blue-600 text-white py-1 px-3 rounded text-xs font-semibold transition">
-                                Try Now
-                            </button>
-                        </div>
-                        <div class="bg-gray-700 rounded-lg p-3 flex justify-between items-center">
-                            <div>
-                                <p class="font-semibold text-base">Word & Character Counter</p>
-                                <p class="text-gray-400 text-xs">Text utility</p>
-                            </div>
-                            <button class="bg-blue-500 hover:bg-blue-600 text-white py-1 px-3 rounded text-xs font-semibold transition">
-                                Try Now
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Services Section -->
-                <div class="bg-gray-800 rounded-xl p-6">
-                    <h2 class="text-xl font-bold mb-4 text-blue-400">Services</h2>
-                    <div class="space-y-3">
-                        <div class="bg-gray-700 rounded-lg p-4 service-card">
-                            <h4 class="font-semibold mb-1 text-base">SEO Audit & Optimization</h4>
-                            <p class="text-sm text-gray-400">Complete website analysis and optimization</p>
-                        </div>
-                        <div class="bg-gray-700 rounded-lg p-4 service-card">
-                            <h4 class="font-semibold mb-1 text-base">Automation Solutions</h4>
-                            <p class="text-sm text-gray-400">Custom Python automation scripts</p>
-                        </div>
-                        <div class="bg-gray-700 rounded-lg p-4 service-card">
-                            <h4 class="font-semibold mb-1 text-base">Guest Posting Campaigns</h4>
-                            <p class="text-sm text-gray-400">High-quality backlink building</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+      <button id="theme-toggle" class="p-2 rounded-md focus:outline-none focus-visible:ring" aria-pressed="false" aria-label="Toggle color theme">
+        <i id="theme-icon" class="fa-regular fa-moon"></i>
+      </button>
     </div>
+  </header>
 
-<script>
-        // Create snowflakes
-        function createSnowflakes() {
-            // Check if snow container already exists
-            if (document.querySelector('.snow-container')) {
-                return;
-            }
-            
-            const snowContainer = document.createElement('div');
-            snowContainer.className = 'snow-container';
-            document.body.appendChild(snowContainer);
-            
-            const snowflakeSymbols = ['❄', '❅', '❆', '✻', '✼', '❉'];
-            const numberOfSnowflakes = 50;
-            
-            for (let i = 0; i < numberOfSnowflakes; i++) {
-                const snowflake = document.createElement('div');
-                snowflake.className = 'snowflake';
-                snowflake.innerHTML = snowflakeSymbols[Math.floor(Math.random() * snowflakeSymbols.length)];
-                snowflake.style.left = Math.random() * 100 + '%';
-                snowflake.style.animationDuration = Math.random() * 3 + 2 + 's';
-                snowflake.style.opacity = Math.random() * 0.6 + 0.4;
-                snowflake.style.fontSize = Math.random() * 10 + 10 + 'px';
-                snowflake.style.animationDelay = Math.random() * 2 + 's';
-                snowContainer.appendChild(snowflake);
-            }
-        }
-        
-        // Typing animation with multiple texts
-        function typeWriter() {
-            const texts = [
-                "Researching and developing SEO optimization and automation solutions.",
-                "Creating innovative Python automation scripts for businesses.",
-                "Expert in guest posting and content strategy development.",
-                "Building cutting-edge AI and machine learning solutions."
-            ];
-            const element = document.getElementById("typing-text");
-            let textIndex = 0;
-            let charIndex = 0;
-            let isDeleting = false;
-            
-            function type() {
-                const currentText = texts[textIndex];
-                
-                if (isDeleting) {
-                    // Deleting text
-                    element.innerHTML = currentText.substring(0, charIndex - 1);
-                    charIndex--;
-                    
-                    if (charIndex === 0) {
-                        isDeleting = false;
-                        textIndex = (textIndex + 1) % texts.length;
-                        setTimeout(type, 500); // Pause before typing next text
-                        return;
-                    }
-                } else {
-                    // Typing text
-                    element.innerHTML = currentText.substring(0, charIndex + 1);
-                    charIndex++;
-                    
-                    if (charIndex === currentText.length) {
-                        isDeleting = true;
-                        setTimeout(type, 2000); // Pause before deleting
-                        return;
-                    }
-                }
-                
-                const typingSpeed = isDeleting ? 30 : 50;
-                setTimeout(type, typingSpeed);
-            }
-            
-            // Start the animation
-            type();
-        }
-        
-        // Initialize animations when page loads
-        document.addEventListener('DOMContentLoaded', function() {
-            createSnowflakes();
-            typeWriter();
-        });
-        
-        // Also initialize if DOM is already loaded
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', function() {
-                createSnowflakes();
-                typeWriter();
-            });
-        } else {
-            createSnowflakes();
-            typeWriter();
-        }
-    </script>
+  <main class="max-w-5xl mx-auto px-6 pb-12">
+    <!-- Hero -->
+    <section class="relative bg-glass rounded-2xl p-8 md:p-12 mb-8 overflow-hidden group">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+        <div class="max-w-2xl">
+          <h1 class="text-4xl md:text-5xl font-extrabold mb-3 leading-tight">Aleem Shahzad</h1>
+          <p class="text-lg text-muted mb-4">SEO & Automation Expert — Guest Posting Specialist · Python Automation · Generative AI</p>
+
+          <p id="typing-text" class="text-base text-subtle min-h-[48px] typing-cursor" aria-live="polite"></p>
+
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="#services" class="btn-primary">Hire Me</a>
+            <a href="assets/resume.pdf" class="btn-ghost" target="_blank" rel="noopener">Download Resume</a>
+          </div>
+        </div>
+
+        <div class="hidden md:block">
+          <img src="assets/images/profile.jpg" alt="Aleem Shahzad" class="w-44 h-44 rounded-2xl object-cover border-2 border-muted shadow-lg">
+        </div>
+      </div>
+
+      <!-- subtle decorative gradient -->
+      <span aria-hidden="true" class="absolute -right-24 -top-20 w-56 h-56 bg-accent/20 rounded-full blur-3xl transform group-hover:scale-105 transition"></span>
+    </section>
+
+    <!-- Grid: left/mid/right moved into stacked responsive layout -->
+    <section class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <!-- Column A -->
+      <div class="space-y-6">
+        <aside class="card" aria-labelledby="profile-heading">
+          <h2 id="profile-heading" class="card-title">Profile</h2>
+          <p class="text-muted">@aleemshahzad</p>
+          <p class="mt-3">SEO & Automation Expert — building automation and growth systems for websites and businesses.</p>
+        </aside>
+
+        <aside class="card">
+          <h2 class="card-title">Journey</h2>
+          <ul class="space-y-3 text-sm text-muted">
+            <li><strong>2025 - Present</strong> — SEO Expert</li>
+            <li><strong>2023 - 2024</strong> — Python Developer</li>
+            <li><strong>2020 - 2022</strong> — Content Manager</li>
+          </ul>
+        </aside>
+
+        <aside class="card">
+          <h2 class="card-title">Skills</h2>
+          <div class="flex flex-wrap gap-2 mt-2">
+            <span class="chip">SEO</span>
+            <span class="chip">Automation</span>
+            <span class="chip">Python</span>
+            <span class="chip">AI</span>
+            <span class="chip">Project Mgmt</span>
+          </div>
+        </aside>
+      </div>
+
+      <!-- Column B -->
+      <div class="space-y-6">
+        <div id="work" class="card">
+          <h2 class="card-title">Projects</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+            <!-- Project card example -->
+            <article class="project-card">
+              <div class="project-media bg-muted/30 w-full h-28 rounded-md"></div>
+              <h3 class="mt-3 font-semibold">G-labs Automation</h3>
+              <p class="text-sm text-muted mt-1">Automation toolkit for SEO tasks and reporting.</p>
+              <div class="mt-3 flex gap-2">
+                <a class="btn-sm" href="#" target="_blank" rel="noopener">Live</a>
+                <a class="btn-sm-outline" href="#" target="_blank" rel="noopener">Code</a>
+              </div>
+            </article>
+            <!-- more cards can be added similarly -->
+          </div>
+        </div>
+
+        <div class="card">
+          <h2 class="card-title">Services</h2>
+          <ul class="mt-3 space-y-3 text-sm text-muted">
+            <li><strong>SEO Audit</strong> — Full site technical + content audit</li>
+            <li><strong>Automation</strong> — Python scripts & browser extensions</li>
+            <li><strong>Guest Posting</strong> — Outreach & backlinks</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Column C -->
+      <div class="space-y-6">
+        <div class="card">
+          <h2 class="card-title">Social & Contact</h2>
+          <div class="grid grid-cols-3 gap-3 mt-3">
+            <!-- Use the same links as before -->
+            <a href="https://twitter.com/ALEEMSHAHZAD2" target="_blank" class="icon-link" aria-label="Twitter"><i class="fab fa-x-twitter"></i><span class="sr-only">Twitter</span></a>
+            <a href="https://github.com/aleemshahad" target="_blank" class="icon-link" aria-label="GitHub"><i class="fab fa-github"></i><span class="sr-only">GitHub</span></a>
+            <a href="mailto:aleemssg@gmail.com" class="icon-link" aria-label="Email"><i class="fas fa-envelope"></i><span class="sr-only">Email</span></a>
+            <!-- add others as needed -->
+          </div>
+        </div>
+
+        <div class="card">
+          <h2 class="card-title">Support</h2>
+          <p class="text-sm text-muted">If you like my work, support via PayPal or USDT.</p>
+          <div class="mt-3 flex gap-2">
+            <a class="btn-sm" href="#">PayPal</a>
+            <a class="btn-sm-outline" href="#">USDT</a>
+          </div>
+        </div>
+
+        <div id="contact" class="card">
+          <h2 class="card-title">Contact</h2>
+          <p class="text-sm text-muted">Tel: <a href="tel:+923000810352" class="link-primary">+92 300 0810352</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/js/theme.js"></script>
+  <script>
+    // typing animation (simple, accessible)
+    (function(){
+      const texts = [
+        "Researching and developing SEO optimization and automation solutions.",
+        "Creating Python automation scripts and browser extensions.",
+        "Expert in guest posting & content strategy."
+      ];
+      const el = document.getElementById('typing-text');
+      let i=0, j=0, isDeleting=false;
+      function tick(){
+        const current = texts[i];
+        el.textContent = current.slice(0, j) + (isDeleting ? '' : '');
+        if (!isDeleting) { j++; if (j>current.length){ isDeleting=true; setTimeout(tick, 1500); return; } }
+        else { j--; if (j===0){ isDeleting=false; i=(i+1)%texts.length; } }
+        setTimeout(tick, isDeleting ? 30 : 40);
+      }
+      tick();
+    })();
+  </script>
 </body>
 </html>
