@@ -16,6 +16,8 @@ import urllib.request
 REPO_URL = "https://api.github.com/users/{user}/repos?per_page=100&sort=updated"
 START = "<!-- PROJECTS:START -->"
 END = "<!-- PROJECTS:END -->"
+RECENT_START = "<!-- RECENT:START -->"
+RECENT_END = "<!-- RECENT:END -->"
 
 ICONS = {
     "python": "fa-robot",
@@ -90,6 +92,22 @@ def generate_block(repos):
     return "\n".join(lines)
 
 
+def generate_recent(repos):
+    lines = [RECENT_START, '          <ul class="mt-3 space-y-3 text-sm text-muted">']
+    for repo in repos:
+        name = html.escape(repo["name"])
+        desc = (repo.get("description") or "").strip()
+        if len(desc) > 60:
+            desc = desc[:57].rstrip() + "..."
+        desc = html.escape(desc) if desc else "Open-source project by Aleem Shahzad."
+        lines.append(
+            f'            <li><a class="link-primary" href="{repo["html_url"]}" target="_blank" rel="noopener">{name}</a> — {desc}</li>'
+        )
+    lines.append("          </ul>")
+    lines.append(RECENT_END)
+    return "\n".join(lines)
+
+
 def main():
     user = os.environ.get("GH_USER") or "aleemshahad"
     token = os.environ.get("GH_TOKEN") or os.environ.get("GITHUB_TOKEN")
@@ -104,13 +122,15 @@ def main():
     with open(the_path, encoding="utf-8") as fh:
         content = fh.read()
 
-    text_start = content.index(START)
-    text_end = content.index(END) + len(END)
-    updated = content[:text_start] + new_block + content[text_end:]
-    updated = updated.replace(
-        '      <!-- PROJECTS:START -->\n      <!-- PROJECTS:START -->',
-        '      <!-- PROJECTS:START -->',
-    )
+    def splice(content, s, e, new):
+        start = content.index(s)
+        end = content.index(e) + len(e)
+        return content[:start] + new + content[end:]
+
+    updated = splice(content, START, END, new_block)
+
+    if RECENT_START in updated:
+        updated = splice(updated, RECENT_START, RECENT_END, generate_recent(repos[:4]))
 
     if updated != content:
         with open(the_path, "w", encoding="utf-8") as fh:
