@@ -23,6 +23,16 @@ body { background: var(--bg); color: var(--surface-contrast); font-family: 'Inte
 .bg-surface { background-color: var(--surface); }
 .text-muted { color: var(--muted); }
 .text-subtle { color: color-mix(in srgb, var(--muted) 60%, transparent); }
+.text-accent { color: var(--accent); }
+.nav-link { color: var(--muted); text-decoration: none; transition: color .15s ease; }
+.nav-link:hover { color: var(--accent); }
+.link-primary { color: var(--accent); text-decoration: none; }
+.link-primary:hover { text-decoration: underline; }
+.typing-cursor::after { content: '|'; color: var(--accent); animation: cursorBlink 1s step-end infinite; }
+@keyframes cursorBlink { 0%,100% { opacity: 1; } 50% { opacity: 0; } }
+
+/* decorative accent blob */
+.glow-accent { background: color-mix(in srgb, var(--accent) 22%, transparent); filter: blur(60px); border-radius: 9999px; }
 
 /* Card / glass */
 .bg-glass { background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); backdrop-filter: blur(6px); border: 1px solid rgba(255,255,255,0.04); }

@@ -4,7 +4,16 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Aleem Shahzad — SEO & Automation Expert</title>
-  <meta name="description" content="Guest Posting Specialist | SEO Expert | Python Automation Developer">
+  <meta name="description" content="Guest Posting Specialist | SEO Expert | Python Automation Developer | Building automation systems, trading bots and growth tools.">
+  <meta name="author" content="Muhammad Aleem Shahzad">
+  <link rel="canonical" href="https://aleemshahad.github.io/portfolio/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Aleem Shahzad — SEO & Automation Expert">
+  <meta property="og:description" content="SEO, Python automation, trading systems & web development.">
+  <meta property="og:url" content="https://aleemshahad.github.io/portfolio/">
+  <meta property="og:image" content="assets/images/profile.jpg">
 
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
@@ -13,7 +22,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous">
 
   <!-- Custom styles -->
   <link rel="stylesheet" href="assets/css/style.css">
@@ -22,15 +31,16 @@
 </head>
 <body class="font-sans bg-surface text-surface-contrast antialiased">
   <header class="max-w-5xl mx-auto px-6 py-6 flex items-center justify-between">
-    <a href="/" class="flex items-center gap-3" aria-label="Home - Aleem Shahzad">
+    <a href="#hero" class="flex items-center gap-3" aria-label="Aleem Shahzad">
       <img src="assets/images/profile.jpg" alt="Aleem Shahzad" class="w-10 h-10 rounded-full object-cover border-2 border-muted">
       <span class="font-semibold text-lg">Aleem Shahzad</span>
     </a>
 
     <div class="flex items-center gap-3">
       <nav class="hidden sm:flex gap-4 text-sm" aria-label="Main navigation">
-        <a class="nav-link" href="#work">Work</a>
+        <a class="nav-link" href="#projects">Projects</a>
         <a class="nav-link" href="#services">Services</a>
+        <a class="nav-link" href="blog.html">Blog</a>
         <a class="nav-link" href="#contact">Contact</a>
       </nav>
 
@@ -42,7 +52,7 @@
 
   <main class="max-w-5xl mx-auto px-6 pb-12">
     <!-- Hero -->
-    <section class="relative bg-glass rounded-2xl p-8 md:p-12 mb-8 overflow-hidden group">
+    <section id="hero" class="relative bg-glass rounded-2xl p-8 md:p-12 mb-8 overflow-hidden group">
       <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
         <div class="max-w-2xl">
           <h1 class="text-4xl md:text-5xl font-extrabold mb-3 leading-tight">Aleem Shahzad</h1>
@@ -51,8 +61,8 @@
           <p id="typing-text" class="text-base text-subtle min-h-[48px] typing-cursor" aria-live="polite"></p>
 
           <div class="mt-6 flex flex-wrap gap-3">
-            <a href="#services" class="btn-primary">Hire Me</a>
-            <a href="assets/resume.pdf" class="btn-ghost" target="_blank" rel="noopener">Download Resume</a>
+            <a href="#projects" class="btn-primary">View My Work</a>
+            <a href="#contact" class="btn-ghost">Hire Me</a>
           </div>
         </div>
 
@@ -61,24 +71,23 @@
         </div>
       </div>
 
-      <!-- subtle decorative gradient -->
-      <span aria-hidden="true" class="absolute -right-24 -top-20 w-56 h-56 bg-accent/20 rounded-full blur-3xl transform group-hover:scale-105 transition"></span>
+      <span aria-hidden="true" class="absolute -right-24 -top-20 w-56 h-56 glow-accent transform group-hover:scale-105 transition"></span>
     </section>
 
-    <!-- Grid: left/mid/right moved into stacked responsive layout -->
+    <!-- Grid: profile / journey / skills -->
     <section class="grid grid-cols-1 lg:grid-cols-3 gap-6">
       <!-- Column A -->
       <div class="space-y-6">
         <aside class="card" aria-labelledby="profile-heading">
           <h2 id="profile-heading" class="card-title">Profile</h2>
-          <p class="text-muted">@aleemshahzad</p>
-          <p class="mt-3">SEO & Automation Expert — building automation and growth systems for websites and businesses.</p>
+          <p class="text-muted">@aleemshahad</p>
+          <p class="mt-3">SEO & Automation Expert — building automation systems, trading bots and growth tools for websites and businesses.</p>
         </aside>
 
         <aside class="card">
           <h2 class="card-title">Journey</h2>
           <ul class="space-y-3 text-sm text-muted">
-            <li><strong>2025 - Present</strong> — SEO Expert</li>
+            <li><strong>2025 - Present</strong> — SEO Expert & Automation</li>
             <li><strong>2023 - 2024</strong> — Python Developer</li>
             <li><strong>2020 - 2022</strong> — Content Manager</li>
           </ul>
@@ -91,36 +100,32 @@
             <span class="chip">Automation</span>
             <span class="chip">Python</span>
             <span class="chip">AI</span>
-            <span class="chip">Project Mgmt</span>
+            <span class="chip">Trading Systems</span>
+            <span class="chip">Web Devel</span>
+            <span class="chip">Guest Posting</span>
           </div>
         </aside>
       </div>
 
       <!-- Column B -->
       <div class="space-y-6">
-        <div id="work" class="card">
-          <h2 class="card-title">Projects</h2>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-            <!-- Project card example -->
-            <article class="project-card">
-              <div class="project-media bg-muted/30 w-full h-28 rounded-md"></div>
-              <h3 class="mt-3 font-semibold">G-labs Automation</h3>
-              <p class="text-sm text-muted mt-1">Automation toolkit for SEO tasks and reporting.</p>
-              <div class="mt-3 flex gap-2">
-                <a class="btn-sm" href="#" target="_blank" rel="noopener">Live</a>
-                <a class="btn-sm-outline" href="#" target="_blank" rel="noopener">Code</a>
-              </div>
-            </article>
-            <!-- more cards can be added similarly -->
-          </div>
-        </div>
-
         <div class="card">
           <h2 class="card-title">Services</h2>
           <ul class="mt-3 space-y-3 text-sm text-muted">
             <li><strong>SEO Audit</strong> — Full site technical + content audit</li>
-            <li><strong>Automation</strong> — Python scripts & browser extensions</li>
+            <li><strong>Automation</strong> — Python scripts, bots & trading systems</li>
             <li><strong>Guest Posting</strong> — Outreach & backlinks</li>
+            <li><strong>Web Development</strong> — Portfolios, blogs & landing pages</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2 class="card-title">Recent Repos</h2>
+          <ul class="mt-3 space-y-3 text-sm text-muted">
+            <li><a class="link-primary" href="https://github.com/aleemshahad/NEXT-LEVEL-TRADING-SYSTEM" target="_blank" rel="noopener">NEXT-LEVEL-TRADING-SYSTEM</a> — MT5 grid trading bot</li>
+            <li><a class="link-primary" href="https://github.com/aleemshahad/nexus-auto-system" target="_blank" rel="noopener">nexus-auto-system</a> — Autonomous forex/gold platform</li>
+            <li><a class="link-primary" href="https://github.com/aleemshahad/seo-audit-tool" target="_blank" rel="noopener">seo-audit-tool</a> — Site SEO audit</li>
+            <li><a class="link-primary" href="https://github.com/aleemshahad/CommitteePro" target="_blank" rel="noopener">CommitteePro</a> — Committee/Kameti manager</li>
           </ul>
         </div>
       </div>
@@ -128,47 +133,166 @@
       <!-- Column C -->
       <div class="space-y-6">
         <div class="card">
-          <h2 class="card-title">Social & Contact</h2>
+          <h2 class="card-title">Social</h2>
           <div class="grid grid-cols-3 gap-3 mt-3">
-            <!-- Use the same links as before -->
             <a href="https://twitter.com/ALEEMSHAHZAD2" target="_blank" class="icon-link" aria-label="Twitter"><i class="fab fa-x-twitter"></i><span class="sr-only">Twitter</span></a>
             <a href="https://github.com/aleemshahad" target="_blank" class="icon-link" aria-label="GitHub"><i class="fab fa-github"></i><span class="sr-only">GitHub</span></a>
             <a href="mailto:aleemssg@gmail.com" class="icon-link" aria-label="Email"><i class="fas fa-envelope"></i><span class="sr-only">Email</span></a>
-            <!-- add others as needed -->
+            <a href="https://www.linkedin.com/in/aleemshahad" target="_blank" class="icon-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i><span class="sr-only">LinkedIn</span></a>
+            <a href="https://www.upwork.com" target="_blank" class="icon-link" aria-label="Upwork"><i class="fab fa-upwork"></i><span class="sr-only">Upwork</span></a>
+            <a href="tel:+923000810352" class="icon-link" aria-label="Phone"><i class="fas fa-phone"></i><span class="sr-only">Phone</span></a>
           </div>
         </div>
 
         <div class="card">
-          <h2 class="card-title">Support</h2>
-          <p class="text-sm text-muted">If you like my work, support via PayPal or USDT.</p>
+          <h2 class="card-title">Consultation</h2>
+          <p class="text-sm text-muted">Open for freelance projects, growth consulting and tool development.</p>
           <div class="mt-3 flex gap-2">
-            <a class="btn-sm" href="#">PayPal</a>
-            <a class="btn-sm-outline" href="#">USDT</a>
+            <a class="btn-sm" href="#contact">Book Intro</a>
+            <a class="btn-sm-outline" href="https://wa.me/923000810352" target="_blank" rel="noopener">WhatsApp</a>
           </div>
         </div>
 
         <div id="contact" class="card">
           <h2 class="card-title">Contact</h2>
-          <p class="text-sm text-muted">Tel: <a href="tel:+923000810352" class="link-primary">+92 300 0810352</a></p>
+          <p class="text-sm text-muted">Email: <a href="mailto:aleemssg@gmail.com" class="link-primary">aleemssg@gmail.com</a></p>
+          <p class="text-sm text-muted mt-2">Tel: <a href="tel:+923000810352" class="link-primary">+92 300 0810352</a></p>
         </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="mt-12">
+      <div class="flex items-end justify-between mb-6">
+        <h2 class="text-3xl font-extrabold">Projects</h2>
+        <a href="https://github.com/aleemshahad?tab=repositories" target="_blank" rel="noopener" class="text-sm link-primary">All repos →</a>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <!-- P1 -->
+        <article class="project-card">
+          <div class="project-media bg-muted/30 w-full h-28 rounded-md flex items-center justify-center">
+            <i class="fas fa-chart-line text-3xl text-accent" aria-hidden="true"></i>
+          </div>
+          <h3 class="mt-3 font-semibold">NEXT-LEVEL-TRADING-SYSTEM</h3>
+          <p class="text-sm text-muted mt-1">Automated trading bot for MT5 executing a dynamic grid strategy on live market data.</p>
+          <div class="mt-3 flex gap-2">
+            <span class="chip">Python</span>
+            <span class="chip">Trading</span>
+          </div>
+          <div class="mt-3 flex gap-2">
+            <a class="btn-sm" href="https://github.com/aleemshahad/NEXT-LEVEL-TRADING-SYSTEM" target="_blank" rel="noopener">Code</a>
+          </div>
+        </article>
+
+        <!-- P2 -->
+        <article class="project-card">
+          <div class="project-media bg-muted/30 w-full h-28 rounded-md flex items-center justify-center">
+            <i class="fas fa-robot text-3xl text-accent" aria-hidden="true"></i>
+          </div>
+          <h3 class="mt-3 font-semibold">Nexus Auto System</h3>
+          <p class="text-sm text-muted mt-1">Autonomous forex & gold trading platform with event-driven agent architecture.</p>
+          <div class="mt-3 flex gap-2">
+            <span class="chip">Python</span>
+            <span class="chip">AI</span>
+          </div>
+          <div class="mt-3 flex gap-2">
+            <a class="btn-sm" href="https://github.com/aleemshahad/nexus-auto-system" target="_blank" rel="noopener">Code</a>
+          </div>
+        </article>
+
+        <!-- P3 -->
+        <article class="project-card">
+          <div class="project-media bg-muted/30 w-full h-28 rounded-md flex items-center justify-center">
+            <i class="fas fa-users text-3xl text-accent" aria-hidden="true"></i>
+          </div>
+          <h3 class="mt-3 font-semibold">CommitteePro</h3>
+          <p class="text-sm text-muted mt-1">Offline-first committee/Kameti manager with digital draws & bilingual support.</p>
+          <div class="mt-3 flex gap-2">
+            <span class="chip">TypeScript</span>
+            <span class="chip">Android</span>
+          </div>
+          <div class="mt-3 flex gap-2">
+            <a class="btn-sm" href="https://github.com/aleemshahad/CommitteePro" target="_blank" rel="noopener">Code</a>
+          </div>
+        </article>
+
+        <!-- P4 -->
+        <article class="project-card">
+          <div class="project-media bg-muted/30 w-full h-28 rounded-md flex items-center justify-center">
+            <i class="fas fa-search text-3xl text-accent" aria-hidden="true"></i>
+          </div>
+          <h3 class="mt-3 font-semibold">SEO Audit Tool</h3>
+          <p class="text-sm text-muted mt-1">Automated site auditing for technical SEO issues and optimization.</p>
+          <div class="mt-3 flex gap-2">
+            <span class="chip">TypeScript</span>
+            <span class="chip">SEO</span>
+          </div>
+          <div class="mt-3 flex gap-2">
+            <a class="btn-sm" href="https://github.com/aleemshahad/seo-audit-tool" target="_blank" rel="noopener">Code</a>
+          </div>
+        </article>
+
+        <!-- P5 -->
+        <article class="project-card">
+          <div class="project-media bg-muted/30 w-full h-28 rounded-md flex items-center justify-center">
+            <i class="fas fa-sd-card text-3xl text-accent" aria-hidden="true"></i>
+          </div>
+          <h3 class="mt-3 font-semibold">Botable USB</h3>
+          <p class="text-sm text-muted mt-1">Bootable USB creator with ISO picking, device detection and progress logs.</p>
+          <div class="mt-3 flex gap-2">
+            <span class="chip">Python</span>
+            <span class="chip">Tools</span>
+          </div>
+          <div class="mt-3 flex gap-2">
+            <a class="btn-sm" href="https://github.com/aleemshahad/Botable-usb" target="_blank" rel="noopener">Code</a>
+          </div>
+        </article>
+
+        <!-- P6 -->
+        <article class="project-card">
+          <div class="project-media bg-muted/30 w-full h-28 rounded-md flex items-center justify-center">
+            <i class="fas fa-desktop text-3xl text-accent" aria-hidden="true"></i>
+          </div>
+          <h3 class="mt-3 font-semibold">Windows Setup Automation</h3>
+          <p class="text-sm text-muted mt-1">Automates software installs, system config and environment setup on Windows.</p>
+          <div class="mt-3 flex gap-2">
+            <span class="chip">Python</span>
+            <span class="chip">Automation</span>
+          </div>
+          <div class="mt-3 flex gap-2">
+            <a class="btn-sm" href="https://github.com/aleemshahad/windows-setup-automation" target="_blank" rel="noopener">Code</a>
+          </div>
+        </article>
       </div>
     </section>
   </main>
 
+  <footer class="border-t border-[rgba(255,255,255,0.05)] py-8 mt-4">
+    <div class="max-w-5xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-muted">
+      <p>© <span id="year">2026</span> Muhammad Aleem Shahzad — SEO & Automation Expert</p>
+      <div class="flex gap-4">
+        <a href="https://github.com/aleemshahad" target="_blank" rel="noopener" class="hover:text-accent">GitHub</a>
+        <a href="https://twitter.com/ALEEMSHAHZAD2" target="_blank" rel="noopener" class="hover:text-accent">Twitter</a>
+        <a href="blog.html" class="hover:text-accent">Blog</a>
+      </div>
+    </div>
+  </footer>
+
   <script src="assets/js/theme.js"></script>
   <script>
-    // typing animation (simple, accessible)
+    document.getElementById('year').textContent = new Date().getFullYear();
     (function(){
       const texts = [
         "Researching and developing SEO optimization and automation solutions.",
-        "Creating Python automation scripts and browser extensions.",
-        "Expert in guest posting & content strategy."
+        "Creating Python automation scripts, trading bots and browser extensions.",
+        "Expert in guest posting, content strategy and growth systems."
       ];
       const el = document.getElementById('typing-text');
       let i=0, j=0, isDeleting=false;
       function tick(){
         const current = texts[i];
-        el.textContent = current.slice(0, j) + (isDeleting ? '' : '');
+        el.textContent = current.slice(0, j);
         if (!isDeleting) { j++; if (j>current.length){ isDeleting=true; setTimeout(tick, 1500); return; } }
         else { j--; if (j===0){ isDeleting=false; i=(i+1)%texts.length; } }
         setTimeout(tick, isDeleting ? 30 : 40);
