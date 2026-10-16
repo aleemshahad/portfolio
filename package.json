@@ -1,41 +1,39 @@
 {
   "name": "aleem-shahzad-portfolio",
-  "version": "1.0.0",
-  "description": "Advanced portfolio website for Muhammad Aleem Shahzad - Digital Marketing Expert, SEO Specialist & Python Automation Developer",
-  "main": "index.html",
+  "version": "2.0.0",
+  "description": "Aleem Shahzad / Nexus Automation — automation-powered technical SEO, Python + CDP automation, full-stack and mobile development.",
+  "private": true,
   "scripts": {
-    "build": "tailwindcss -i ./assets/css/style.css -o ./assets/css/style.min.css --minify",
-    "watch": "tailwindcss -i ./assets/css/style.css -o ./assets/css/style.min.css --watch",
-    "serve": "python -m http.server 8000",
-    "deploy": "gh-pages -d ."
+    "sync": "node scripts/fetch_repos.mjs",
+    "vendor": "node scripts/vendor.mjs",
+    "build": "node scripts/build.mjs",
+    "build:clean": "node scripts/build.mjs --no-splice",
+    "serve": "node scripts/serve.mjs",
+    "serve:dist": "node scripts/serve.mjs --dist",
+    "verify": "node scripts/verify.mjs"
   },
   "keywords": [
     "portfolio",
-    "digital-marketing",
     "seo",
+    "link-building",
     "python-automation",
-    "trading",
-    "web-development",
+    "cdp",
+    "full-stack",
     "github-pages"
   ],
-  "author": {
-    "name": "Muhammad Aleem Shahzad",
-    "email": "aleemshahzad@email.com",
-    "url": "https://aleemshahzad.github.io/portfolio"
-  },
+  "author": "Aleem Shahzad <aleemssg@gmail.com> (https://aleemshahad.github.io/portfolio)",
   "license": "MIT",
-  "homepage": "https://aleemshahzad.github.io/portfolio",
+  "homepage": "https://aleemshahad.github.io/portfolio",
   "repository": {
     "type": "git",
-    "url": "https://github.com/aleemshahzad/portfolio.git"
+    "url": "git+https://github.com/aleemshahad/portfolio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/aleemshahad/portfolio/issues"
   },
   "devDependencies": {
-    "tailwindcss": "^3.3.0",
-    "gh-pages": "^6.0.0"
+    "esbuild": "^0.28.2",
+    "gsap": "^3.15.0"
   },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead"
-  ]
+  "type": "commonjs"
 }

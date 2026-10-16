@@ -1,0 +1,113 @@
+/* =============================================================
+   tokens.css — three-level token layer.
+   1 · PRIMITIVE  raw values, no meaning
+   2 · SEMANTIC   roles the page reasons about (component CSS reads ONLY these)
+   3 · COMPONENT  a genuine deviation from a role
+   Palette: near-black ground, off-white ink, ONE signal hue (green),
+   one amber used only inside terminal strings. No gradients as ground.
+   ============================================================= */
+
+:root {
+  /* ── 1 · PRIMITIVE ───────────────────────────────────────── */
+  --ink-000: #04060a;
+  --ink-050: #06090e;
+  --ink-100: #0a0e14;
+  --ink-150: #0e131a;
+  --ink-200: #131a23;
+  --ink-300: #1e2731;
+  --ink-400: #2c3743;
+  --ink-500: #5c6875;
+  --ink-600: #8a95a3;
+  --ink-700: #b9c3cf;
+  --ink-900: #eef2f7;
+
+  --signal-300: #86f5c4;
+  --signal-500: #2fe08a;
+  --signal-600: #14b873;
+  --amber-500: #e6b348;
+
+  --font-display: "Space Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  /* ── 2 · SEMANTIC ────────────────────────────────────────── */
+  --bg:            var(--ink-000);
+  --bg-alt:        var(--ink-050);
+  --surface:       var(--ink-100);
+  --surface-raised: var(--ink-150);
+  --surface-hover: var(--ink-200);
+
+  --border:        color-mix(in oklab, var(--ink-700) 12%, transparent);
+  --border-strong: color-mix(in oklab, var(--ink-700) 24%, transparent);
+  --rule:          color-mix(in oklab, var(--ink-700) 8%, transparent);
+
+  --text:          var(--ink-900);
+  --text-secondary: var(--ink-700);
+  --text-muted:    var(--ink-600);
+  --text-faint:    var(--ink-500);
+
+  --accent:        var(--signal-500);
+  --accent-strong: var(--signal-600);
+  --accent-soft:   var(--signal-300);
+  --accent-on:     #03110a;
+  --string:        var(--amber-500);
+  --focus:         var(--signal-500);
+
+  /* ── 3 · COMPONENT (only where a component genuinely deviates) */
+  --radius: 0px;                 /* creative/terminal dialect: one radius, and it is none */
+  --hair: 1px;
+
+  /* ── type scale — display ÷ body ≈ 9.5× at desktop ───────── */
+  --text-xs:   0.75rem;                                    /* 12 */
+  --text-sm:   0.8125rem;                                  /* 13 */
+  --text-base: 1rem;                                       /* 16 */
+  --text-md:   clamp(1.0625rem, 1rem + 0.25vw, 1.1875rem); /* 17-19 */
+  --text-h3:   clamp(1.375rem, 1.196rem + 0.893vw, 2rem);      /* 22-32 */
+  --text-h2:   clamp(2.25rem,  1.607rem + 3.214vw, 4.5rem);    /* 36-72 */
+  --text-h1:   clamp(3.25rem,  1.583rem + 8.333vw, 9.5rem);    /* 52-152 */
+  --text-stat: clamp(3.5rem,   2.071rem + 7.14vw,  8.5rem);    /* 56-136 */
+
+  /* ── space scale ─────────────────────────────────────────── */
+  --space-3xs: .25rem;
+  --space-2xs: .5rem;
+  --space-xs:  .75rem;
+  --space-s:   1rem;
+  --space-m:   1.5rem;
+  --space-l:   2.5rem;
+  --space-xl:  4rem;
+  --space-2xl: 6rem;
+
+  --gutter:        clamp(1.25rem, 4vw, 4.5rem);
+  --rail-w:        4.5rem;
+  --section-tight: clamp(2.5rem, 1.5rem + 3vw, 5rem);
+  --section:       clamp(4rem, 2rem + 7vw, 9rem);
+  --section-loose: clamp(6rem, 3rem + 11vw, 14rem);
+  --header-h:      64px;
+
+  --measure:       68ch;
+  --measure-narrow: 48ch;
+
+  /* ── motion tokens (duration / easing) ───────────────────── */
+  --dur-instant:  90ms;
+  --dur-fast:     160ms;
+  --dur-standard: 300ms;
+  --dur-medium:   450ms;
+  --dur-slow:     700ms;
+  --dur-cinema:   1100ms;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-expo:  cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-sharp:    cubic-bezier(0.65, 0, 0.45, 1);
+  --ease-out-circ: cubic-bezier(0, 0.55, 0.45, 1);
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-out-back: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* On wide screens the pipeline rail owns the left edge. Push the gutter
+   out by the rail width so no copy ever sits under a tick.
+   NOTE: this MUST live outside the `:root` block above. A nested
+   `@media { :root {} }` inside `:root` compiles to `:root :root`
+   (descendant of itself) which matches nothing. Top level = same layer,
+   same specificity, later in source => it wins. */
+@media (min-width: 78rem) {
+  :root { --gutter: calc(clamp(1.25rem, 4vw, 4.5rem) + var(--rail-w)); }
+}

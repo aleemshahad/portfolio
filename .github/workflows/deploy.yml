@@ -1,0 +1,82 @@
+# ==============================================================
+# deploy.yml — build the site and publish it to GitHub Pages.
+#
+# Replaces the old "update-portfolio.yml" (which pushed commits
+# back into the repo to refresh the projects list). The projects
+# list is now rebuilt from the GitHub API on every deploy, so the
+# committed index.html never needs another commit.
+#
+# The site is served from a project subpath (/portfolio/), which
+# is why every asset reference in the HTML is relative.
+# ==============================================================
+
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    # daily re-sync so the project cards track pushed_at
+    - cron: "17 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# never let two deploys fight over the Pages artifact
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      - name: Sync GitHub project data
+        # a rate limit here must never block a deploy — the committed
+        # snapshot in assets/data/repos.json is a valid fallback
+        run: node scripts/fetch_repos.mjs
+        continue-on-error: true
+        env:
+          GH_USER: ${{ github.repository_owner }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build
+        run: npm run build
+
+      - name: Verify
+        # hard gate: refuse to publish a broken or non-compliant artifact
+        run: npm run verify
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

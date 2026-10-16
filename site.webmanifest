@@ -1,0 +1,24 @@
+{
+  "name": "Nexus Automation — Aleem Shahzad",
+  "short_name": "Nexus Automation",
+  "description": "7+ years of Python automation, technical SEO and backlink systems, full-stack development and content pipelines.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#04060a",
+  "theme_color": "#04060a",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

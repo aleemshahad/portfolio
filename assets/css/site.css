@@ -1,0 +1,13 @@
+/* =============================================================
+   site.css — single stylesheet entry point.
+   Import order == cascade order. Layers declared in reset.css.
+   Source of truth for the build (scripts/build.mjs minifies this
+   into dist/assets/css/site.css with identical filename).
+   ============================================================= */
+
+@import "./reset.css";
+@import "./tokens.css";
+@import "./base.css";
+@import "./layout.css";
+@import "./sections.css";
+@import "./motion.css";

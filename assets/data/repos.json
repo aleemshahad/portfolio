@@ -1,0 +1,104 @@
+{
+  "user": "aleemshahad",
+  "fetchedAt": "2026-10-14T08:12:24.470Z",
+  "count": 9,
+  "repos": [
+    {
+      "name": "Romote_Desktop_pro",
+      "description": "Open-source LAN remote desktop for Windows with real-time PC to mobile chat, file transfer, clipboard sync, and secure access-code authentication.",
+      "language": "JavaScript",
+      "stars": 2,
+      "url": "https://github.com/aleemshahad/Romote_Desktop_pro",
+      "homepage": null,
+      "updated": "2026-10-10T11:18:06Z",
+      "topics": []
+    },
+    {
+      "name": "Committee-Pro",
+      "description": "A modern, offline-first financial management system and Android mobile application designed to manage community savings groups (Committees, Kameti, BC, Chit Funds) with complete transparency, bilingual support (English & Urdu), digital lucky draws, and AI-assisted reminders.",
+      "language": null,
+      "stars": 1,
+      "url": "https://github.com/aleemshahad/Committee-Pro",
+      "homepage": null,
+      "updated": "2026-10-09T15:26:37Z",
+      "topics": []
+    },
+    {
+      "name": "PhoneDisplay",
+      "description": null,
+      "language": "C#",
+      "stars": 1,
+      "url": "https://github.com/aleemshahad/PhoneDisplay",
+      "homepage": null,
+      "updated": "2026-10-04T10:03:28Z",
+      "topics": []
+    },
+    {
+      "name": "NEXUS-TRADING-SYSTEM",
+      "description": "Nexus TRADING SYSTEM is a professional automated trading bot that connects to MetaTrader 5 and executes a dynamic grid strategy on real market data. It does not use any mocked, simulated, or fake data — all prices, fills, and account information come directly from your live MT5 terminal.",
+      "language": "Python",
+      "stars": 7,
+      "url": "https://github.com/aleemshahad/NEXUS-TRADING-SYSTEM",
+      "homepage": null,
+      "updated": "2026-10-03T07:27:25Z",
+      "topics": [
+        "trading-algorithms"
+      ]
+    },
+    {
+      "name": "nexus-auto-system",
+      "description": "NEXUS AUTO SYSTEM is an autonomous forex and gold trading platform built on an event-driven agent architecture. It combines multi-strategy signal generation, AI-assisted research, browser-based market intelligence,",
+      "language": "Python",
+      "stars": 7,
+      "url": "https://github.com/aleemshahad/nexus-auto-system",
+      "homepage": null,
+      "updated": "2026-08-24T08:52:47Z",
+      "topics": [
+        "bot",
+        "mt5-api",
+        "mt5-bot",
+        "mt5-headless"
+      ]
+    },
+    {
+      "name": "data_profiling_app-main",
+      "description": null,
+      "language": "HTML",
+      "stars": 1,
+      "url": "https://github.com/aleemshahad/data_profiling_app-main",
+      "homepage": null,
+      "updated": "2026-04-22T03:50:50Z",
+      "topics": []
+    },
+    {
+      "name": "nextgenblog",
+      "description": "everything you need to run app",
+      "language": "TypeScript",
+      "stars": 1,
+      "url": "https://github.com/aleemshahad/nextgenblog",
+      "homepage": "https://nextgenblog.vercel.app",
+      "updated": "2026-02-10T04:42:47Z",
+      "topics": []
+    },
+    {
+      "name": "Blogger_Theems",
+      "description": "Modern Blogger Theme",
+      "language": null,
+      "stars": 1,
+      "url": "https://github.com/aleemshahad/Blogger_Theems",
+      "homepage": null,
+      "updated": "2026-01-25T09:34:29Z",
+      "topics": []
+    },
+    {
+      "name": "NextGenGuides",
+      "description": null,
+      "language": "TypeScript",
+      "stars": 1,
+      "url": "https://github.com/aleemshahad/NextGenGuides",
+      "homepage": null,
+      "updated": "2025-12-21T18:07:08Z",
+      "topics": []
+    }
+  ]
+}

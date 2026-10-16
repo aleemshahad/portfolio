@@ -1,0 +1,316 @@
+/* =============================================================
+   layout.css — page chrome: header, mobile menu, pipeline rail,
+   section shells, footer.
+   ============================================================= */
+
+@layer layout {
+
+  /* ── fixed header ─────────────────────────────────────────── */
+  .site-header {
+    position: fixed;
+    inset-inline: 0;
+    top: 0;
+    z-index: 60;
+    block-size: var(--header-h);
+    display: flex;
+    align-items: center;
+    gap: var(--space-m);
+    padding-inline: var(--gutter);
+    background: transparent;
+    border-block-end: var(--hair) solid transparent;
+    transition: background-color var(--dur-standard) var(--ease-standard),
+                border-color var(--dur-standard) var(--ease-standard);
+  }
+  .site-header[data-stuck="true"] {
+    background-color: color-mix(in oklab, var(--ink-000) 92%, transparent);
+    border-block-end-color: var(--rule);
+  }
+
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2xs);
+    min-height: 44px;
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--text);
+    margin-inline-end: auto;
+  }
+  .brand__mark {
+    color: var(--accent);
+    border: var(--hair) solid color-mix(in oklab, var(--accent) 45%, transparent);
+    padding: .2em .4em;
+    line-height: 1;
+  }
+  .brand__name { display: none; }
+  @media (min-width: 48rem) { .brand__name { display: inline; } }
+  @media (hover: hover) and (pointer: fine) { .brand:hover .brand__mark { background: var(--accent); color: var(--accent-on); } }
+
+  .site-nav { display: none; }
+  @media (min-width: 60rem) {
+    .site-nav { display: block; }
+    .site-nav ul { display: flex; align-items: center; gap: var(--space-m); }
+    .site-nav a {
+      position: relative;
+      display: inline-block;
+      padding-block: .3em;
+      font-family: var(--font-mono);
+      font-size: var(--text-sm);
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      transition: color var(--dur-fast) var(--ease-out-expo);
+    }
+    .site-nav a::after {
+      content: "";
+      position: absolute;
+      inset-inline: 0;
+      inset-block-end: 0;
+      block-size: var(--hair);
+      background: var(--accent);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform var(--dur-standard) var(--ease-out-expo);
+    }
+    .site-nav a[aria-current="true"] { color: var(--text); }
+    .site-nav a[aria-current="true"]::after { transform: scaleX(1); }
+    @media (hover: hover) and (pointer: fine) {
+      .site-nav a:hover { color: var(--text); }
+      .site-nav a:hover::after { transform: scaleX(1); }
+    }
+  }
+
+  .header__end { display: flex; align-items: center; gap: var(--space-2xs); }
+
+  .icon-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    inline-size: 44px;
+    block-size: 44px;
+    color: var(--text-muted);
+    border: var(--hair) solid transparent;
+    transition: color var(--dur-fast) var(--ease-out-expo),
+                border-color var(--dur-fast) var(--ease-out-expo),
+                background-color var(--dur-fast) var(--ease-out-expo);
+  }
+  .icon-btn svg { inline-size: 18px; block-size: 18px; }
+  .icon-btn[hidden] { display: none; }
+  @media (hover: hover) and (pointer: fine) {
+    .icon-btn:hover { color: var(--accent); border-color: var(--border-strong); }
+  }
+  .icon-btn:active { background: var(--surface-hover); }
+
+  .menu-toggle { display: inline-flex; }
+  @media (min-width: 60rem) { .menu-toggle { display: none; } }
+
+  /* ── mobile menu: full-screen sheet ───────────────────────── */
+  .sheet {
+    position: fixed;
+    inset: 0;
+    z-index: 70;
+    display: flex;
+    flex-direction: column;
+    padding: var(--gutter);
+    padding-block-start: calc(var(--header-h) + var(--space-l));
+    background: var(--ink-000);
+    /* starts off-screen; .is-open drives it */
+    transform: translate3d(0, -100%, 0);
+    visibility: hidden;
+    transition: transform var(--dur-medium) var(--ease-out-expo),
+                visibility 0s linear var(--dur-medium);
+  }
+  .sheet[data-open="true"] {
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+    transition: transform var(--dur-medium) var(--ease-out-expo), visibility 0s;
+  }
+  .sheet__close { position: absolute; top: var(--space-2xs); right: calc(var(--gutter) - 10px); }
+  .sheet nav ul { display: flex; flex-direction: column; gap: var(--space-2xs); }
+  .sheet nav a {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-s);
+    padding-block: var(--space-2xs);
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 12vw, 3.25rem);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    color: var(--text);
+    border-block-end: var(--hair) solid var(--rule);
+  }
+  .sheet nav a span {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    font-weight: 500;
+    letter-spacing: .12em;
+    color: var(--text-faint);
+  }
+  .sheet nav a:active { color: var(--accent); }
+  .sheet__foot {
+    margin-block-start: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-s);
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+  }
+
+  /* ── pipeline rail (long-scroll map) ──────────────────────── */
+  .rail { display: none; }
+  @media (min-width: 78rem) {
+    .rail {
+      display: block;
+      position: fixed;
+      z-index: 50;
+      inset-block: 0;
+      inset-inline-start: 0;
+      inline-size: var(--rail-w);
+      padding-block: calc(var(--header-h) + var(--space-l)) var(--space-l);
+      pointer-events: none;
+    }
+    .rail ol {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      block-size: 100%;
+      pointer-events: auto;
+    }
+    /* the drawn spine */
+    .rail ol::before {
+      content: "";
+      position: absolute;
+      inset-block: .4rem;
+      inset-inline-start: .4875rem;
+      inline-size: var(--hair);
+      background: var(--rule);
+    }
+    /* the drawn progress. Direct child of .rail (which is position:fixed),
+       so it must measure against .rail's padding box, not the <ol>. */
+    .rail__fill {
+      position: absolute;
+      inset-block-start: calc(var(--header-h) + var(--space-l) + .4rem);
+      inset-inline-start: .4875rem;
+      inline-size: var(--hair);
+      block-size: calc(100% - var(--header-h) - (var(--space-l) * 2) - .8rem);
+      background: var(--accent);
+      transform: scaleY(0);
+      transform-origin: top;
+      will-change: transform;
+    }
+    .rail li { position: relative; }
+    .rail a {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2xs);
+      padding-block: .35rem;
+      min-height: 44px;
+    }
+    .rail__tick {
+      inline-size: .6rem;
+      block-size: .6rem;
+      margin-inline-start: .19rem;
+      flex: none;
+      background: var(--bg);
+      border: var(--hair) solid var(--ink-400);
+      transition: border-color var(--dur-standard) var(--ease-out-expo),
+                  background-color var(--dur-standard) var(--ease-out-expo);
+    }
+    .rail__label {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--text-faint);
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      transition: color var(--dur-standard) var(--ease-out-expo);
+    }
+    .rail li[data-active="true"] .rail__tick {
+      background: var(--accent);
+      border-color: var(--accent);
+    }
+    .rail li[data-active="true"] .rail__label { color: var(--text-secondary); }
+    @media (hover: hover) and (pointer: fine) {
+      .rail a:hover .rail__tick { border-color: var(--accent); }
+      .rail a:hover .rail__label { color: var(--text); }
+    }
+    .rail a:focus-visible { outline-offset: 6px; }
+  }
+
+  /* thin top progress for < 78rem */
+  .scroll-progress {
+    position: fixed;
+    inset-block-start: var(--header-h);
+    inset-inline: 0;
+    z-index: 55;
+    block-size: 2px;
+    background: transparent;
+    pointer-events: none;
+  }
+  .scroll-progress span {
+    display: block;
+    block-size: 100%;
+    background: var(--accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    will-change: transform;
+  }
+  @media (min-width: 78rem) { .scroll-progress { display: none; } }
+
+  /* ── section shells ───────────────────────────────────────── */
+  main { display: block; padding-block-start: var(--header-h); }
+
+  /* fixed header: an anchored jump must clear it */
+  section[id] { scroll-margin-block-start: calc(var(--header-h) + var(--space-s)); }
+
+  .section { padding-block: var(--section); }
+  .section--tight { padding-block: var(--section-tight); }
+  .section--loose { padding-block: var(--section-loose); }
+  .section--ground { background: var(--bg-alt); border-block: var(--hair) solid var(--rule); }
+
+  .sec-head {
+    display: grid;
+    gap: var(--space-m);
+    margin-block-end: var(--section-tight);
+  }
+  @media (min-width: 60rem) {
+    .sec-head {
+      grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+      align-items: end;
+      gap: var(--space-xl);
+    }
+    .sec-head .eyebrow { grid-column: 1 / -1; }
+    .sec-head__title { grid-column: 1; }
+    .sec-head__lede { grid-column: 2; }
+  }
+
+  /* ── footer: creative dialect = 2 columns, few links ──────── */
+  .site-footer {
+    border-block-start: var(--hair) solid var(--rule);
+    padding-block: var(--space-l);
+    background: var(--bg);
+  }
+  .site-footer .wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-m);
+    align-items: baseline;
+    justify-content: space-between;
+  }
+  .site-footer p, .site-footer a, .site-footer span {
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+  }
+  .site-footer__links { display: flex; flex-wrap: wrap; gap: var(--space-m); }
+  .site-footer a { min-height: 44px; display: inline-flex; align-items: center; }
+  @media (hover: hover) and (pointer: fine) { .site-footer a:hover { color: var(--accent); } }
+
+}

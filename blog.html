@@ -1,155 +1,282 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Blog — Aleem Shahzad</title>
-  <meta name="description" content="Articles on digital marketing, SEO, Python automation, trading systems and AI.">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Writing — Aleem Shahzad / Nexus Automation</title>
+  <meta name="description" content="Notes in progress on technical SEO, Python automation, trading systems and AI-assisted content pipelines, by Aleem Shahzad (Nexus Automation).">
+  <meta name="author" content="Aleem Shahzad">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#04060a">
+  <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://aleemshahad.github.io/portfolio/blog.html">
 
-  <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Blog — Aleem Shahzad">
-  <meta property="og:description" content="SEO, automation, trading systems & AI.">
+  <meta property="og:site_name" content="Nexus Automation">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="Writing — Aleem Shahzad / Nexus Automation">
+  <meta property="og:description" content="Notes in progress on technical SEO, Python automation, trading systems and AI-assisted content pipelines.">
   <meta property="og:url" content="https://aleemshahad.github.io/portfolio/blog.html">
+  <meta property="og:image" content="https://aleemshahad.github.io/portfolio/assets/images/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Aleem Shahzad — Nexus Automation">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Writing — Aleem Shahzad / Nexus Automation">
+  <meta name="twitter:description" content="Notes in progress on technical SEO, Python automation, trading systems and AI-assisted content pipelines.">
+  <meta name="twitter:image" content="https://aleemshahad.github.io/portfolio/assets/images/og.png">
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
 
-  <!-- Tailwind (CDN) -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preload" href="assets/fonts/SpaceGrotesk.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/JetBrainsMono.woff2" as="font" type="font/woff2" crossorigin>
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/site.css">
 
-  <!-- Custom styles -->
-  <link rel="stylesheet" href="assets/css/style.css">
+  <script defer src="assets/vendor/gsap.min.js"></script>
+  <script defer src="assets/vendor/ScrollTrigger.min.js"></script>
 
-  <meta name="color-scheme" content="dark light">
+  <script>
+    /* Same contract as the homepage: stamp the motion flag before first
+       paint, then drop it if the app never boots. */
+    (function () {
+      var root = document.documentElement;
+      if (!window.matchMedia || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+      if (!document.querySelector('script[src$="gsap.min.js"]')) return;
+      root.setAttribute("data-motion", "on");
+      setTimeout(function () {
+        if (!window.__NEXUS_BOOTED) root.removeAttribute("data-motion");
+      }, 3000);
+    })();
+  </script>
 </head>
-<body class="font-sans bg-surface text-surface-contrast antialiased">
-  <header class="max-w-5xl mx-auto px-6 py-6 flex items-center justify-between">
-    <a href="index.html" class="flex items-center gap-3" aria-label="Aleem Shahzad">
-      <img src="assets/images/profile.jpg" alt="Aleem Shahzad" class="w-10 h-10 rounded-full object-cover border-2 border-muted">
-      <span class="font-semibold text-lg">Aleem Shahzad</span>
+
+<body>
+  <!-- ── icon sprite ─────────────────────────────────────────── -->
+  <svg style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true" focusable="false">
+    <symbol id="i-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"><path d="M2.5 8h11M9.5 4l4 4-4 4"/></symbol>
+    <symbol id="i-ext" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"><path d="M9.5 2.5h4v4M13.5 2.5 7.75 8.25M12 8.75v4.75H3.25V4.75H8"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"><path d="M2 4.5h12M2 8h12M2 11.5h12"/></symbol>
+    <symbol id="i-close" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"><path d="m4 4 8 8M12 4l-8 8"/></symbol>
+    <symbol id="i-github" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></symbol>
+  </svg>
+
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- ── header ─────────────────────────────────────────────── -->
+  <header class="site-header" data-header>
+    <a class="brand" href="index.html" aria-label="Nexus Automation — home">
+      <span class="brand__mark" aria-hidden="true">AS</span>
+      <span class="brand__name">Nexus Automation</span>
     </a>
 
-    <div class="flex items-center gap-3">
-      <nav class="hidden sm:flex gap-4 text-sm" aria-label="Main navigation">
-        <a class="nav-link" href="index.html#projects">Projects</a>
-        <a class="nav-link" href="index.html#services">Services</a>
-        <a class="nav-link" href="blog.html">Blog</a>
-        <a class="nav-link" href="index.html#contact">Contact</a>
-      </nav>
+    <nav class="site-nav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html#metrics">Numbers</a></li>
+        <li><a href="index.html#capabilities">Capabilities</a></li>
+        <li><a href="index.html#work">Work</a></li>
+        <li><a href="blog.html" aria-current="page">Writing</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
 
-      <button id="theme-toggle" class="p-2 rounded-md focus:outline-none focus-visible:ring" aria-pressed="false" aria-label="Toggle color theme">
-        <i id="theme-icon" class="fa-regular fa-moon"></i>
-      </button>
+    <div class="header__end">
+      <a class="icon-btn" href="https://github.com/aleemshahad" target="_blank" rel="noopener" aria-label="GitHub profile (opens in a new tab)"><svg aria-hidden="true"><use href="#i-github"/></svg></a>
+      <button class="icon-btn menu-toggle" type="button" aria-expanded="false" aria-controls="sheet" aria-label="Open menu" data-menu-toggle><svg aria-hidden="true"><use href="#i-menu"/></svg></button>
     </div>
   </header>
 
-  <main class="max-w-5xl mx-auto px-6 pb-12">
-    <!-- Blog hero -->
-    <section class="relative bg-glass rounded-2xl p-8 md:p-12 mb-8 overflow-hidden">
-      <h1 class="text-4xl md:text-5xl font-extrabold mb-3 leading-tight">Blog</h1>
-      <p class="text-lg text-muted max-w-2xl">
-        Insights on SEO, digital marketing, Python automation, trading systems and the latest tech trends.
-      </p>
-      <span aria-hidden="true" class="absolute -right-24 -top-20 w-56 h-56 glow-accent"></span>
-    </section>
+  <!-- ── mobile sheet ───────────────────────────────────────── -->
+  <div class="sheet" id="sheet" data-sheet>
+    <button class="icon-btn sheet__close" type="button" aria-label="Close menu" data-menu-close><svg aria-hidden="true"><use href="#i-close"/></svg></button>
+    <nav aria-label="Mobile">
+      <ul>
+        <li><a href="index.html#metrics"><span>01</span>Numbers</a></li>
+        <li><a href="index.html#capabilities"><span>02</span>Capabilities</a></li>
+        <li><a href="index.html#work"><span>03</span>Work</a></li>
+        <li><a href="blog.html" aria-current="page"><span>04</span>Writing</a></li>
+        <li><a href="index.html#contact"><span>05</span>Contact</a></li>
+      </ul>
+    </nav>
+    <div class="sheet__foot">
+      <a class="link" href="mailto:aleemssg@gmail.com">aleemssg@gmail.com</a>
+      <a class="link" href="https://github.com/aleemshahad" target="_blank" rel="noopener">github.com/aleemshahad</a>
+    </div>
+  </div>
 
-    <!-- Featured -->
-    <section class="mb-10">
-      <div class="card p-6">
-        <div class="flex items-center gap-2 text-sm text-muted mb-3">
-          <i class="fas fa-fire text-accent" aria-hidden="true"></i>
-          <span class="text-accent font-semibold">Featured</span>
-          <span>•</span>
-          <span>AI & Automation</span>
+  <main id="main">
+
+    <!-- ══ WRITING ═══════════════════════════════════════════ -->
+    <section class="section" aria-labelledby="writing-title">
+      <div class="wrap">
+        <header class="sec-head">
+          <p class="eyebrow">04 &middot; Writing</p>
+          <h1 class="sec-title sec-head__title" id="writing-title">Notes from inside the build.</h1>
+          <p class="lede sec-head__lede">
+            Seven pieces are drafted and not yet published — no post is listed here until it
+            actually ships. Each one is a working note from a real system rather than a listicle.
+          </p>
+        </header>
+
+        <div class="projects projects--notes">
+
+          <!-- No card is featured: a 2x2 featured cell on a page whose
+               cards carry three lines of copy leaves a 300px hole, and
+               these notes are peers — none of them is the lead. -->
+          <article class="project rise">
+            <div class="project__top">
+              <span class="project__lang">AI &amp; Automation</span>
+              <span>draft</span>
+            </div>
+            <h2 class="project__name">How AI Automation is Revolutionizing Digital Marketing</h2>
+            <p class="project__desc">
+              How artificial intelligence and automation change the economics of digital
+              marketing — chatbots, predictive analytics, and where the ROI actually comes from
+              once the manual work is gone.
+            </p>
+            <div class="project__foot">
+              <span class="project__meta">AI &middot; Automation &middot; Marketing</span>
+              <span class="project__links">not published yet</span>
+            </div>
+          </article>
+
+          <article class="project rise">
+            <div class="project__top">
+              <span class="project__lang">Trading</span>
+              <span>draft</span>
+            </div>
+            <h2 class="project__name">Turning $10 into $100 — My Trading Journey</h2>
+            <p class="project__desc">
+              A personal record of a forex account, the sizing and risk rules that held up, and
+              the strategies that produced consistent results instead of one lucky week.
+            </p>
+            <div class="project__foot">
+              <span class="project__meta">Trading &middot; Forex &middot; Strategy</span>
+              <span class="project__links">not published yet</span>
+            </div>
+          </article>
+
+          <article class="project rise">
+            <div class="project__top">
+              <span class="project__lang">Python</span>
+              <span>draft</span>
+            </div>
+            <h2 class="project__name">Building Smart Python Bots for Forex Trading</h2>
+            <p class="project__desc">
+              A practical build guide: MT5 integration, grid strategies, event-driven bots and
+              the failure modes that only show up against live market data.
+            </p>
+            <div class="project__foot">
+              <span class="project__meta">Python &middot; Trading Bots &middot; Automation</span>
+              <span class="project__links">not published yet</span>
+            </div>
+          </article>
+
+          <article class="project rise">
+            <div class="project__top">
+              <span class="project__lang">Systems</span>
+              <span>draft</span>
+            </div>
+            <h2 class="project__name">Start a New Trading Journal</h2>
+            <p class="project__desc">
+              The tooling behind a trading setup — MT5 automation, logging, and AI-assisted
+              market research, wired into one workflow.
+            </p>
+            <div class="project__foot">
+              <span class="project__meta">Systems &middot; AI</span>
+              <span class="project__links">not published yet</span>
+            </div>
+          </article>
+
+          <article class="project rise">
+            <div class="project__top">
+              <span class="project__lang">SEO</span>
+              <span>draft</span>
+            </div>
+            <h2 class="project__name">Advanced SEO Techniques</h2>
+            <p class="project__desc">
+              Technical, content and off-page work that still moves rankings after the recent
+              algorithm updates — including what stopped working.
+            </p>
+            <div class="project__foot">
+              <span class="project__meta">SEO &middot; Google &middot; Rankings</span>
+              <span class="project__links">not published yet</span>
+            </div>
+          </article>
+
+          <article class="project rise">
+            <div class="project__top">
+              <span class="project__lang">Guest Posting</span>
+              <span>draft</span>
+            </div>
+            <h2 class="project__name">Automating Audience Research</h2>
+            <p class="project__desc">
+              Guest posting at scale — how outreach, publisher research and content strategy
+              combine into backlinks that actually get placed.
+            </p>
+            <div class="project__foot">
+              <span class="project__meta">Guest Posting &middot; Backlinks</span>
+              <span class="project__links">not published yet</span>
+            </div>
+          </article>
+
+          <article class="project rise">
+            <div class="project__top">
+              <span class="project__lang">Mobile SEO</span>
+              <span>draft</span>
+            </div>
+            <h2 class="project__name">Mobile-First SEO: The Future of Search</h2>
+            <p class="project__desc">
+              What mobile-first indexing actually rewards, and the performance and UX work that
+              has to happen before the content is even evaluated.
+            </p>
+            <div class="project__foot">
+              <span class="project__meta">Mobile SEO &middot; UX &middot; Performance</span>
+              <span class="project__links">not published yet</span>
+            </div>
+          </article>
+
         </div>
-        <h2 class="text-2xl font-bold mb-3">How AI Automation is Revolutionizing Digital Marketing</h2>
-        <p class="text-muted max-w-3xl mb-4">
-          Discover how artificial intelligence and automation are transforming the digital marketing landscape — from chatbots to predictive analytics, and how to leverage AI to boost your marketing ROI.
-        </p>
-        <div class="flex flex-wrap gap-2 mb-5">
-          <span class="chip">AI</span><span class="chip">Automation</span><span class="chip">Marketing</span>
-        </div>
-        <a href="#" class="btn-sm">Read Article</a>
       </div>
     </section>
 
-    <!-- Articles grid -->
-    <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" aria-label="Latest articles">
-      <article class="project-card">
-        <h3 class="font-semibold">Turning $10 into $100 — My Trading Journey</h3>
-        <p class="text-sm text-muted mt-1">My personal journey in forex trading and the strategies that helped me build consistent results.</p>
-        <div class="flex flex-wrap gap-2 mt-3">
-          <span class="chip">Trading</span><span class="chip">Forex</span><span class="chip">Strategy</span>
-        </div>
-        <a href="#" class="btn-sm-outline mt-3 inline-block">Read →</a>
-      </article>
-
-      <article class="project-card">
-        <h3 class="font-semibold">Building Smart Python Bots for Forex Trading</h3>
-        <p class="text-sm text-muted mt-1">A practical guide to building automated trading systems with Python — MT5, grid strategies and event-driven bots.</p>
-        <div class="flex flex-wrap gap-2 mt-3">
-          <span class="chip">Python</span><span class="chip">Trading Bots</span><span class="chip">Automation</span>
-        </div>
-        <a href="#" class="btn-sm-outline mt-3 inline-block">Read →</a>
-      </article>
-
-      <article class="project-card">
-        <h3 class="font-semibold">Start a New Trading Journal</h3>
-        <p class="text-sm text-muted mt-1">The systems and tools behind my trading setup — from MT5 automation to AI-assisted market research.</p>
-        <div class="flex flex-wrap gap-2 mt-3">
-          <span class="chip">Systems</span><span class="chip">AI</span>
-        </div>
-        <a href="#" class="btn-sm-outline mt-3 inline-block">Read →</a>
-      </article>
-
-      <article class="project-card">
-        <h3 class="font-semibold">Advanced SEO Techniques</h3>
-        <p class="text-sm text-muted mt-1">Cutting-edge SEO strategies that work with the latest Google algorithm updates — technical, content and off-page.</p>
-        <div class="flex flex-wrap gap-2 mt-3">
-          <span class="chip">SEO</span><span class="chip">Google</span><span class="chip">Rankings</span>
-        </div>
-        <a href="#" class="btn-sm-outline mt-3 inline-block">Read →</a>
-      </article>
-
-      <article class="project-card">
-        <h3 class="font-semibold">Automating Audience Research</h3>
-        <p class="text-sm text-muted mt-1">Guest posting at scale — how outreach, research and content strategy come together for real backlinks.</p>
-        <div class="flex flex-wrap gap-2 mt-3">
-          <span class="chip">Guest Posting</span><span class="chip">Backlinks</span>
-        </div>
-        <a href="#" class="btn-sm-outline mt-3 inline-block">Read →</a>
-      </article>
-
-      <article class="project-card">
-        <h3 class="font-semibold">Mobile-First SEO: The Future of Search</h3>
-        <p class="text-sm text-muted mt-1">Understanding Google's mobile-first indexing and how to optimize your website for mobile users.</p>
-        <div class="flex flex-wrap gap-2 mt-3">
-          <span class="chip">Mobile SEO</span><span class="chip">UX</span><span class="chip">Performance</span>
-        </div>
-        <a href="#" class="btn-sm-outline mt-3 inline-block">Read →</a>
-      </article>
+    <!-- ══ CLOSING ═══════════════════════════════════════════ -->
+    <section class="section section--ground" aria-labelledby="writing-cta">
+      <div class="wrap">
+        <header class="sec-head">
+          <p class="eyebrow">Ship</p>
+          <h2 class="sec-title sec-head__title" id="writing-cta">Want one of these written for your stack?</h2>
+          <p class="lede sec-head__lede">
+            These notes come out of live client systems. If you have a problem worth documenting,
+            it is probably worth automating first.
+          </p>
+        </header>
+        <p class="contact__alt rise">
+          <a class="btn" href="index.html#contact">Open a channel <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a class="link-arrow" href="https://github.com/aleemshahad" target="_blank" rel="noopener">Read the code instead <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+        </p>
+      </div>
     </section>
+
   </main>
 
-  <footer class="border-t border-[rgba(255,255,255,0.05)] py-8 mt-4">
-    <div class="max-w-5xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-muted">
-      <p>© <span id="year">2026</span> Muhammad Aleem Shahzad — SEO & Automation Expert</p>
-      <div class="flex gap-4">
-        <a href="https://github.com/aleemshahad" target="_blank" rel="noopener" class="hover:text-accent">GitHub</a>
-        <a href="https://twitter.com/ALEEMSHAHZAD2" target="_blank" rel="noopener" class="hover:text-accent">Twitter</a>
-        <a href="index.html" class="hover:text-accent">Home</a>
-      </div>
+  <!-- ── footer ─────────────────────────────────────────────── -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>&copy; <span data-year>2026</span> Aleem Shahzad — Nexus Automation</p>
+      <nav class="site-footer__links" aria-label="Social">
+        <a href="https://github.com/aleemshahad" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://x.com/ALEEMSHAHZAD2" target="_blank" rel="noopener">X</a>
+        <a href="https://www.linkedin.com/in/aleemshahad" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="index.html">Home</a>
+      </nav>
     </div>
   </footer>
 
-  <script src="assets/js/theme.js"></script>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <script type="module" src="assets/js/site.js"></script>
 </body>
 </html>

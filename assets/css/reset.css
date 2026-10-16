@@ -1,0 +1,43 @@
+/* =============================================================
+   reset.css — cascade layer order + minimal reset.
+   The layer statement lives here (first import) so it is always
+   established before any layered rule, in dev and after bundling.
+   ============================================================= */
+
+@layer reset, base, layout, components, motion, utilities, overrides;
+
+@layer reset {
+  *, *::before, *::after { box-sizing: border-box; }
+  * { margin: 0; }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    interpolate-size: allow-keywords;
+    scrollbar-gutter: stable;
+  }
+
+  body {
+    min-height: 100svh;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  img, picture, video, canvas, svg { display: block; max-width: 100%; }
+  input, button, textarea, select { font: inherit; color: inherit; }
+  button { background: none; border: 0; padding: 0; cursor: pointer; }
+
+  p, h1, h2, h3, h4, li, dt, dd, figure, blockquote { overflow-wrap: break-word; }
+  h1, h2, h3 { text-wrap: balance; }
+  p { text-wrap: pretty; }
+  ul, ol { list-style: none; padding: 0; }
+
+  :target { scroll-margin-block: 5svh; }
+
+  /* the page is committed to one ground — see tokens.css */
+  :root { color-scheme: dark; }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html { scroll-behavior: smooth; }
+  }
+}

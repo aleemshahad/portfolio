@@ -1,330 +1,618 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Aleem Shahzad — SEO & Automation Expert</title>
-  <meta name="description" content="Guest Posting Specialist | SEO Expert | Python Automation Developer | Building automation systems, trading bots and growth tools.">
-  <meta name="author" content="Muhammad Aleem Shahzad">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Aleem Shahzad — Automation, SEO &amp; Full-Stack</title>
+  <meta name="description" content="Aleem Shahzad (Nexus Automation): 7+ years of Python automation, technical SEO and backlink systems, full-stack development and content pipelines.">
+  <meta name="author" content="Aleem Shahzad">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#04060a">
+  <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://aleemshahad.github.io/portfolio/">
 
-  <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Aleem Shahzad — SEO & Automation Expert">
-  <meta property="og:description" content="SEO, Python automation, trading systems & web development.">
+  <meta property="og:site_name" content="Nexus Automation">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="Aleem Shahzad — Automation, SEO &amp; Full-Stack">
+  <meta property="og:description" content="7+ years of Python automation, technical SEO and backlink systems, full-stack development and content pipelines.">
   <meta property="og:url" content="https://aleemshahad.github.io/portfolio/">
-  <meta property="og:image" content="assets/images/profile.jpg">
+  <meta property="og:image" content="https://aleemshahad.github.io/portfolio/assets/images/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Aleem Shahzad — Nexus Automation">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Aleem Shahzad — Automation, SEO &amp; Full-Stack">
+  <meta name="twitter:description" content="7+ years of Python automation, technical SEO and backlink systems, full-stack development and content pipelines.">
+  <meta name="twitter:image" content="https://aleemshahad.github.io/portfolio/assets/images/og.png">
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
 
-  <!-- Tailwind (CDN for quick updates) -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- two font files, zero requests to a third party -->
+  <link rel="preload" href="assets/fonts/SpaceGrotesk.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/JetBrainsMono.woff2" as="font" type="font/woff2" crossorigin>
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/site.css">
 
-  <!-- Custom styles -->
-  <link rel="stylesheet" href="assets/css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Aleem Shahzad",
+    "alternateName": "Muhammad Aleem Shahzad",
+    "url": "https://aleemshahad.github.io/portfolio/",
+    "image": "https://aleemshahad.github.io/portfolio/assets/images/profile.jpg",
+    "jobTitle": "Technical SEO & Automation Specialist",
+    "worksFor": { "@type": "Organization", "name": "Nexus Automation" },
+    "sameAs": [
+      "https://github.com/aleemshahad",
+      "https://x.com/ALEEMSHAHZAD2",
+      "https://www.linkedin.com/in/aleemshahad"
+    ],
+    "knowsAbout": [
+      "Technical SEO", "Link Building", "Guest Posting", "Python Automation",
+      "Web Scraping", "Chrome DevTools Protocol", "React Native",
+      "GitHub Actions", "Video Editing"
+    ]
+  }
+  </script>
 
-  <meta name="color-scheme" content="dark light">
+  <!-- vendored locally: no CDN, no runtime network dependency -->
+  <script defer src="assets/vendor/gsap.min.js"></script>
+  <script defer src="assets/vendor/ScrollTrigger.min.js"></script>
+
+  <script>
+    /* Stamp the motion flag before first paint so nothing flashes in its
+       finished state, then hide it again if the app never boots — content
+       must never stay hidden behind a script that failed to load. */
+    (function () {
+      var root = document.documentElement;
+      if (!window.matchMedia || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+      if (!document.querySelector('script[src$="gsap.min.js"]')) return;
+      root.setAttribute("data-motion", "on");
+      setTimeout(function () {
+        if (!window.__NEXUS_BOOTED) root.removeAttribute("data-motion");
+      }, 3000);
+    })();
+  </script>
+
+  <script>
+    /* Review harness. Never runs in production: it needs BOTH the diag
+       query flag and a localhost origin, and GitHub Pages has no /_diag
+       endpoint to talk to anyway. Reports page errors and the document
+       height so the headless shot tool can size a full-page capture. */
+    (function () {
+      if (!/[?&]diag=1/.test(location.search)) return;
+      if (!/^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname)) return;
+
+      /* Hold the `load` event long enough for the intro choreography AND
+         the live GitHub project sync + its reveal stagger to finish —
+         a headless browser screenshots the instant `load` fires, so a
+         short hold would capture the grid mid-flight. */
+      var hold = document.createElement("img");
+      hold.src = "/__delay/3000";
+      hold.alt = "";
+      hold.setAttribute("aria-hidden", "true");
+      (document.head || document.documentElement).appendChild(hold);
+
+      var send = function (line) {
+        try {
+          fetch("/_diag", {
+            method: "POST",
+            keepalive: true,
+            headers: { "content-type": "text/plain" },
+            body: String(line),
+          });
+        } catch (e) { /* diagnostics are best effort */ }
+      };
+      /* Sent before `load` on purpose: a headless browser screenshots and
+         exits the instant load fires, so anything queued on a timer after
+         it never reaches the server. This beacon tells the harness the
+         flag was actually parsed (vs. the page simply being dead). */
+      send("HARNESS");
+
+      window.addEventListener("error", function (e) {
+        send("ERROR " + (e.message || "unknown") + " @ " + (e.filename || "") + ":" + (e.lineno || 0));
+      });
+      window.addEventListener("unhandledrejection", function (e) {
+        send("REJECTION " + String(e.reason && e.reason.message ? e.reason.message : e.reason));
+      });
+      var nativeError = console.error;
+      console.error = function () {
+        var args = Array.prototype.slice.call(arguments);
+        send("CONSOLE " + args.map(String).join(" "));
+        return nativeError.apply(console, args);
+      };
+
+      var reported = false;
+      var report = function () {
+        if (reported) return;
+        reported = true;
+        var d = document.documentElement;
+        send("METRIC scrollHeight=" + d.scrollHeight);
+        send("METRIC motion=" + (d.getAttribute("data-motion") || "off"));
+        send("METRIC projects=" + document.querySelectorAll("[data-projects] [data-repo]").length);
+        send("READY");
+      };
+      window.addEventListener("load", report);
+      /* belt and braces: if `load` never fires, still report */
+      window.setTimeout(report, 5000);
+    })();
+  </script>
 </head>
-<body class="font-sans bg-surface text-surface-contrast antialiased">
-  <header class="max-w-5xl mx-auto px-6 py-6 flex items-center justify-between">
-    <a href="#hero" class="flex items-center gap-3" aria-label="Aleem Shahzad">
-      <img src="assets/images/profile.jpg" alt="Aleem Shahzad" class="w-10 h-10 rounded-full object-cover border-2 border-muted">
-      <span class="font-semibold text-lg">Aleem Shahzad</span>
+
+<body>
+  <!-- ── icon sprite ─────────────────────────────────────────── -->
+  <svg style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true" focusable="false">
+    <symbol id="i-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"><path d="M2.5 8h11M9.5 4l4 4-4 4"/></symbol>
+    <symbol id="i-ext" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"><path d="M9.5 2.5h4v4M13.5 2.5 7.75 8.25M12 8.75v4.75H3.25V4.75H8"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"><path d="M2 4.5h12M2 8h12M2 11.5h12"/></symbol>
+    <symbol id="i-close" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"><path d="m4 4 8 8M12 4l-8 8"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1.75" y="3.25" width="12.5" height="9.5"/><path d="m2 4 6 4.5L14 4"/></symbol>
+    <symbol id="i-play" viewBox="0 0 16 16" fill="currentColor"><path d="M4.5 2.5 13 8l-8.5 5.5z"/></symbol>
+    <symbol id="i-refresh" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"><path d="M13.5 8a5.5 5.5 0 1 1-1.75-4.02M13.5 1.5v3h-3"/></symbol>
+    <symbol id="i-github" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24" fill="currentColor"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></symbol>
+    <symbol id="i-wa" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></symbol>
+  </svg>
+
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- ── header ─────────────────────────────────────────────── -->
+  <header class="site-header" data-header>
+    <a class="brand" href="#hero" aria-label="Nexus Automation — home">
+      <span class="brand__mark" aria-hidden="true">AS</span>
+      <span class="brand__name">Nexus Automation</span>
     </a>
 
-    <div class="flex items-center gap-3">
-      <nav class="hidden sm:flex gap-4 text-sm" aria-label="Main navigation">
-        <a class="nav-link" href="#projects">Projects</a>
-        <a class="nav-link" href="#services">Services</a>
-        <a class="nav-link" href="blog.html">Blog</a>
-        <a class="nav-link" href="#contact">Contact</a>
-      </nav>
+    <nav class="site-nav" aria-label="Primary">
+      <ul>
+        <li><a href="#metrics">Numbers</a></li>
+        <li><a href="#capabilities">Capabilities</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="blog.html">Writing</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
 
-      <button id="theme-toggle" class="p-2 rounded-md focus:outline-none focus-visible:ring" aria-pressed="false" aria-label="Toggle color theme">
-        <i id="theme-icon" class="fa-regular fa-moon"></i>
-      </button>
+    <div class="header__end">
+      <a class="icon-btn" href="https://github.com/aleemshahad" target="_blank" rel="noopener" aria-label="GitHub profile (opens in a new tab)"><svg aria-hidden="true"><use href="#i-github"/></svg></a>
+      <button class="icon-btn menu-toggle" type="button" aria-expanded="false" aria-controls="sheet" aria-label="Open menu" data-menu-toggle><svg aria-hidden="true"><use href="#i-menu"/></svg></button>
     </div>
   </header>
 
-  <main class="max-w-5xl mx-auto px-6 pb-12">
-    <!-- Hero -->
-    <section id="hero" class="relative bg-glass rounded-2xl p-8 md:p-12 mb-8 overflow-hidden group">
-      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-        <div class="max-w-2xl">
-          <h1 class="text-4xl md:text-5xl font-extrabold mb-3 leading-tight">Aleem Shahzad</h1>
-          <p class="text-lg text-muted mb-4">SEO & Automation Expert — Guest Posting Specialist · Python Automation · Generative AI</p>
+  <!-- ── mobile sheet ───────────────────────────────────────── -->
+  <div class="sheet" id="sheet" data-sheet>
+    <button class="icon-btn sheet__close" type="button" aria-label="Close menu" data-menu-close><svg aria-hidden="true"><use href="#i-close"/></svg></button>
+    <nav aria-label="Mobile">
+      <ul>
+        <li><a href="#metrics"><span>01</span>Numbers</a></li>
+        <li><a href="#capabilities"><span>02</span>Capabilities</a></li>
+        <li><a href="#work"><span>03</span>Work</a></li>
+        <li><a href="blog.html"><span>04</span>Writing</a></li>
+        <li><a href="#contact"><span>05</span>Contact</a></li>
+      </ul>
+    </nav>
+    <div class="sheet__foot">
+      <a class="link" href="mailto:aleemssg@gmail.com">aleemssg@gmail.com</a>
+      <a class="link" href="https://github.com/aleemshahad" target="_blank" rel="noopener">github.com/aleemshahad</a>
+    </div>
+  </div>
 
-          <p id="typing-text" class="text-base text-subtle min-h-[48px] typing-cursor" aria-live="polite"></p>
+  <!-- ── pipeline rail (>= 78rem) ───────────────────────────── -->
+  <nav class="rail" aria-label="Build stages">
+    <span class="rail__fill" aria-hidden="true"></span>
+    <ol>
+      <li data-rail="hero" data-active="true"><a href="#hero"><span class="rail__tick" aria-hidden="true"></span><span class="rail__label">boot</span></a></li>
+      <li data-rail="metrics"><a href="#metrics"><span class="rail__tick" aria-hidden="true"></span><span class="rail__label">proof</span></a></li>
+      <li data-rail="capabilities"><a href="#capabilities"><span class="rail__tick" aria-hidden="true"></span><span class="rail__label">build</span></a></li>
+      <li data-rail="work"><a href="#work"><span class="rail__tick" aria-hidden="true"></span><span class="rail__label">ship</span></a></li>
+      <li data-rail="contact"><a href="#contact"><span class="rail__tick" aria-hidden="true"></span><span class="rail__label">deploy</span></a></li>
+    </ol>
+  </nav>
 
-          <div class="mt-6 flex flex-wrap gap-3">
-            <a href="#projects" class="btn-primary">View My Work</a>
-            <a href="#contact" class="btn-ghost">Hire Me</a>
+  <div class="scroll-progress" aria-hidden="true"><span data-progress></span></div>
+
+  <main id="main">
+    <!-- ══ HERO ═════════════════════════════════════════════ -->
+    <section class="hero" id="hero" data-stage="hero" aria-labelledby="hero-title">
+      <canvas class="hero__canvas" data-nodes aria-hidden="true"></canvas>
+
+      <div class="hero__grid">
+        <div class="hero__main">
+          <p class="eyebrow">Nexus Automation / portfolio</p>
+
+          <h1 class="hero__title" id="hero-title">
+            <span class="line"><span class="line__in">Aleem</span></span>
+            <span class="line"><span class="line__in line__in--ghost">Shahzad</span></span>
+          </h1>
+
+          <p class="hero__lead">
+            I build the systems behind the traffic: <strong>Python automation</strong>,
+            <strong>technical SEO and backlink pipelines</strong>, full-stack products,
+            and content that ships on a schedule.
+          </p>
+
+          <p class="hero__roles" aria-hidden="true">
+            <span class="prompt">$</span>
+            <span data-roles-text>Full Stack Developer</span><span class="caret"></span>
+          </p>
+
+          <div class="hero__actions">
+            <a class="btn" href="#work">See the work <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a class="link-arrow" href="#contact">Start a project <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
           </div>
         </div>
 
-        <div class="hidden md:block">
-          <img src="assets/images/profile.jpg" alt="Aleem Shahzad" class="w-44 h-44 rounded-2xl object-cover border-2 border-muted shadow-lg">
-        </div>
-      </div>
+        <div class="hero__side">
+          <p class="status"><span class="status__dot" aria-hidden="true"></span><span>System operational — available for high-impact projects</span></p>
 
-      <span aria-hidden="true" class="absolute -right-24 -top-20 w-56 h-56 glow-accent transform group-hover:scale-105 transition"></span>
-    </section>
-
-    <!-- Grid: profile / journey / skills -->
-    <section class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-      <!-- Column A -->
-      <div class="space-y-6">
-        <aside class="card" aria-labelledby="profile-heading">
-          <h2 id="profile-heading" class="card-title">Profile</h2>
-          <p class="text-muted">@aleemshahad</p>
-          <p class="mt-3">SEO & Automation Expert — building automation systems, trading bots and growth tools for websites and businesses.</p>
-        </aside>
-
-        <aside class="card">
-          <h2 class="card-title">Journey</h2>
-          <ul class="space-y-3 text-sm text-muted">
-            <li><strong>2025 - Present</strong> — SEO Expert & Automation</li>
-            <li><strong>2023 - 2024</strong> — Python Developer</li>
-            <li><strong>2020 - 2022</strong> — Content Manager</li>
+          <ul class="hero__roster">
+            <li><b>01</b><span>SEO &amp; Link Building</span><i>7+ yrs</i></li>
+            <li><b>02</b><span>Python + CDP Automation</span><i>100+ bots</i></li>
+            <li><b>03</b><span>Social Media Systems</span><i>4 channels</i></li>
+            <li><b>04</b><span>Video &amp; Content</span><i>Shorts</i></li>
+            <li><b>05</b><span>Full-Stack &amp; Mobile</span><i>Web + RN</i></li>
           </ul>
-        </aside>
 
-        <aside class="card">
-          <h2 class="card-title">Skills</h2>
-          <div class="flex flex-wrap gap-2 mt-2">
-            <span class="chip">SEO</span>
-            <span class="chip">Automation</span>
-            <span class="chip">Python</span>
-            <span class="chip">AI</span>
-            <span class="chip">Trading Systems</span>
-            <span class="chip">Web Devel</span>
-            <span class="chip">Guest Posting</span>
-          </div>
-        </aside>
-      </div>
+          <p class="hero__queue">field &middot; <b data-node-count>0</b> nodes &middot; <b data-link-count>0</b> links</p>
 
-      <!-- Column B -->
-      <div class="space-y-6">
-        <div class="card">
-          <h2 class="card-title">Services</h2>
-          <ul class="mt-3 space-y-3 text-sm text-muted">
-            <li><strong>SEO Audit</strong> — Full site technical + content audit</li>
-            <li><strong>Automation</strong> — Python scripts, bots & trading systems</li>
-            <li><strong>Guest Posting</strong> — Outreach & backlinks</li>
-            <li><strong>Web Development</strong> — Portfolios, blogs & landing pages</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h2 class="card-title">Recent Repos</h2>
-          <!-- RECENT:START -->
-          <ul class="mt-3 space-y-3 text-sm text-muted">
-            <li><a class="link-primary" href="https://github.com/aleemshahad/NEXUS-TRADING-SYSTEM" target="_blank" rel="noopener">NEXUS-TRADING-SYSTEM</a> — Nexus TRADING SYSTEM is a professional automated trading...</li>
-            <li><a class="link-primary" href="https://github.com/aleemshahad/nexus-auto-system" target="_blank" rel="noopener">nexus-auto-system</a> — NEXUS AUTO SYSTEM is an autonomous forex and gold trading...</li>
-            <li><a class="link-primary" href="https://github.com/aleemshahad/Romote_Desktop_pro" target="_blank" rel="noopener">Romote_Desktop_pro</a> — Open-source LAN remote desktop for Windows with real-time...</li>
-            <li><a class="link-primary" href="https://github.com/aleemshahad/seo-audit-tool" target="_blank" rel="noopener">seo-audit-tool</a> — SEOAudit you site</li>
-          </ul>
-<!-- RECENT:END -->
-        </div>
-      </div>
-
-      <!-- Column C -->
-      <div class="space-y-6">
-        <div class="card">
-          <h2 class="card-title">Social</h2>
-          <div class="grid grid-cols-3 gap-3 mt-3">
-            <a href="https://twitter.com/ALEEMSHAHZAD2" target="_blank" class="icon-link" aria-label="Twitter"><i class="fab fa-x-twitter"></i><span class="sr-only">Twitter</span></a>
-            <a href="https://github.com/aleemshahad" target="_blank" class="icon-link" aria-label="GitHub"><i class="fab fa-github"></i><span class="sr-only">GitHub</span></a>
-            <a href="mailto:aleemssg@gmail.com" class="icon-link" aria-label="Email"><i class="fas fa-envelope"></i><span class="sr-only">Email</span></a>
-            <a href="https://www.linkedin.com/in/aleemshahad" target="_blank" class="icon-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i><span class="sr-only">LinkedIn</span></a>
-            <a href="https://www.upwork.com" target="_blank" class="icon-link" aria-label="Upwork"><i class="fab fa-upwork"></i><span class="sr-only">Upwork</span></a>
-            <a href="tel:+923000810352" class="icon-link" aria-label="Phone"><i class="fas fa-phone"></i><span class="sr-only">Phone</span></a>
-          </div>
-        </div>
-
-        <div class="card">
-          <h2 class="card-title">Consultation</h2>
-          <p class="text-sm text-muted">Open for freelance projects, growth consulting and tool development.</p>
-          <div class="mt-3 flex gap-2">
-            <a class="btn-sm" href="#contact">Book Intro</a>
-            <a class="btn-sm-outline" href="https://wa.me/923000810352" target="_blank" rel="noopener">WhatsApp</a>
-          </div>
-        </div>
-
-        <div id="contact" class="card">
-          <h2 class="card-title">Contact</h2>
-          <p class="text-sm text-muted">Email: <a href="mailto:aleemssg@gmail.com" class="link-primary">aleemssg@gmail.com</a></p>
-          <p class="text-sm text-muted mt-2">Tel: <a href="tel:+923000810352" class="link-primary">+92 300 0810352</a></p>
+          <p class="hero__tagline">AI Powered + Human Strategy | Automating Growth &amp; Scaling Traffic</p>
         </div>
       </div>
     </section>
 
-    <!-- Projects -->
-    <section id="projects" class="mt-12">
-      <div class="flex items-end justify-between mb-6">
-        <h2 class="text-3xl font-extrabold">Projects</h2>
-        <a href="https://github.com/aleemshahad?tab=repositories" target="_blank" rel="noopener" class="text-sm link-primary">All repos →</a>
-      </div>
+    <!-- ══ 01 · PROOF ═══════════════════════════════════════ -->
+    <section class="section metrics" id="metrics" data-stage="metrics" aria-label="Headline numbers">
+      <div class="wrap">
+        <header class="metrics__head">
+          <p class="eyebrow">01 &middot; Proof</p>
+          <p class="lede">Experience, output and reach — the three figures I lead with.</p>
+        </header>
 
-      <!-- PROJECTS:START -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        <article class="project-card">
-          <div class="project-media bg-muted/30 w-full h-28 rounded-md flex items-center justify-center">
-            <i class="fas fa-robot text-3xl text-accent" aria-hidden="true"></i>
+        <div class="metrics__list">
+          <div class="metric metric--lead">
+            <span class="metric__num"><span data-count="7">7</span><span class="suffix">+</span></span>
+            <span class="metric__label">Years of industry experience</span>
           </div>
-          <h3 class="mt-3 font-semibold">NEXUS-TRADING-SYSTEM</h3>
-          <p class="text-sm text-muted mt-1">Nexus TRADING SYSTEM is a professional automated trading bot that connects to MetaTrader 5 and executes a dynamic grid strategy on real market data...</p>
-          <div class="mt-3 flex gap-2">
-            <span class="chip">Python</span>
+          <div class="metric">
+            <span class="metric__num"><span data-count="100">100</span><span class="suffix">+</span></span>
+            <span class="metric__label">Automation bots, scrapers and pipelines</span>
           </div>
-          <div class="mt-3 flex gap-2">
-            <a class="btn-sm" href="https://github.com/aleemshahad/NEXUS-TRADING-SYSTEM" target="_blank" rel="noopener">Code</a>
+          <div class="metric">
+            <span class="metric__num"><span data-count="10">10</span><span class="suffix">M+</span></span>
+            <span class="metric__label">Organic reach delivered</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ 02 · CAPABILITIES ════════════════════════════════ -->
+    <section class="section" id="capabilities" data-stage="capabilities" aria-labelledby="capabilities-title">
+      <div class="wrap">
+        <header class="sec-head">
+          <p class="eyebrow">02 &middot; Capabilities</p>
+          <h2 class="sec-title sec-head__title" id="capabilities-title">Five systems. One operator.</h2>
+          <p class="lede sec-head__lede">Every engagement runs the same loop: audit the data, automate the work, ship the artifact, measure what moved.</p>
+        </header>
+
+        <div class="bento">
+          <!-- 01 -->
+          <article class="bento-card bento__py rise">
+            <div class="bento-card__head">
+              <span class="bento-card__idx">01</span>
+              <h3 class="bento-card__title">Python + CDP Automation</h3>
+            </div>
+            <p class="bento-card__desc">
+              Scrapers, browser bots on DrissionPage and raw CDP, scheduled runners and
+              data pipelines. Structured output, real error handling, logs you can read.
+            </p>
+            <button class="machine__run" type="button" data-replay hidden aria-label="Replay the automation log"><svg aria-hidden="true"><use href="#i-play"/></svg></button>
+            <div class="machine m-term" data-machine="term">
+              <p class="m-term__line"><span class="c-dim">$</span> <span class="c-cmd">python3 run.py --daily</span></p>
+              <p class="m-term__line"><span class="c-str">&gt; connect cdp :9222</span> <span class="c-dim">.........</span> <span class="c-ok">ok</span></p>
+              <p class="m-term__line"><span class="c-str">&gt; extract + validate</span> <span class="c-dim">.........</span> <span class="c-ok">ok</span></p>
+              <p class="m-term__line"><span class="c-str">&gt; write build/repos.json</span> <span class="c-dim">...</span> <span class="c-ok">ok</span></p>
+              <p class="m-term__line"><span class="c-dim">&gt; schedule</span> <span class="c-str">06:00 utc</span> <span class="c-dim">.....</span> <span class="c-ok">ok</span></p>
+              <p class="m-term__line"><span class="c-dim">$</span> <span class="m-term__caret" aria-hidden="true"></span></p>
+            </div>
+          </article>
+
+          <!-- 02 -->
+          <article class="bento-card bento__se rise">
+            <div class="bento-card__head">
+              <span class="bento-card__idx">02</span>
+              <h3 class="bento-card__title">SEO &amp; Guest Posting</h3>
+            </div>
+            <p class="bento-card__desc">
+              Technical audits run from custom Python scrapers, high-DA publisher
+              inventory, and outreach that lands real backlinks — not directories.
+            </p>
+            <button class="machine__run" type="button" data-replay hidden aria-label="Replay the authority graph"><svg aria-hidden="true"><use href="#i-play"/></svg></button>
+            <div class="machine m-graph" data-machine="graph">
+              <svg viewBox="0 0 240 90" fill="none" role="img" aria-label="Illustration of an outreach pipeline trending upward over eight weeks">
+                <g class="g-grid"><path d="M0 22h240M0 46h240M0 70h240"/></g>
+                <path class="g-curve" d="M4 80C44 76 66 70 88 62s44-10 66-22 48-16 78-26"/>
+                <path class="g-head" d="M232 4v82"/>
+                <circle class="g-dot" cx="232" cy="14" r="3.5"/>
+              </svg>
+              <div class="m-graph__legend"><span>wk 1</span><span class="m-graph__phase">outreach cycle</span></div>
+            </div>
+          </article>
+
+          <!-- 03 -->
+          <article class="bento-card bento__st rise">
+            <div class="bento-card__head">
+              <span class="bento-card__idx">03</span>
+              <h3 class="bento-card__title">Full-Stack &amp; Mobile</h3>
+            </div>
+            <p class="bento-card__desc">
+              Web apps, React Native mobile, Firebase architecture and GitHub Actions
+              pipelines — from first commit to deploy.
+            </p>
+            <button class="machine__run" type="button" data-replay hidden aria-label="Replay the stack layers"><svg aria-hidden="true"><use href="#i-play"/></svg></button>
+            <div class="machine m-stack" data-machine="stack">
+              <p class="m-stack__row" data-on="true"><span>Front end</span><i>HTML &middot; CSS &middot; JS</i></p>
+              <p class="m-stack__row"><span>Client</span><i>React Native</i></p>
+              <p class="m-stack__row"><span>Data</span><i>Firebase</i></p>
+              <p class="m-stack__row"><span>Pipeline</span><i>GitHub Actions</i></p>
+            </div>
+          </article>
+
+          <!-- 04 -->
+          <article class="bento-card bento__so rise">
+            <div class="bento-card__head">
+              <span class="bento-card__idx">04</span>
+              <h3 class="bento-card__title">Social Media Systems</h3>
+            </div>
+            <p class="bento-card__desc">
+              Scheduled distribution across LinkedIn, X, YouTube and Binance Square —
+              automated pipelines with a human editorial pass.
+            </p>
+            <button class="machine__run" type="button" data-replay hidden aria-label="Replay the schedule queue"><svg aria-hidden="true"><use href="#i-play"/></svg></button>
+            <div class="machine m-queue" data-machine="queue">
+              <p class="m-queue__row"><time datetime="06:00">06:00</time><span>X &middot; thread</span><em>run</em></p>
+              <p class="m-queue__row"><time datetime="09:30">09:30</time><span>LinkedIn &middot; post</span><em>next</em></p>
+              <p class="m-queue__row"><time datetime="14:00">14:00</time><span>YouTube &middot; short</span><em>wait</em></p>
+              <p class="m-queue__row"><time datetime="18:00">18:00</time><span>Binance Square &middot; note</span><em>wait</em></p>
+            </div>
+          </article>
+
+          <!-- 05 -->
+          <article class="bento-card bento__vi rise">
+            <div class="bento-card__head">
+              <span class="bento-card__idx">05</span>
+              <h3 class="bento-card__title">Video &amp; Content</h3>
+            </div>
+            <p class="bento-card__desc">
+              Script-to-video, YouTube Shorts and AI-assisted edit workflows —
+              Google Flow and Groq prompt pipelines into finished cuts.
+            </p>
+            <button class="machine__run" type="button" data-replay hidden aria-label="Replay the edit timeline"><svg aria-hidden="true"><use href="#i-play"/></svg></button>
+            <div class="machine m-timeline" data-machine="timeline">
+              <div class="m-timeline__track">
+                <span class="m-timeline__clip" data-kind="a" data-on="true"></span>
+                <span class="m-timeline__clip" data-kind="b"></span>
+                <span class="m-timeline__clip" data-kind="c"></span>
+                <span class="m-timeline__clip" data-kind="b"></span>
+                <span class="m-timeline__head" data-playhead aria-hidden="true"></span>
+              </div>
+              <div class="m-timeline__meta"><span>sequence <b>script to cut</b></span><span>format <b>9:16</b></span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ 03 · WORK ════════════════════════════════════════ -->
+    <section class="section section--ground" id="work" data-stage="work" aria-labelledby="work-title">
+      <div class="wrap">
+        <header class="sec-head">
+          <p class="eyebrow">03 &middot; Work</p>
+          <h2 class="sec-title sec-head__title" id="work-title">Everything here is public.</h2>
+          <p class="lede sec-head__lede">Refreshed live from the GitHub API whenever this page loads. A new repository appears here without anyone editing this page.</p>
+        </header>
+
+<!-- PROJECTS:START -->
+      <div class="projects" data-projects>
+        <article class="project project--featured rise" data-repo="Romote_Desktop_pro">
+          <div class="project__top">
+            <span class="project__lang">JavaScript</span>
+            <span class="project__arrow" aria-hidden="true">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 11 11 5M6 5h5v5"/></svg>
+            </span>
+          </div>
+          <h3 class="project__name"><a href="https://github.com/aleemshahad/Romote_Desktop_pro" target="_blank" rel="noopener">Romote_Desktop_pro<span class="vh"> on GitHub</span></a></h3>
+          <p class="project__desc">Open-source LAN remote desktop for Windows with real-time PC / mobile chat, file transfer, clipboard sync, and secure access-code authentication.</p>
+          <div class="project__foot">
+            <span class="project__meta"><span class="project__stars"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="m8 2.5 1.7 3.5 3.8.5-2.8 2.7.7 3.8L8 11.2 4.6 13l.7-3.8L2.5 6.5l3.8-.5z"/></svg>2</span><span class="project__dot" aria-hidden="true">&middot;</span><span>upd 2026-10-10</span></span>
+            <span class="project__links"></span>
           </div>
         </article>
-        <article class="project-card">
-          <div class="project-media bg-muted/30 w-full h-28 rounded-md flex items-center justify-center">
-            <i class="fas fa-robot text-3xl text-accent" aria-hidden="true"></i>
+        <article class="project rise" data-repo="Committee-Pro">
+          <div class="project__top">
+            <span class="project__lang">Git</span>
+            <span class="project__arrow" aria-hidden="true">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 11 11 5M6 5h5v5"/></svg>
+            </span>
           </div>
-          <h3 class="mt-3 font-semibold">nexus-auto-system</h3>
-          <p class="text-sm text-muted mt-1">NEXUS AUTO SYSTEM is an autonomous forex and gold trading platform built on an event-driven agent architecture. It combines multi-strategy signal g...</p>
-          <div class="mt-3 flex gap-2">
-            <span class="chip">Python</span>
-          </div>
-          <div class="mt-3 flex gap-2">
-            <a class="btn-sm" href="https://github.com/aleemshahad/nexus-auto-system" target="_blank" rel="noopener">Code</a>
-          </div>
-        </article>
-        <article class="project-card">
-          <div class="project-media bg-muted/30 w-full h-28 rounded-md flex items-center justify-center">
-            <i class="fas fa-bolt text-3xl text-accent" aria-hidden="true"></i>
-          </div>
-          <h3 class="mt-3 font-semibold">Romote_Desktop_pro</h3>
-          <p class="text-sm text-muted mt-1">Open-source LAN remote desktop for Windows with real-time PC ↔ mobile chat, file transfer, clipboard sync, and secure access-code authentication.</p>
-          <div class="mt-3 flex gap-2">
-            <span class="chip">JavaScript</span>
-          </div>
-          <div class="mt-3 flex gap-2">
-            <a class="btn-sm" href="https://github.com/aleemshahad/Romote_Desktop_pro" target="_blank" rel="noopener">Code</a>
+          <h3 class="project__name"><a href="https://github.com/aleemshahad/Committee-Pro" target="_blank" rel="noopener">Committee-Pro<span class="vh"> on GitHub</span></a></h3>
+          <p class="project__desc">A modern, offline-first financial management system and Android mobile application designed to manage community savings groups (Committees, Kameti, BC, Chit Funds) with complete transparency, bilingual support (English &amp; Urdu), digital lucky draws, and AI-assisted reminders.</p>
+          <div class="project__foot">
+            <span class="project__meta"><span class="project__stars"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="m8 2.5 1.7 3.5 3.8.5-2.8 2.7.7 3.8L8 11.2 4.6 13l.7-3.8L2.5 6.5l3.8-.5z"/></svg>1</span><span class="project__dot" aria-hidden="true">&middot;</span><span>upd 2026-10-09</span></span>
+            <span class="project__links"></span>
           </div>
         </article>
-        <article class="project-card">
-          <div class="project-media bg-muted/30 w-full h-28 rounded-md flex items-center justify-center">
-            <i class="fas fa-cubes text-3xl text-accent" aria-hidden="true"></i>
+        <article class="project rise" data-repo="PhoneDisplay">
+          <div class="project__top">
+            <span class="project__lang">C#</span>
+            <span class="project__arrow" aria-hidden="true">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 11 11 5M6 5h5v5"/></svg>
+            </span>
           </div>
-          <h3 class="mt-3 font-semibold">seo-audit-tool</h3>
-          <p class="text-sm text-muted mt-1">SEOAudit you site</p>
-          <div class="mt-3 flex gap-2">
-            <span class="chip">TypeScript</span>
-          </div>
-          <div class="mt-3 flex gap-2">
-            <a class="btn-sm" href="https://github.com/aleemshahad/seo-audit-tool" target="_blank" rel="noopener">Code</a>
-          </div>
-        </article>
-        <article class="project-card">
-          <div class="project-media bg-muted/30 w-full h-28 rounded-md flex items-center justify-center">
-            <i class="fas fa-robot text-3xl text-accent" aria-hidden="true"></i>
-          </div>
-          <h3 class="mt-3 font-semibold">Botable-usb</h3>
-          <p class="text-sm text-muted mt-1">The application provides: - ISO file selection with file browser - Automatic USB device detection and refresh - Configuration options for boot mode...</p>
-          <div class="mt-3 flex gap-2">
-            <span class="chip">Python</span>
-          </div>
-          <div class="mt-3 flex gap-2">
-            <a class="btn-sm" href="https://github.com/aleemshahad/Botable-usb" target="_blank" rel="noopener">Code</a>
+          <h3 class="project__name"><a href="https://github.com/aleemshahad/PhoneDisplay" target="_blank" rel="noopener">PhoneDisplay<span class="vh"> on GitHub</span></a></h3>
+          <p class="project__desc">Public repository. Source, README and issues live on GitHub.</p>
+          <div class="project__foot">
+            <span class="project__meta"><span class="project__stars"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="m8 2.5 1.7 3.5 3.8.5-2.8 2.7.7 3.8L8 11.2 4.6 13l.7-3.8L2.5 6.5l3.8-.5z"/></svg>1</span><span class="project__dot" aria-hidden="true">&middot;</span><span>upd 2026-10-04</span></span>
+            <span class="project__links"></span>
           </div>
         </article>
-        <article class="project-card">
-          <div class="project-media bg-muted/30 w-full h-28 rounded-md flex items-center justify-center">
-            <i class="fas fa-code text-3xl text-accent" aria-hidden="true"></i>
+        <article class="project rise" data-repo="NEXUS-TRADING-SYSTEM">
+          <div class="project__top">
+            <span class="project__lang">Python</span>
+            <span class="project__arrow" aria-hidden="true">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 11 11 5M6 5h5v5"/></svg>
+            </span>
           </div>
-          <h3 class="mt-3 font-semibold">Committee-Pro</h3>
-          <p class="text-sm text-muted mt-1">A modern, offline-first financial management system and Android mobile application designed to manage community savings groups (Committees, Kameti,...</p>
-          <div class="mt-3 flex gap-2">
-            <span class="chip">Git</span>
-          </div>
-          <div class="mt-3 flex gap-2">
-            <a class="btn-sm" href="https://github.com/aleemshahad/Committee-Pro" target="_blank" rel="noopener">Code</a>
-          </div>
-        </article>
-        <article class="project-card">
-          <div class="project-media bg-muted/30 w-full h-28 rounded-md flex items-center justify-center">
-            <i class="fas fa-code text-3xl text-accent" aria-hidden="true"></i>
-          </div>
-          <h3 class="mt-3 font-semibold">PhoneDisplay</h3>
-          <p class="text-sm text-muted mt-1">Open-source project by Aleem Shahzad.</p>
-          <div class="mt-3 flex gap-2">
-            <span class="chip">C#</span>
-          </div>
-          <div class="mt-3 flex gap-2">
-            <a class="btn-sm" href="https://github.com/aleemshahad/PhoneDisplay" target="_blank" rel="noopener">Code</a>
+          <h3 class="project__name"><a href="https://github.com/aleemshahad/NEXUS-TRADING-SYSTEM" target="_blank" rel="noopener">NEXUS-TRADING-SYSTEM<span class="vh"> on GitHub</span></a></h3>
+          <p class="project__desc">Nexus TRADING SYSTEM is a professional automated trading bot that connects to MetaTrader 5 and executes a dynamic grid strategy on real market data. It does not use any mocked, simulated, or fake data — all prices, fills, and account information come directly from your live MT5 terminal.</p>
+          <div class="project__foot">
+            <span class="project__meta"><span class="project__stars"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="m8 2.5 1.7 3.5 3.8.5-2.8 2.7.7 3.8L8 11.2 4.6 13l.7-3.8L2.5 6.5l3.8-.5z"/></svg>7</span><span class="project__dot" aria-hidden="true">&middot;</span><span>upd 2026-10-03</span></span>
+            <span class="project__links"></span>
           </div>
         </article>
-        <article class="project-card">
-          <div class="project-media bg-muted/30 w-full h-28 rounded-md flex items-center justify-center">
-            <i class="fas fa-code text-3xl text-accent" aria-hidden="true"></i>
+        <article class="project rise" data-repo="nexus-auto-system">
+          <div class="project__top">
+            <span class="project__lang">Python</span>
+            <span class="project__arrow" aria-hidden="true">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 11 11 5M6 5h5v5"/></svg>
+            </span>
           </div>
-          <h3 class="mt-3 font-semibold">aleemshahad</h3>
-          <p class="text-sm text-muted mt-1">Open-source project by Aleem Shahzad.</p>
-          <div class="mt-3 flex gap-2">
-            <span class="chip">Git</span>
-          </div>
-          <div class="mt-3 flex gap-2">
-            <a class="btn-sm" href="https://github.com/aleemshahad/aleemshahad" target="_blank" rel="noopener">Code</a>
+          <h3 class="project__name"><a href="https://github.com/aleemshahad/nexus-auto-system" target="_blank" rel="noopener">nexus-auto-system<span class="vh"> on GitHub</span></a></h3>
+          <p class="project__desc">NEXUS AUTO SYSTEM is an autonomous forex and gold trading platform built on an event-driven agent architecture. It combines multi-strategy signal generation, AI-assisted research, browser-based market intelligence,</p>
+          <div class="project__foot">
+            <span class="project__meta"><span class="project__stars"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="m8 2.5 1.7 3.5 3.8.5-2.8 2.7.7 3.8L8 11.2 4.6 13l.7-3.8L2.5 6.5l3.8-.5z"/></svg>7</span><span class="project__dot" aria-hidden="true">&middot;</span><span>upd 2026-08-24</span></span>
+            <span class="project__links"></span>
           </div>
         </article>
-        <article class="project-card">
-          <div class="project-media bg-muted/30 w-full h-28 rounded-md flex items-center justify-center">
-            <i class="fas fa-code text-3xl text-accent" aria-hidden="true"></i>
+        <article class="project rise" data-repo="data_profiling_app-main">
+          <div class="project__top">
+            <span class="project__lang">HTML</span>
+            <span class="project__arrow" aria-hidden="true">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 11 11 5M6 5h5v5"/></svg>
+            </span>
           </div>
-          <h3 class="mt-3 font-semibold">data_profiling_app-main</h3>
-          <p class="text-sm text-muted mt-1">data_profiling_app-main</p>
-          <div class="mt-3 flex gap-2">
-            <span class="chip">HTML</span>
+          <h3 class="project__name"><a href="https://github.com/aleemshahad/data_profiling_app-main" target="_blank" rel="noopener">data_profiling_app-main<span class="vh"> on GitHub</span></a></h3>
+          <p class="project__desc">Public repository. Source, README and issues live on GitHub.</p>
+          <div class="project__foot">
+            <span class="project__meta"><span class="project__stars"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="m8 2.5 1.7 3.5 3.8.5-2.8 2.7.7 3.8L8 11.2 4.6 13l.7-3.8L2.5 6.5l3.8-.5z"/></svg>1</span><span class="project__dot" aria-hidden="true">&middot;</span><span>upd 2026-04-22</span></span>
+            <span class="project__links"></span>
           </div>
-          <div class="mt-3 flex gap-2">
-            <a class="btn-sm" href="https://github.com/aleemshahad/data_profiling_app-main" target="_blank" rel="noopener">Code</a>
+        </article>
+        <article class="project rise" data-repo="nextgenblog">
+          <div class="project__top">
+            <span class="project__lang">TypeScript</span>
+            <span class="project__arrow" aria-hidden="true">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 11 11 5M6 5h5v5"/></svg>
+            </span>
+          </div>
+          <h3 class="project__name"><a href="https://github.com/aleemshahad/nextgenblog" target="_blank" rel="noopener">nextgenblog<span class="vh"> on GitHub</span></a></h3>
+          <p class="project__desc">everything you need to run  app</p>
+          <div class="project__foot">
+            <span class="project__meta"><span class="project__stars"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="m8 2.5 1.7 3.5 3.8.5-2.8 2.7.7 3.8L8 11.2 4.6 13l.7-3.8L2.5 6.5l3.8-.5z"/></svg>1</span><span class="project__dot" aria-hidden="true">&middot;</span><span>upd 2026-02-10</span></span>
+            <span class="project__links">
+            <a class="project__live" href="https://nextgenblog.vercel.app" target="_blank" rel="noopener nofollow">Live<span class="vh"> demo of nextgenblog</span></a></span>
+          </div>
+        </article>
+        <article class="project rise" data-repo="Blogger_Theems">
+          <div class="project__top">
+            <span class="project__lang">Git</span>
+            <span class="project__arrow" aria-hidden="true">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 11 11 5M6 5h5v5"/></svg>
+            </span>
+          </div>
+          <h3 class="project__name"><a href="https://github.com/aleemshahad/Blogger_Theems" target="_blank" rel="noopener">Blogger_Theems<span class="vh"> on GitHub</span></a></h3>
+          <p class="project__desc">Modern Blogger Theme</p>
+          <div class="project__foot">
+            <span class="project__meta"><span class="project__stars"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="m8 2.5 1.7 3.5 3.8.5-2.8 2.7.7 3.8L8 11.2 4.6 13l.7-3.8L2.5 6.5l3.8-.5z"/></svg>1</span><span class="project__dot" aria-hidden="true">&middot;</span><span>upd 2026-01-25</span></span>
+            <span class="project__links"></span>
+          </div>
+        </article>
+        <article class="project rise" data-repo="NextGenGuides">
+          <div class="project__top">
+            <span class="project__lang">TypeScript</span>
+            <span class="project__arrow" aria-hidden="true">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 11 11 5M6 5h5v5"/></svg>
+            </span>
+          </div>
+          <h3 class="project__name"><a href="https://github.com/aleemshahad/NextGenGuides" target="_blank" rel="noopener">NextGenGuides<span class="vh"> on GitHub</span></a></h3>
+          <p class="project__desc">Public repository. Source, README and issues live on GitHub.</p>
+          <div class="project__foot">
+            <span class="project__meta"><span class="project__stars"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="m8 2.5 1.7 3.5 3.8.5-2.8 2.7.7 3.8L8 11.2 4.6 13l.7-3.8L2.5 6.5l3.8-.5z"/></svg>1</span><span class="project__dot" aria-hidden="true">&middot;</span><span>upd 2025-12-21</span></span>
+            <span class="project__links"></span>
           </div>
         </article>
       </div>
 <!-- PROJECTS:END -->
+
+        <p class="projects__status" role="status" data-projects-status>
+          <span data-status="sync">snapshot &middot; <time datetime="2026-10-14">14 oct 2026</time></span>
+          <span>live refresh needs javascript &middot; <a href="https://github.com/aleemshahad?tab=repositories" target="_blank" rel="noopener">all repositories</a></span>
+        </p>
+      </div>
+    </section>
+
+    <!-- ══ 04 · CONTACT ═════════════════════════════════════ -->
+    <section class="section contact" id="contact" data-stage="contact" aria-labelledby="contact-title">
+      <div class="wrap">
+        <header class="sec-head">
+          <p class="eyebrow">04 &middot; Contact</p>
+          <h2 class="sec-title sec-head__title" id="contact-title">Open a channel.</h2>
+          <p class="lede sec-head__lede">WhatsApp for a quick start, email for the full brief — or type a command below.</p>
+        </header>
+
+        <div class="cli rise" data-terminal>
+          <div class="cli__bar"><b>nexus@portfolio</b><span>contact &middot; tty0</span></div>
+
+          <div class="cli__scroll" role="log" aria-live="polite" aria-label="Terminal output" data-cli-log>
+            <p class="cli__line cli__line--dim">Last login: now from portfolio.local</p>
+            <p class="cli__line cli__line--in"><span class="c-prompt">$</span> contact --list</p>
+            <p class="cli__line">[01] <a class="link" href="https://wa.me/923000810352" target="_blank" rel="noopener">whatsapp</a> &nbsp;+92 300 0810352</p>
+            <p class="cli__line">[02] <a class="link" href="mailto:aleemssg@gmail.com">email</a> &nbsp;&nbsp;&nbsp;&nbsp;aleemssg@gmail.com</p>
+            <p class="cli__line">[03] <a class="link" href="https://github.com/aleemshahad" target="_blank" rel="noopener">github</a> &nbsp;&nbsp;&nbsp;&nbsp;aleemshahad</p>
+            <p class="cli__line cli__line--dim">$ # type a command, or use a shortcut below</p>
+          </div>
+
+          <form class="cli__form" data-cli-form autocomplete="off">
+            <span class="cli__prompt" aria-hidden="true">$</span>
+            <label class="vh" for="cli-input">Type a contact command</label>
+            <input class="cli__input" id="cli-input" name="command" type="text" placeholder="help" spellcheck="false" autocapitalize="off" autocomplete="off">
+          </form>
+
+          <div class="cli__chips">
+            <button class="cli__chip" type="button" data-cmd="whatsapp"><svg aria-hidden="true"><use href="#i-wa"/></svg> whatsapp</button>
+            <button class="cli__chip" type="button" data-cmd="email"><svg aria-hidden="true"><use href="#i-mail"/></svg> email</button>
+            <button class="cli__chip" type="button" data-cmd="github"><svg aria-hidden="true"><use href="#i-github"/></svg> github</button>
+            <button class="cli__chip" type="button" data-cmd="help"><span aria-hidden="true">$</span> help</button>
+          </div>
+        </div>
+
+        <div class="contact__alt rise">
+          <a class="link-arrow" href="mailto:aleemssg@gmail.com">Write an email <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a class="link-arrow" href="https://github.com/aleemshahad" target="_blank" rel="noopener">Browse GitHub <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer class="border-t border-[rgba(255,255,255,0.05)] py-8 mt-4">
-    <div class="max-w-5xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-muted">
-      <p>© <span id="year">2026</span> Muhammad Aleem Shahzad — SEO & Automation Expert</p>
-      <div class="flex gap-4">
-        <a href="https://github.com/aleemshahad" target="_blank" rel="noopener" class="hover:text-accent">GitHub</a>
-        <a href="https://twitter.com/ALEEMSHAHZAD2" target="_blank" rel="noopener" class="hover:text-accent">Twitter</a>
-        <a href="blog.html" class="hover:text-accent">Blog</a>
-      </div>
+  <!-- ── footer ─────────────────────────────────────────────── -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>&copy; <span data-year>2026</span> Aleem Shahzad — Nexus Automation</p>
+      <nav class="site-footer__links" aria-label="Social">
+        <a href="https://github.com/aleemshahad" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://x.com/ALEEMSHAHZAD2" target="_blank" rel="noopener">X</a>
+        <a href="https://www.linkedin.com/in/aleemshahad" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="blog.html">Writing</a>
+      </nav>
     </div>
   </footer>
 
-  <script src="assets/js/theme.js"></script>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    (function(){
-      const texts = [
-        "Researching and developing SEO optimization and automation solutions.",
-        "Creating Python automation scripts, trading bots and browser extensions.",
-        "Expert in guest posting, content strategy and growth systems."
-      ];
-      const el = document.getElementById('typing-text');
-      let i=0, j=0, isDeleting=false;
-      function tick(){
-        const current = texts[i];
-        el.textContent = current.slice(0, j);
-        if (!isDeleting) { j++; if (j>current.length){ isDeleting=true; setTimeout(tick, 1500); return; } }
-        else { j--; if (j===0){ isDeleting=false; i=(i+1)%texts.length; } }
-        setTimeout(tick, isDeleting ? 30 : 40);
-      }
-      tick();
-    })();
-  </script>
+  <script type="module" src="assets/js/site.js"></script>
 </body>
 </html>

@@ -1,0 +1,22 @@
+/* Self-hosted variable fonts (SIL OFL). Subset to the glyphs this site renders.
+   Two files total: display face (Space Grotesk) + interface face (JetBrains Mono). */
+
+/* Space Grotesk 300-700 (display) */
+@font-face {
+  font-family: "Space Grotesk";
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url("./SpaceGrotesk.woff2") format("woff2");
+  unicode-range: U+0020-00FF, U+2013-2014, U+2018-201D, U+2022, U+2026, U+2190-2193, U+2212, U+2713, U+25B8, U+25CF;
+}
+
+/* JetBrains Mono 100-800 (interface / terminal / labels) */
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 100 800;
+  font-display: swap;
+  src: url("./JetBrainsMono.woff2") format("woff2");
+  unicode-range: U+0020-00FF, U+2013-2014, U+2018-201D, U+2022, U+2026, U+2190-2193, U+2212, U+2713, U+25B8, U+25CF;
+}

@@ -1,0 +1,85 @@
+/* =============================================================
+   motion.css — authoring order matters.
+
+   Rule: the FINISHED state is the element's normal CSS. The
+   hidden start-state is only applied when <html> carries
+   [data-motion="on"], which JS sets after confirming
+   prefers-reduced-motion is NOT reduce. So:
+     · no JS      -> content is visible (finished state)
+     · reduced    -> content is visible (finished state)
+     · motion on  -> JS/GSAP owns the property from here
+   Never put a CSS transition on a transform/opacity that a
+   GSAP tween also writes — one writer per property.
+   ============================================================= */
+
+@layer motion {
+
+  /* ── entrance initial states ─────────────────────────────────── */
+  [data-motion="on"] .rise {
+    opacity: 0;
+    transform: translate3d(0, 22px, 0);
+  }
+  [data-motion="on"] .wipe {
+    opacity: 0;
+    clip-path: inset(0 100% 0 0);
+  }
+  [data-motion="on"] .hero__title .line__in {
+    transform: translate3d(0, 110%, 0);
+  }
+  [data-motion="on"] .hero__lead,
+  [data-motion="on"] .hero__actions,
+  [data-motion="on"] .hero__roles,
+  [data-motion="on"] .hero__tagline {
+    opacity: 0;
+    transform: translate3d(0, 14px, 0);
+  }
+  [data-motion="on"] .hero__side > * {
+    opacity: 0;
+    transform: translate3d(14px, 0, 0);
+  }
+  [data-motion="on"] .site-header .brand,
+  [data-motion="on"] .site-header .site-nav li,
+  [data-motion="on"] .site-header .header__end {
+    opacity: 0;
+    transform: translate3d(0, -10px, 0);
+  }
+  [data-motion="on"] .metric {
+    opacity: 0;
+    transform: translate3d(0, 26px, 0);
+  }
+  [data-motion="on"] .rail,
+  [data-motion="on"] .scroll-progress {
+    opacity: 0;
+  }
+
+  /* ── section-level reveals driven by ScrollTrigger ───────────── */
+  [data-motion="on"] .sec-head > * {
+    opacity: 0;
+    transform: translate3d(0, 18px, 0);
+  }
+
+  /* ── reduced motion: a designed page, not a broken one ───────── */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+    /* keep every element on its finished state regardless of what
+       any script or stylesheet asked for */
+    .rise, .wipe, .metric, .sec-head > *,
+    .hero__lead, .hero__actions, .hero__roles, .hero__tagline,
+    .hero__side > *, .hero__title .line__in,
+    .site-header .brand, .site-header .site-nav li, .site-header .header__end {
+      opacity: 1 !important;
+      transform: none !important;
+      clip-path: none !important;
+    }
+    .hero__canvas { opacity: 1 !important; }
+    .rail, .scroll-progress { opacity: 1 !important; }
+    .m-queue__row { opacity: 1 !important; transform: none !important; }
+    .hero__roles .caret, .m-term__caret, .status__dot { animation: none !important; opacity: 1 !important; }
+  }
+
+}

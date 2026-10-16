@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://aleemshahad.github.io/portfolio/sitemap.xml
