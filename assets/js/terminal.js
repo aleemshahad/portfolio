@@ -12,7 +12,7 @@ const MAX_LINES = 60;
 const CHANNELS = {
   whatsapp: {
     label: "whatsapp",
-    href: "https://wa.me/923000000000",
+    href: "https://wa.me/92300 0123456",
     detail: "+92 300 0123456",
     rel: "noopener",
   },
