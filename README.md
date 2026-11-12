@@ -1,18 +1,12 @@
+# Nexus Automation — Portfolio
+
 <div align="center">
-
-<!-- بینر کا کوڈ -->
 [![Project Banner](assets/images/banner.png)](https://aleemshahad.github.io/portfolio/)
-
 <br>
-
-<!-- بیجز (Badges) کا کوڈ -->
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-
 </div>
-# Nexus Automation — Portfolio
-
 Personal site for **Aleem Shahzad** — technical SEO, Python + CDP automation, and
 full-stack development. Static HTML/CSS/ESM, built with esbuild, published to
 GitHub Pages by GitHub Actions. No framework, no runtime CDN, no build server.
