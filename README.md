@@ -1,5 +1,5 @@
 [![Project Banner](assets/images/banner.png)](https://aleemshahad.github.io/portfolio/)
-
+https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white
 # Nexus Automation — Portfolio
 
 Personal site for **Aleem Shahzad** — technical SEO, Python + CDP automation, and
