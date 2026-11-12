@@ -1,6 +1,6 @@
 # Nexus Automation — Portfolio
 
-[![Project Banner](https://raw.githubusercontent.com/aleemshahad/Nexus_sumi/main/banner.png)](https://aleemshahad.github.io/portfolio/)
+[![Project Banner](assets/images/banner.png)](https://aleemshahad.github.io/portfolio/)
 
 Personal site for **Aleem Shahzad** — technical SEO, Python + CDP automation, and
 full-stack development. Static HTML/CSS/ESM, built with esbuild, published to
